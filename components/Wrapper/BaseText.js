@@ -1,6 +1,5 @@
-import { Flex, Icon, IconButton, Image, Text, VStack } from "@chakra-ui/react";
+import { Flex, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import Header from "../Header";
 
 const BaseText = ({ firstTitle, secondTitle, textIcon }) => {
   return (
