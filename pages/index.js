@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@ayushsoni1010" />
         <meta
           name="twitter:image"
-          content="https://ayushsoni1010.com/profile.jng"
+          content="https://ayushsoni1010.com/profile.jpg"
         />
         <meta property="og:site_name" content="Ayush Soni" />
         <meta name="og:title" content="Ayush Soni" />

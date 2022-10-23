@@ -21,7 +21,7 @@ const Header = () => {
   const handleToggle = () => {
     setOpen((prevState) => !prevState);
   };
-  
+
   return (
     <React.Fragment>
       <Box
@@ -30,13 +30,12 @@ const Header = () => {
         zIndex="10"
         minW="100%"
         px={{ md: 20, lg: 20, sm: 5 }}
-        py={{ base: 0, md: 0, lg: 0, sm: 0, xs: 2 }}
       >
         <Flex
           backdropFilter="blur(4px)"
           border="none"
           minH="60px"
-          py={{ base: 2, md: 3 }}
+          py={{ base: 3, md: 3, lg: 3, sm: 3, xs: 4 }}
           px={{ base: 4, md: 7 }}
           alignSelf="center"
         >
