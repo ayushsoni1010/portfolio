@@ -8,7 +8,7 @@ const ThemeToggleButton = (props) => {
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         style={{ display: "inline-block" }}
         key={useColorModeValue("light", "dark")}
