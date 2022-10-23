@@ -28,9 +28,15 @@ const VoxelDog = () => {
         scH = 400;
         scW = 400;
       }
-      if (window.matchMedia("screen and (max-width: 400px)").matches) {
+
+      if (window.matchMedia("screen and (max-width: 500px)").matches) {
         scH = 300;
         scW = 300;
+      }
+
+      if (window.matchMedia("screen and (max-width: 300px)").matches) {
+        scH = 250;
+        scW = 250;
       }
 
       renderer.setSize(scW, scH);
