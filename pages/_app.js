@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import { AnimatePresence } from "framer-motion";
+import Chakra from "../components/Chakra/chakra";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+if (typeof window !== "undefined") {
+  window.history.scrollRestoration = "manual";
 }
 
-export default MyApp
+function MyApp({ Component, pageProps, router }) {
+  return (
+    <Chakra cookies={pageProps.cookies}>
+      <Component {...pageProps} key={router.route} />
+    </Chakra>
+  );
+}
+
+export default MyApp;
