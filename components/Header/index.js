@@ -24,7 +24,13 @@ const Header = () => {
   };
   return (
     <React.Fragment>
-      <Box position="fixed" top="0" zIndex="10" minW="100%" px="20">
+      <Box
+        position="fixed"
+        top="0"
+        zIndex="10"
+        minW="100%"
+        px={{ base: 20, md: 20, lg: 20, sm: 5 }}
+      >
         <Flex
           backdropFilter="blur(4px)"
           border="none"
