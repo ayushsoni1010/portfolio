@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import VoxelDogLoader from "../DevDog/voxel-dog";
+import VoxelDogLoader from "../DevDog/blender-dog";
 import BaseLayout from "../../layouts/BaseLayout";
 import {
   Button,

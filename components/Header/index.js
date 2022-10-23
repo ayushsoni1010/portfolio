@@ -19,9 +19,9 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleToggle = () => {
-    console.log("changed");
     setOpen((prevState) => !prevState);
   };
+  
   return (
     <React.Fragment>
       <Box

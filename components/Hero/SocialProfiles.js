@@ -25,6 +25,7 @@ const SocialProfiles = (props) => {
                 aria-label={`Switch to ${item.name} mode`}
                 variant="solid"
                 colorScheme="gray"
+                boxShadow="inner"
                 // eslint-disable-next-line react-hooks/rules-of-hooks
                 color={useColorModeValue("black", "white")}
                 icon={item.icon}
