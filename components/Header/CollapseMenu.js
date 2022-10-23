@@ -15,7 +15,7 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
     <React.Fragment>
       <Collapse in={isOpen}>
         <Box
-          display={{ md: "none", sm: "flex" }}
+          display={{ md: "none", sm: "flex", xs: "flex" }}
           flexDir="column"
           m="5"
           p="5"
@@ -26,7 +26,7 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
           bg={useColorModeValue("teal.100", "gray.700")}
         >
           <Stack
-            display={{ md: "none", sm: "flex" }}
+            display={{ md: "none", sm: "flex", xs: "flex" }}
             flexDir="column"
             alignItems="start"
           >
@@ -45,7 +45,7 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
               </Button>
             ))}
           </Stack>
-          <ButtonGroup display={{ sm: "flex" }}>
+          <ButtonGroup display={{ sm: "flex", xs:"flex" }}>
             <Button
               as="a"
               target="_blank"
