@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../utils/model";
-import { DogSpinner, DogContainer } from "./voxel-dog";
+import { DogSpinner, DogContainer } from "./blender-dog";
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
@@ -23,6 +23,15 @@ const VoxelDog = () => {
     if (container && renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
+
+      if (window.matchMedia("screen and (max-width: 768px)").matches) {
+        scH = 400;
+        scW = 400;
+      }
+      if (window.matchMedia("screen and (max-width: 400px)").matches) {
+        scH = 300;
+        scW = 300;
+      }
 
       renderer.setSize(scW, scH);
     }

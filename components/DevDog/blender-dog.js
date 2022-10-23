@@ -16,12 +16,21 @@ export const DogSpinner = () => (
 export const DogContainer = forwardRef(({ children }, ref) => (
   <Box
     ref={ref}
-    className="voxel-dog"
+    className="blender-dog"
     m="auto"
-    mt={["-20px", "-60px", "-120px"]}
-    mb={["-40px", "-140px", "-200px"]}
-    w={{ base: [280, 480, 640], md: [280, 480, 640], sm: [280, 400, 600] }}
-    h={{ base: [280, 480, 640], md: [280, 480, 640], sm: [280, 500, 600] }}
+    mt={{ md: "-120px", lg: "-120px", sm: "0px", xs: "0px" }}
+    w={{
+      md: 600,
+      lg: 600,
+      sm: 400,
+      xs: 300,
+    }}
+    h={{
+      md: 640,
+      lg: 640,
+      sm: 400,
+      xs: 300,
+    }}
     position="relative"
   >
     {children}

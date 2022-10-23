@@ -19,9 +19,9 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleToggle = () => {
-    console.log("changed");
     setOpen((prevState) => !prevState);
   };
+  
   return (
     <React.Fragment>
       <Box
@@ -29,7 +29,8 @@ const Header = () => {
         top="0"
         zIndex="10"
         minW="100%"
-        px={{ base: 20, md: 20, lg: 20, sm: 5 }}
+        px={{ md: 20, lg: 20, sm: 5 }}
+        py={{ base: 0, md: 0, lg: 0, sm: 0, xs: 2 }}
       >
         <Flex
           backdropFilter="blur(4px)"
@@ -66,9 +67,15 @@ const Header = () => {
           >
             <ColorModeSwitcher
               justifySelf="flex-end"
-              display={{ base: "none", md: "inline-flex", sm: "inline-flex" }}
+              display={{
+                base: "none",
+                md: "inline-flex",
+                sm: "inline-flex",
+                xs: "inline-flex",
+              }}
+              _focus={{ boxShadow: "outline" }}
             />
-            <Box display={{ md: "none", lg: "none" }}>
+            <Box display={{ md: "none", lg: "none", sm: "flex", xs: "flex" }}>
               <IconButton
                 variant="outline"
                 icon={<FiMenu />}
@@ -79,7 +86,9 @@ const Header = () => {
                 _focus={{ boxShadow: "outline" }}
               />
             </Box>
-            <ButtonGroup display={{ base: "flex", md: "flex", sm: "none" }}>
+            <ButtonGroup
+              display={{ base: "flex", md: "flex", sm: "none", xs: "none" }}
+            >
               <Button
                 as="a"
                 target="_blank"

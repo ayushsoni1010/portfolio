@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import VoxelDogLoader from "../DevDog/voxel-dog";
+import VoxelDogLoader from "../DevDog/blender-dog";
 import BaseLayout from "../../layouts/BaseLayout";
 import {
   Button,
@@ -24,28 +24,43 @@ const Hero = () => {
   return (
     <React.Fragment>
       <BaseLayout>
-        <VStack m="auto" my="10" zIndex="100">
+        <VStack
+          m="auto"
+          my="10"
+          mt={{ base: 10, md: 10, lg: 10, sm: 10, xs: "4em" }}
+          zIndex="100"
+        >
           <Button
             borderRadius="full"
             borderColor="blue.600"
             h="30px"
-            fontSize="sm"
+            fontSize={{ base: "sm", sm: "sm", xs: "xs" }}
             borderWidth="2px"
           >
             Hello, I&apos;m a Full Stack Developer based in India
           </Button>
         </VStack>
         <Flex
-          flex={{ base: 1, md: 1, sm: 0 }}
+          // display={{ base: "flex", md: "flex", sm: "block", xs: "block" }}
+          flex={{ base: 1, md: 1, sm: 0, xs: 0 }}
           justify="space-between"
-          direction={{ base: "row", md: "row", sm: "column-reverse" }}
+          direction={{
+            base: "row",
+            md: "row",
+            sm: "column-reverse",
+            xs: "column-reverse",
+          }}
         >
           <Stack>
             <Heading
-              fontSize={{ md: "6xl", lg: "6xl", sm: "4xl" }}
+              fontSize={{ md: "6xl", lg: "6xl", sm: "4xl", xs: "3xl" }}
               fontWeight="extrabold"
             >
-              <Stack display="flex" gap="2" direction="row">
+              <Stack
+                display="flex"
+                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
+                direction="row"
+              >
                 <Text colorScheme="black">I&apos;m</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
@@ -54,7 +69,11 @@ const Hero = () => {
                   Ayush Soni,
                 </Text>
               </Stack>
-              <Stack display="flex" gap="2" direction="row">
+              <Stack
+                display="flex"
+                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
+                direction="row"
+              >
                 <Text colorScheme="black">full stack</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
@@ -63,7 +82,11 @@ const Hero = () => {
                   developer
                 </Text>
               </Stack>
-              <Stack display="flex" gap="2" direction="row">
+              <Stack
+                display="flex"
+                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
+                direction="row"
+              >
                 <Text colorScheme="black">and</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
