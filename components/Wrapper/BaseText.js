@@ -4,13 +4,29 @@ import React from "react";
 const BaseText = ({ firstTitle, secondTitle, textIcon }) => {
   return (
     <React.Fragment>
-      <Flex my={{ base: 0, md: 0, lg: 0, sm: 10, xs: 10 }}>
+      <Flex my={{ base: 0, md: 0, lg: 0, sm: 10, xs: 12 }}>
         <VStack align="start" position="relative">
-          <Text fontSize="7xl" fontWeight="900" zIndex="5">
+          <Text
+            fontSize={{
+              base: "7xl",
+              lg: "7xl",
+              md: "7xl",
+              sm: "6xl",
+              xs: "6xl",
+            }}
+            fontWeight="900"
+            zIndex="5"
+          >
             {firstTitle}
           </Text>
           <Text
-            fontSize="5xl"
+            fontSize={{
+              base: "5xl",
+              lg: "5xl",
+              md: "5xl",
+              sm: "4xl",
+              xs: "4xl",
+            }}
             fontWeight="900"
             color="teal.400"
             position="absolute"
@@ -19,7 +35,12 @@ const BaseText = ({ firstTitle, secondTitle, textIcon }) => {
             {secondTitle}
           </Text>
         </VStack>
-        <Image src={textIcon} alt="AboutMe" />
+        <Image
+          src={textIcon}
+          w={{ lg: 120, md: 120, sm: 100, xs: 100 }}
+          h={{ lg: 120, md: 120, sm: 100, xs: 100 }}
+          alt="AboutMe"
+        />
       </Flex>
     </React.Fragment>
   );

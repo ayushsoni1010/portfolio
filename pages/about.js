@@ -23,7 +23,7 @@ const About = () => {
         <BaseText
           firstTitle="About"
           secondTitle="Developer"
-          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/naughtdev_PROPgeLL5?ik-sdk-version=javascript-1.4.3&updatedAt=1666550607955"
+          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about_OAHDfHioo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958900"
         />
         <Grid
           display={{
