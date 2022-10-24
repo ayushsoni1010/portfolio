@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Seo from "../components/SEO";
+import Seo from "../components/Seo";
 
 export default function Home() {
   return (

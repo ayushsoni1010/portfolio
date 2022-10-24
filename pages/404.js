@@ -8,7 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import Seo from "../components/SEO";
+import Seo from "../components/Seo";
 
 const NotFound = () => {
   return (

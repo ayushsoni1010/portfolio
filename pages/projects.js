@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
-import Seo from "../components/SEO";
+import Seo from "../components/Seo";
 
 const Projects = () => {
   return (

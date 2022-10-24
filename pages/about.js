@@ -14,7 +14,7 @@ import Header from "../components/Header";
 import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
 import SocialProfiles from "../components/Hero/SocialProfiles";
-import Seo from "../components/SEO";
+import Seo from "../components/Seo";
 
 const About = () => {
   return (
