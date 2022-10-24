@@ -2,19 +2,18 @@ import {
   Box,
   Button,
   FormControl,
-  FormErrorMessage,
   FormLabel,
   Grid,
   GridItem,
   Image,
   Input,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import Header from "../components/Header";
 import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
+import Seo from "../components/Seo";
 
 const Contact = () => {
   const sendEmail = (e) => {
@@ -48,6 +47,7 @@ const Contact = () => {
 
   return (
     <React.Fragment>
+      <Seo title="Contact | Ayush Soni" />
       <Header />
       <BaseLayout>
         <BaseText

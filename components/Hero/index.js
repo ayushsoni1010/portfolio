@@ -10,9 +10,7 @@ import {
   Heading,
   Text,
   ButtonGroup,
-  IconButton,
 } from "@chakra-ui/react";
-import { connectionLinks } from "./__connectLinks";
 import SocialProfiles from "./SocialProfiles";
 
 const LazyVoxelDog = dynamic(() => import("../DevDog"), {
