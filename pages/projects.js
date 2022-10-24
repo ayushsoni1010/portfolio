@@ -11,7 +11,7 @@ const Projects = () => {
         <BaseText
           firstTitle="Projects"
           secondTitle="Softwares"
-          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about_Ok4v5_qG0V.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666550607854"
+          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/projects_pQ8GW-1HA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958820"
         />
       </BaseLayout>
     </React.Fragment>

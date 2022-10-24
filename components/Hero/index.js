@@ -58,7 +58,6 @@ const Hero = () => {
             >
               <Stack
                 display="flex"
-                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
                 direction="row"
               >
                 <Text colorScheme="black">I&apos;m</Text>
@@ -71,7 +70,6 @@ const Hero = () => {
               </Stack>
               <Stack
                 display="flex"
-                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
                 direction="row"
               >
                 <Text colorScheme="black">full stack</Text>
@@ -84,7 +82,6 @@ const Hero = () => {
               </Stack>
               <Stack
                 display="flex"
-                gap={{ base: 2, md: 2, lg: 2, sm: 2, xs: 0 }}
                 direction="row"
               >
                 <Text colorScheme="black">and</Text>
