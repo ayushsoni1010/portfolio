@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, BoxProps } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const BaseLayout = ({ children, ...props }) => {
   return (
