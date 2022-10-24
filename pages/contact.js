@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <Seo title="Contact" />
+      <Seo title="Contact | Ayush Soni" />
       <Header />
       <BaseLayout>
         <BaseText

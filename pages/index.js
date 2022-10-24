@@ -7,7 +7,7 @@ import Seo from "../components/SEO";
 export default function Home() {
   return (
     <React.Fragment>
-      <Seo title="Portfolio" />
+      <Seo title="Portfolio | Ayush Soni" />
       <Box>
         <Header />
         <Hero />

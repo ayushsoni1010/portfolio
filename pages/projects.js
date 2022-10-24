@@ -7,7 +7,7 @@ import Seo from "../components/SEO";
 const Projects = () => {
   return (
     <React.Fragment>
-      <Seo title="Projects" />
+      <Seo title="Projects | Ayush Soni" />
       <Header />
       <BaseLayout>
         <BaseText

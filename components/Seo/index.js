@@ -26,7 +26,7 @@ const Seo = ({ title, ...props }) => {
           property="og:image"
           content="https://ayushsoni1010.com/developer.png"
         />
-        <title>{title} | Ayush Soni</title>
+        <title>{title}</title>
       </Head>
     </React.Fragment>
   );
