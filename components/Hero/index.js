@@ -54,10 +54,7 @@ const Hero = () => {
               fontSize={{ md: "6xl", lg: "6xl", sm: "4xl", xs: "3xl" }}
               fontWeight="extrabold"
             >
-              <Stack
-                display="flex"
-                direction="row"
-              >
+              <Stack display="flex" direction="row">
                 <Text colorScheme="black">I&apos;m</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
@@ -66,10 +63,7 @@ const Hero = () => {
                   Ayush Soni,
                 </Text>
               </Stack>
-              <Stack
-                display="flex"
-                direction="row"
-              >
+              <Stack display="flex" direction="row">
                 <Text colorScheme="black">full stack</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
@@ -78,10 +72,7 @@ const Hero = () => {
                   developer
                 </Text>
               </Stack>
-              <Stack
-                display="flex"
-                direction="row"
-              >
+              <Stack display="flex" direction="row">
                 <Text colorScheme="black">and</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
@@ -120,7 +111,7 @@ const Hero = () => {
                 high quality.
               </span>{" "}
             </Text>
-            <ButtonGroup>
+            <ButtonGroup gap="1">
               <Button
                 as="a"
                 target="_blank"
