@@ -48,84 +48,90 @@ const Contact = () => {
   return (
     <React.Fragment>
       <Seo title="Contact | Ayush Soni" />
-      <Header />
-      <BaseLayout>
-        <BaseText
-          firstTitle="Contact"
-          secondTitle="Freelancer"
-          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact_ohepgZrZ9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958913"
-        />
-        <Grid
-          display={{
-            base: "grid",
-            md: "grid",
-            lg: "grid",
-            sm: "block",
-            xs: "block",
-          }}
-          templateColumns={{
-            md: "repeat(5, 1fr)",
-            lg: "repeat(5, 1fr)",
-          }}
-          gap={4}
-          my="5"
-        >
-          <GridItem colSpan={2}>
-            <Image
-              src="/contact.svg"
-              alt="Hero"
-              w="320px"
-              my="10"
-              borderRadius="10px"
+      <Box>
+        <header>
+          <Header />
+        </header>
+        <main>
+          <BaseLayout>
+            <BaseText
+              firstTitle="Contact"
+              secondTitle="Freelancer"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact_ohepgZrZ9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958913"
             />
-          </GridItem>
-          <GridItem
-            colStart={3}
-            colEnd={6}
-            mt={{ base: 0, md: 0, lg: 0, sm: 10, xs: 10 }}
-          >
-            <Box borderRadius="10px" pt="20" pb="20">
-              <form onSubmit={sendEmail}>
-                <VStack maxW="sm" mx="auto">
-                  <FormControl>
-                    <FormLabel htmlFor="Email">Name</FormLabel>
-                    <Input
-                      type="text"
-                      name="name"
-                      id="name"
-                      variant="filled"
-                      placeholder="Enter your name"
-                      required
-                    />
-                  </FormControl>
+            <Grid
+              display={{
+                base: "grid",
+                md: "grid",
+                lg: "grid",
+                sm: "block",
+                xs: "block",
+              }}
+              templateColumns={{
+                md: "repeat(5, 1fr)",
+                lg: "repeat(5, 1fr)",
+              }}
+              gap={4}
+              my="5"
+            >
+              <GridItem colSpan={2}>
+                <Image
+                  src="/contact.svg"
+                  alt="Hero"
+                  w="320px"
+                  my="10"
+                  borderRadius="10px"
+                />
+              </GridItem>
+              <GridItem
+                colStart={3}
+                colEnd={6}
+                mt={{ base: 0, md: 0, lg: 0, sm: 10, xs: 10 }}
+              >
+                <Box borderRadius="10px" pt="20" pb="20">
+                  <form onSubmit={sendEmail}>
+                    <VStack maxW="sm" mx="auto">
+                      <FormControl>
+                        <FormLabel htmlFor="Email">Name</FormLabel>
+                        <Input
+                          type="text"
+                          name="name"
+                          id="name"
+                          variant="filled"
+                          placeholder="Enter your name"
+                          required
+                        />
+                      </FormControl>
 
-                  <FormControl>
-                    <FormLabel htmlFor="Email">Email</FormLabel>
-                    <Input
-                      type="email"
-                      name="email"
-                      id="email"
-                      variant="filled"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </FormControl>
+                      <FormControl>
+                        <FormLabel htmlFor="Email">Email</FormLabel>
+                        <Input
+                          type="email"
+                          name="email"
+                          id="email"
+                          variant="filled"
+                          placeholder="Enter your email"
+                          required
+                        />
+                      </FormControl>
 
-                  <Button
-                    w="full"
-                    type="submit"
-                    variant="solid"
-                    colorScheme="teal"
-                    _focus={{ transform: "scale(1.02)" }}
-                  >
-                    Send
-                  </Button>
-                </VStack>
-              </form>
-            </Box>
-          </GridItem>
-        </Grid>
-      </BaseLayout>
+                      <Button
+                        w="full"
+                        type="submit"
+                        variant="solid"
+                        colorScheme="teal"
+                        _focus={{ transform: "scale(1.02)" }}
+                      >
+                        Send
+                      </Button>
+                    </VStack>
+                  </form>
+                </Box>
+              </GridItem>
+            </Grid>
+          </BaseLayout>
+        </main>
+      </Box>
     </React.Fragment>
   );
 };
