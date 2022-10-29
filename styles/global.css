@@ -1,0 +1,21 @@
+/***** Show custom scrollbar on screen *****/
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: unset;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--chakra-colors-teal-400);
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
