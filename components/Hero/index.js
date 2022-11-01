@@ -9,6 +9,7 @@ import {
   Stack,
   Heading,
   Text,
+  Link,
   ButtonGroup,
 } from "@chakra-ui/react";
 import SocialProfiles from "./SocialProfiles";
@@ -28,15 +29,22 @@ const Hero = () => {
           mt={{ base: 10, md: 10, lg: 10, sm: 10, xs: "4em" }}
           zIndex="100"
         >
-          <Button
-            borderRadius="full"
-            borderColor="blue.600"
-            h="30px"
-            fontSize={{ base: "sm", sm: "sm", xs: "xs" }}
-            borderWidth="2px"
+          <Link
+            href="https://github.com/ayushsoni1010"
+            textDecoration="none"
+            isExternal={true}
+            style={{ textDecoration: "none" }}
           >
-            Hello, I&apos;m a Full Stack Developer based in India
-          </Button>
+            <Button
+              borderRadius="full"
+              borderColor="blue.600"
+              h="30px"
+              fontSize={{ base: "sm", sm: "sm", xs: "xs" }}
+              borderWidth="2px"
+            >
+              Hello, I&apos;m a Full Stack Developer based in India
+            </Button>
+          </Link>
         </VStack>
         <Flex
           // display={{ base: "flex", md: "flex", sm: "block", xs: "block" }}
