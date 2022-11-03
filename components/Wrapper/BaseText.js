@@ -1,10 +1,10 @@
 import { Flex, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
-const BaseText = ({ firstTitle, secondTitle, textIcon }) => {
+const BaseText = ({ firstTitle, secondTitle, textIcon, ...props }) => {
   return (
     <React.Fragment>
-      <Flex my={{ base: 0, md: 0, lg: 0, sm: 10, xs: 12 }}>
+      <Flex my={{ base: 0, md: 0, lg: 0, sm: 10, xs: 12 }} {...props}>
         <VStack align="start" position="relative">
           <Text
             fontSize={{

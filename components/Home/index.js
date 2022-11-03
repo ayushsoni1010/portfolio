@@ -1,6 +1,7 @@
 import { Box, Grid, Heading, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import BaseLayout from "../Wrapper/BaseLayout";
+import Timeline from "./Timeline";
 import { productCardDetails } from "./__productCardDetails";
 
 const Home = () => {
@@ -138,6 +139,7 @@ const Home = () => {
           </Grid>
         </Box>
       </BaseLayout>
+      <Timeline />
     </React.Fragment>
   );
 };
