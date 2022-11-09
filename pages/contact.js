@@ -133,9 +133,7 @@ const Contact = () => {
           </BaseLayout>
         </main>
         <footer>
-          <BaseLayout>
             <Footer />
-          </BaseLayout>
         </footer>
       </Box>
     </React.Fragment>

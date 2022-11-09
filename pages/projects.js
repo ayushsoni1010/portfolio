@@ -24,9 +24,7 @@ const Projects = () => {
           </BaseLayout>
         </main>
         <footer>
-          <BaseLayout>
-            <Footer />
-          </BaseLayout>
+          <Footer />
         </footer>
       </Box>
     </React.Fragment>
