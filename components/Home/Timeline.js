@@ -102,7 +102,7 @@ const Timeline = () => {
                     borderRadius="full"
                     backgroundColor="black"
                     position="absolute"
-                    top="40%"
+                    top="22%"
                     right="-8.5px"
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   ></Text>
@@ -279,7 +279,7 @@ const Timeline = () => {
                     borderRadius="full"
                     backgroundColor="black"
                     position="absolute"
-                    top="40%"
+                    top="33%"
                     right="-8.5px"
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   />
