@@ -4,6 +4,7 @@ import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
 import Seo from "../components/Seo";
 import { Box } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 
 const Projects = () => {
   return (
@@ -22,6 +23,11 @@ const Projects = () => {
             />
           </BaseLayout>
         </main>
+        <footer>
+          <BaseLayout>
+            <Footer />
+          </BaseLayout>
+        </footer>
       </Box>
     </React.Fragment>
   );

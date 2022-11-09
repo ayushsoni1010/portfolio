@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Seo from "../components/Seo";
 import Home from "../components/Home";
+import Footer from "../components/Footer";
+import BaseLayout from "../components/Wrapper/BaseLayout";
 
 export default function Landing() {
   return (
@@ -17,7 +19,11 @@ export default function Landing() {
           <Hero />
           <Home />
         </main>
-        <footer></footer>
+        <footer>
+          <BaseLayout>
+            <Footer />
+          </BaseLayout>
+        </footer>
       </Box>
     </React.Fragment>
   );

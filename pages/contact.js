@@ -14,6 +14,7 @@ import Header from "../components/Header";
 import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
 import Seo from "../components/Seo";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const sendEmail = (e) => {
@@ -131,6 +132,11 @@ const Contact = () => {
             </Grid>
           </BaseLayout>
         </main>
+        <footer>
+          <BaseLayout>
+            <Footer />
+          </BaseLayout>
+        </footer>
       </Box>
     </React.Fragment>
   );

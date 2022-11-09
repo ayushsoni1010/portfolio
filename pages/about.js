@@ -16,6 +16,7 @@ import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
 import SocialProfiles from "../components/Hero/SocialProfiles";
 import Seo from "../components/Seo";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -132,7 +133,9 @@ const About = () => {
           </BaseLayout>
         </main>
         <footer>
-
+          <BaseLayout>
+            <Footer />
+          </BaseLayout>
         </footer>
       </Box>
     </React.Fragment>
