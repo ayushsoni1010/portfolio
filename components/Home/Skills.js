@@ -16,28 +16,26 @@ const Skills = () => {
           spacing="14"
         />
         <Box boxShadow="2xl" borderRadius="3xl" my="10">
-          <marquee loop truespeed="60" direction="left">
-            <Flex
-              gap={{ base: 16, lg: 16, md: 16, sm: 14, xs: 10 }}
-              wrap="wrap"
-              p={{ base: 10, lg: 10, md: 10, sm: 10, xs: 0 }}
-              my={{ base: 0, lg: 0, md: 0, sm: 4, xs: 10 }}
-              alignItems="center"
-              justify="center"
-            >
-              {skillDetails.map((item) => (
-                <Box key={item.key}>
-                  <Image
-                    width="70"
-                    height="70"
-                    src={item.iconURL}
-                    alt={item.name}
-                    aria-label={item.name}
-                  />
-                </Box>
-              ))}
-            </Flex>
-          </marquee>
+          <Flex
+            gap={{ base: 16, lg: 16, md: 16, sm: 14, xs: 10 }}
+            wrap="wrap"
+            p={{ base: 10, lg: 10, md: 10, sm: 10, xs: 0 }}
+            my={{ base: 0, lg: 0, md: 0, sm: 4, xs: 10 }}
+            alignItems="center"
+            justify="center"
+          >
+            {skillDetails.map((item) => (
+              <Box key={item.key}>
+                <Image
+                  width="70"
+                  height="70"
+                  src={item.iconURL}
+                  alt={item.name}
+                  aria-label={item.name}
+                />
+              </Box>
+            ))}
+          </Flex>
         </Box>
       </BaseLayout>
     </React.Fragment>
