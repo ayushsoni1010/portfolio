@@ -20,6 +20,8 @@ const Skills = () => {
             gap={{ base: 16, lg: 16, md: 16, sm: 14, xs: 10 }}
             wrap="wrap"
             p={{ base: 10, lg: 10, md: 10, sm: 10, xs: 0 }}
+            pt={{ base: 10, lg: 10, md: 10, sm: 10, xs: 10 }}
+            pb={{ base: 10, lg: 10, md: 10, sm: 10, xs: 10 }}
             my={{ base: 0, lg: 0, md: 0, sm: 4, xs: 10 }}
             alignItems="center"
             justify="center"
