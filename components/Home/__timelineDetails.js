@@ -1,6 +1,6 @@
 import { MdOutlineEmojiEvents } from "react-icons/md";
 import { MdEventAvailable } from "react-icons/md";
-import { CiViewTimeline } from "react-icons/ci";
+import { MdEvent } from "react-icons/md";
 import { VscSymbolEvent } from "react-icons/vsc";
 import { MdTimeline } from "react-icons/md";
 import { RiMapPinTimeLine } from "react-icons/ri";
@@ -121,7 +121,7 @@ const timelineDetails = [
     timeline_title: "AWS Community Day Rajasthan",
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
-    timeline_icon: <CiViewTimeline />,
+    timeline_icon: <MdEvent />,
     timeline_icon_align: "left",
     timeline_card_align: "right",
     timeline_place: "Jaipur",
