@@ -7,7 +7,10 @@ import { FaSass } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { FaFigma } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
+import { FaYarn } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
+import { AiOutlineAntDesign } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { SiGooglecloud } from "react-icons/si";
 import { SiNetlify } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
@@ -23,9 +26,14 @@ import { SiHeroku } from "react-icons/si";
 import { SiStorybook } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 import { SiGoland } from "react-icons/si";
+import { SiStrapi } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
+import { SiStyledcomponents } from "react-icons/si";
+import { SiChakraui } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiGit } from "react-icons/di";
+import { DiNpm } from "react-icons/di";
 
 const skillDetails = [
   {
@@ -154,17 +162,23 @@ const skillDetails = [
     icon: <SiNetlify />,
     iconURL: "/assets/netlify.svg",
   },
-  // {
-  //   name: "Vercel",
-  //   key: "vercel",
-  //   icon: <SiVercel />,
-  //   iconURL: "/assets/vercel.svg",
-  // },
+  {
+    name: "Vercel",
+    key: "vercel",
+    icon: <SiVercel />,
+    iconURL: "/assets/vercel.svg",
+  },
   {
     name: "Git",
     key: "git",
     icon: <DiGit />,
     iconURL: "/assets/git.svg",
+  },
+  {
+    name: "GitHub",
+    key: "gitHub",
+    icon: <AiFillGithub />,
+    iconURL: "/assets/github.svg",
   },
   {
     name: "AdobeXD",
@@ -195,6 +209,48 @@ const skillDetails = [
     key: "docker",
     icon: <FaDocker />,
     iconURL: "/assets/docker.svg",
+  },
+  {
+    name: "Strapi",
+    key: "strapi",
+    icon: <SiStrapi />,
+    iconURL: "/assets/strapi.svg",
+  },
+  {
+    name: "NPM",
+    key: "npm",
+    icon: <DiNpm />,
+    iconURL: "/assets/npm.svg",
+  },
+  {
+    name: "Yarn",
+    key: "yarn",
+    icon: <FaYarn />,
+    iconURL: "/assets/yarn.svg",
+  },
+  {
+    name: "Styled-Components",
+    key: "styled-components",
+    icon: <SiStyledcomponents />,
+    iconURL: "/assets/styled-components.svg",
+  },
+  {
+    name: "Chakra UI",
+    key: "chakra-ui",
+    icon: <SiChakraui />,
+    iconURL: "/assets/chakra-ui.svg",
+  },
+  {
+    name: "Ant-Design",
+    key: "ant-design",
+    icon: <AiOutlineAntDesign />,
+    iconURL: "/assets/ant-design.svg",
+  },
+  {
+    name: "Prisma",
+    key: "prisma",
+    icon: <SiPrisma />,
+    iconURL: "/assets/prisma.svg",
   },
 ];
 
