@@ -5,15 +5,34 @@ import { VscSymbolEvent } from "react-icons/vsc";
 import { MdTimeline } from "react-icons/md";
 import { RiMapPinTimeLine } from "react-icons/ri";
 import { MdEventNote } from "react-icons/md";
+import { SiHiveBlockchain } from "react-icons/si";
 
 const timelineDetails = [
+  {
+    timeline_title: "Developers India Tour",
+    timeline_description:
+      "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
+    timeline_icon: <SiHiveBlockchain />,
+    timeline_place: "Bhopal",
+    timeline_date: "18th November 2022",
+    timeline_day: "Friday",
+    timeline_hostedby: "Solana",
+    timeline_event_link: "https://solana.com/",
+    timeline_tags: [
+      "Solana",
+      "Blockchain",
+      "Tour",
+      "JavaScript",
+      "Solana Foundation",
+      "Community",
+    ],
+    timeline_card_color: "teal.400",
+  },
   {
     timeline_title: "#RoadToPolygonConnect Polygon Guild Jaipur",
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <MdEventNote />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Jaipur",
     timeline_date: "6th November 2022",
     timeline_day: "Sunday",
@@ -35,8 +54,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <MdTimeline />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Jaipur",
     timeline_date: "5th November 2022",
     timeline_day: "Saturday",
@@ -58,8 +75,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <RiMapPinTimeLine />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Indore",
     timeline_date: "30th October 2022",
     timeline_day: "Sunday",
@@ -81,8 +96,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <VscSymbolEvent />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Indore",
     timeline_date: "29th October 2022",
     timeline_day: "Saturday",
@@ -104,8 +117,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <MdEvent />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Indore",
     timeline_date: "14th October 2022",
     timeline_day: "Friday",
@@ -125,8 +136,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <MdEventAvailable />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Indore",
     timeline_date: "08th October 2022",
     timeline_day: "Saturday",
@@ -146,8 +155,6 @@ const timelineDetails = [
     timeline_description:
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <MdOutlineEmojiEvents />,
-    timeline_icon_align: "left",
-    timeline_card_align: "right",
     timeline_place: "Delhi",
     timeline_date: "24th September 2022",
     timeline_day: "Sunday",
