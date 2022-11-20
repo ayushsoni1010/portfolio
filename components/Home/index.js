@@ -33,7 +33,7 @@ const Home = () => {
           idea to a finished hiqh quality app, polished with fantastic design
           and running on state of the art software.
         </Text>
-        <Box align="center" my="10">
+        <Box align="center" my="20">
           <Grid
             display={{
               base: "grid",
@@ -43,8 +43,8 @@ const Home = () => {
               xs: "block",
             }}
             templateColumns="repeat(2,1fr)"
-            maxW="2xl"
-            gap="14"
+            maxW="3xl"
+            gap="20"
           >
             {productCardDetails.map(
               (item, index) =>
