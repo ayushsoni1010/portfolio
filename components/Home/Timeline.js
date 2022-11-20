@@ -2,12 +2,13 @@ import {
   Box,
   Divider,
   Grid,
-  useColorModeValue,
   Heading,
   IconButton,
   Text,
   Link,
   Flex,
+  Tag,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import BaseLayout from "../Wrapper/BaseLayout";
@@ -102,27 +103,48 @@ const Timeline = () => {
                     borderRadius="full"
                     backgroundColor="black"
                     position="absolute"
-                    top="22%"
+                    top="47%"
                     right="-8.5px"
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   ></Text>
                 </Box>
                 <Box
-                  boxShadow="base"
                   borderRadius="base"
                   p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                   pl={{ base: 14, lg: 14, md: 14, sm: 14, xs: 14 }}
                   position="relative"
-                  _hover={{ boxShadow: "xl" }}
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bgColor={useColorModeValue("white", "gray.700")}
+                  boxShadow="outline"
+                  transition={"ease-in-out"}
+                  transitionDuration="0.5s"
+                  _hover={{ boxShadow: "2xl" }}
                 >
                   <Heading fontSize="lg">{item.timeline_title}</Heading>
-                  <Text fontSize="md">{item.timeline_description}</Text>
+                  <Text fontSize="md" textAlign="left" mt="2">
+                    {item.timeline_description}
+                  </Text>
+                  <Flex
+                    wrap="wrap"
+                    direction="row"
+                    gap={2}
+                    mt="4"
+                    justify="left"
+                  >
+                    {item.timeline_tags.map((tag, i) => {
+                      return (
+                        <Tag key={i} size="lg">
+                          {tag.tag}
+                        </Tag>
+                      );
+                    })}
+                  </Flex>
                   <Box
                     position="absolute"
                     w={{ base: 14, lg: 14, md: 14, sm: 10, xs: 10 }}
                     h={{ base: 14, lg: 14, md: 14, sm: 10, xs: 10 }}
                     bgColor={item.timeline_card_color}
-                    top={{ base: "25%", lg: "25%", md: "25%", sm: 6, xs: 6 }}
+                    top={{ base: "12%", lg: "12%", md: "12%", sm: 6, xs: 6 }}
                     left={{ base: -7, lg: -7, md: -7, sm: 1, xs: 1 }}
                     borderRadius={{
                       base: "20px 0 20px 0",
@@ -131,10 +153,10 @@ const Timeline = () => {
                       sm: "15px 0 15px 0",
                       xs: "15px 0 15px 0",
                     }}
-                    boxShadow="outline"
+                    boxShadow="2xl"
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
-                    _hover={{ boxShadow: "2xl" }}
+                    _hover={{ boxShadow: "outline" }}
                     align="center"
                   >
                     <IconButton
@@ -176,7 +198,6 @@ const Timeline = () => {
                 gridAutoFlow={"dense"}
               >
                 <Box
-                  boxShadow="base"
                   borderRadius="base"
                   p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                   pr={{
@@ -188,8 +209,13 @@ const Timeline = () => {
                   }}
                   pl={{ base: "none", lg: "none", md: "none", sm: 14, xs: 14 }}
                   position="relative"
-                  _hover={{ boxShadow: "xl" }}
-                  my="10"
+                  my="20"
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bgColor={useColorModeValue("white", "gray.700")}
+                  boxShadow="outline"
+                  transition={"ease-in-out"}
+                  transitionDuration="0.5s"
+                  _hover={{ boxShadow: "2xl" }}
                 >
                   <Heading
                     fontSize="lg"
@@ -212,9 +238,31 @@ const Timeline = () => {
                       sm: "left",
                       xs: "left",
                     }}
+                    mt="2"
                   >
                     {item.timeline_description}
                   </Text>
+                  <Flex
+                    wrap="wrap"
+                    direction="row"
+                    gap={2}
+                    mt="4"
+                    justify={{
+                      base: "right",
+                      md: "right",
+                      lg: "right",
+                      sm: "left",
+                      xs: "left",
+                    }}
+                  >
+                    {item.timeline_tags.map((tag, i) => {
+                      return (
+                        <Tag key={i} size="lg">
+                          {tag.tag}
+                        </Tag>
+                      );
+                    })}
+                  </Flex>
                   <Box
                     display={{
                       base: "inherit",
@@ -227,7 +275,7 @@ const Timeline = () => {
                     w={{ base: 14, lg: 14, md: 14, sm: 10, xs: 10 }}
                     h={{ base: 14, lg: 14, md: 14, sm: 10, xs: 10 }}
                     bgColor={item.timeline_card_color}
-                    top={{ base: "25%", lg: "25%", md: "25%", sm: 6, xs: 6 }}
+                    top={{ base: "12%", lg: "12%", md: "12%", sm: 6, xs: 6 }}
                     right={{ base: -7, lg: -7, md: -7, sm: "none", xs: "none" }}
                     borderRadius={{
                       base: "20px 0 20px 0",
@@ -236,10 +284,10 @@ const Timeline = () => {
                       sm: "15px 0 15px 0",
                       xs: "15px 0 15px 0",
                     }}
-                    boxShadow="outline"
+                    boxShadow="2xl"
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
-                    _hover={{ boxShadow: "2xl" }}
+                    _hover={{ boxShadow: "outline" }}
                     align="center"
                   >
                     <IconButton
@@ -279,7 +327,7 @@ const Timeline = () => {
                     borderRadius="full"
                     backgroundColor="black"
                     position="absolute"
-                    top="33%"
+                    top="48%"
                     right="-8.5px"
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   />
@@ -379,15 +427,36 @@ const Timeline = () => {
                   </Box>
 
                   <Box
-                    boxShadow="base"
                     borderRadius="base"
                     p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                     pl={{ base: 14, lg: 14, md: 14, sm: 14, xs: 14 }}
                     position="relative"
-                    _hover={{ boxShadow: "xl" }}
+                    // eslint-disable-next-line react-hooks/rules-of-hooks
+                    bgColor={useColorModeValue("white", "gray.700")}
+                    boxShadow="outline"
+                    transition={"ease-in-out"}
+                    transitionDuration="0.5s"
+                    _hover={{ boxShadow: "2xl" }}
                   >
                     <Heading fontSize="lg">{item.timeline_title}</Heading>
-                    <Text fontSize="md">{item.timeline_description}</Text>
+                    <Text fontSize="md" textAlign="left">
+                      {item.timeline_description}
+                    </Text>
+                    <Flex
+                      wrap="wrap"
+                      direction="row"
+                      gap={2}
+                      mt="4"
+                      justify="left"
+                    >
+                      {item.timeline_tags.map((tag, i) => {
+                        return (
+                          <Tag key={i} size="md">
+                            {tag.tag}
+                          </Tag>
+                        );
+                      })}
+                    </Flex>
                     <Box
                       position="absolute"
                       w={{ base: 14, lg: 14, md: 14, sm: 10, xs: 10 }}
@@ -402,10 +471,10 @@ const Timeline = () => {
                         sm: "15px 0 15px 0",
                         xs: "15px 0 15px 0",
                       }}
-                      boxShadow="outline"
+                      boxShadow="2xl"
                       transition={"ease-in-out"}
                       transitionDuration="0.5s"
-                      _hover={{ boxShadow: "2xl" }}
+                      _hover={{ boxShadow: "outline" }}
                       align="center"
                     >
                       <IconButton
