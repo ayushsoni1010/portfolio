@@ -33,7 +33,7 @@ const Home = () => {
           idea to a finished hiqh quality app, polished with fantastic design
           and running on state of the art software.
         </Text>
-        <Box align="center" my="20">
+        <Box align="center" my={{ base: 20, lg: 20, md: 20, sm: 14, xs: 14 }}>
           <Grid
             display={{
               base: "grid",
@@ -62,6 +62,11 @@ const Home = () => {
                       align="center"
                       bg={item?.bgColor}
                       mb="2"
+                      boxShadow="2xl"
+                      transition={"ease-in-out"}
+                      transitionDuration="0.5s"
+                      _hover={{ boxShadow: "outline" }}
+                      cursor="pointer"
                     >
                       <Icon mt="5" w="5" h="5">
                         {item?.svgIcon}
@@ -99,7 +104,7 @@ const Home = () => {
           I provide you the following perks for your product development
           process, and more.
         </Text>
-        <Box align="center" my="10">
+        <Box align="center" my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}>
           <Grid
             display={{
               base: "grid",
@@ -109,8 +114,8 @@ const Home = () => {
               xs: "block",
             }}
             templateColumns="repeat(2,1fr)"
-            gap="14"
-            maxW="2xl"
+            gap="20"
+            maxW="3xl"
           >
             {productCardDetails.map(
               (item, index) =>
@@ -128,6 +133,11 @@ const Home = () => {
                       align="center"
                       bg={item.bgColor}
                       mb="2"
+                      boxShadow="2xl"
+                      transition={"ease-in-out"}
+                      transitionDuration="0.5s"
+                      _hover={{ boxShadow: "outline" }}
+                      cursor="pointer"
                     >
                       <Icon mt="5" w="5" h="5">
                         {item?.svgIcon}

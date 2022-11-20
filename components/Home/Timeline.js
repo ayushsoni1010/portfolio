@@ -8,6 +8,7 @@ import {
   Link,
   Flex,
   Tag,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import BaseLayout from "../Wrapper/BaseLayout";
@@ -108,12 +109,16 @@ const Timeline = () => {
                   ></Text>
                 </Box>
                 <Box
-                  boxShadow="base"
                   borderRadius="base"
                   p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                   pl={{ base: 14, lg: 14, md: 14, sm: 14, xs: 14 }}
                   position="relative"
-                  _hover={{ boxShadow: "xl" }}
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bgColor={useColorModeValue("white", "gray.700")}
+                  boxShadow="outline"
+                  transition={"ease-in-out"}
+                  transitionDuration="0.5s"
+                  _hover={{ boxShadow: "2xl" }}
                 >
                   <Heading fontSize="lg">{item.timeline_title}</Heading>
                   <Text fontSize="md" textAlign="left" mt="2">
@@ -148,10 +153,10 @@ const Timeline = () => {
                       sm: "15px 0 15px 0",
                       xs: "15px 0 15px 0",
                     }}
-                    boxShadow="outline"
+                    boxShadow="2xl"
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
-                    _hover={{ boxShadow: "2xl" }}
+                    _hover={{ boxShadow: "outline" }}
                     align="center"
                   >
                     <IconButton
@@ -193,7 +198,6 @@ const Timeline = () => {
                 gridAutoFlow={"dense"}
               >
                 <Box
-                  boxShadow="base"
                   borderRadius="base"
                   p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                   pr={{
@@ -205,8 +209,13 @@ const Timeline = () => {
                   }}
                   pl={{ base: "none", lg: "none", md: "none", sm: 14, xs: 14 }}
                   position="relative"
-                  _hover={{ boxShadow: "xl" }}
                   my="20"
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bgColor={useColorModeValue("white", "gray.700")}
+                  boxShadow="outline"
+                  transition={"ease-in-out"}
+                  transitionDuration="0.5s"
+                  _hover={{ boxShadow: "2xl" }}
                 >
                   <Heading
                     fontSize="lg"
@@ -275,10 +284,10 @@ const Timeline = () => {
                       sm: "15px 0 15px 0",
                       xs: "15px 0 15px 0",
                     }}
-                    boxShadow="outline"
+                    boxShadow="2xl"
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
-                    _hover={{ boxShadow: "2xl" }}
+                    _hover={{ boxShadow: "outline" }}
                     align="center"
                   >
                     <IconButton
@@ -418,12 +427,16 @@ const Timeline = () => {
                   </Box>
 
                   <Box
-                    boxShadow="base"
                     borderRadius="base"
                     p={{ base: 5, lg: 5, md: 5, sm: 4, xs: 4 }}
                     pl={{ base: 14, lg: 14, md: 14, sm: 14, xs: 14 }}
                     position="relative"
-                    _hover={{ boxShadow: "xl" }}
+                    // eslint-disable-next-line react-hooks/rules-of-hooks
+                    bgColor={useColorModeValue("white", "gray.700")}
+                    boxShadow="outline"
+                    transition={"ease-in-out"}
+                    transitionDuration="0.5s"
+                    _hover={{ boxShadow: "2xl" }}
                   >
                     <Heading fontSize="lg">{item.timeline_title}</Heading>
                     <Text fontSize="md" textAlign="left">
@@ -458,10 +471,10 @@ const Timeline = () => {
                         sm: "15px 0 15px 0",
                         xs: "15px 0 15px 0",
                       }}
-                      boxShadow="outline"
+                      boxShadow="2xl"
                       transition={"ease-in-out"}
                       transitionDuration="0.5s"
-                      _hover={{ boxShadow: "2xl" }}
+                      _hover={{ boxShadow: "outline" }}
                       align="center"
                     >
                       <IconButton
