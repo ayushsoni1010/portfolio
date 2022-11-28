@@ -58,7 +58,8 @@ const Contact = () => {
             <BaseText
               firstTitle="Contact"
               secondTitle="Freelancer"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669660940053"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact?ik-sdk-version=javascript-1.4.3&updatedAt=1669666339518"
+              leftSpacing="4"
             />
             <Grid
               display={{

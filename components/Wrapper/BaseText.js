@@ -5,7 +5,8 @@ const BaseText = ({
   firstTitle,
   secondTitle,
   textIcon,
-  spacing = 0,
+  leftSpacing = 0,
+  topSpacing = 0,
   ...props
 }) => {
   return (
@@ -43,11 +44,12 @@ const BaseText = ({
         </VStack>
         <Image
           src={textIcon}
-          w={{ lg: 120, md: 120, sm: 100, xs: 100 }}
-          h={{ lg: 120, md: 120, sm: 100, xs: 100 }}
+          w="100"
+          h="100"
           alt="AboutMe"
           position="relative"
-          left={spacing}
+          left={leftSpacing}
+          top={2 + topSpacing}
         />
       </Flex>
     </React.Fragment>

@@ -19,7 +19,7 @@ const Projects = () => {
             <BaseText
               firstTitle="Projects"
               secondTitle="Softwares"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/projects.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669660994031"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/projects?ik-sdk-version=javascript-1.4.3&updatedAt=1669666353424"
             />
           </BaseLayout>
         </main>

@@ -31,7 +31,9 @@ const About = () => {
             <BaseText
               firstTitle="About"
               secondTitle="Developer"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669660980287"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about?ik-sdk-version=javascript-1.4.3&updatedAt=1669666323627"
+              leftSpacing="4"
+              topSpacing="2"
             />
             <Grid
               display={{

@@ -108,7 +108,6 @@ const timelineDetails = [
       { tag: "Lightning Web Components" },
       { tag: "Event" },
       { tag: "Cloud Computing" },
-      { tag: "Developer Group" },
     ],
     timeline_card_color: "teal.400",
   },
