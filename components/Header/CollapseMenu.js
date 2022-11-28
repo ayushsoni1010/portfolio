@@ -19,16 +19,17 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
           flexDir="column"
           m="5"
           p="5"
+          backdropFilter="blur(4px)"
           borderRadius="md"
-          minH="50vh"
+          minH="lg"
           justifyContent="space-between"
-          alignItems="start"
+          alignItems="center"
           bg={useColorModeValue("teal.100", "gray.700")}
         >
           <Stack
             display={{ md: "none", sm: "flex", xs: "flex" }}
             flexDir="column"
-            alignItems="start"
+            w="full"
           >
             {linkDetails.map((item, index) => (
               <Button
