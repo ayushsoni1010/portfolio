@@ -19,16 +19,17 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
           flexDir="column"
           m="5"
           p="5"
+          backdropFilter="blur(4px)"
           borderRadius="md"
-          minH="50vh"
+          minH="lg"
           justifyContent="space-between"
-          alignItems="start"
+          alignItems="center"
           bg={useColorModeValue("teal.100", "gray.700")}
         >
           <Stack
             display={{ md: "none", sm: "flex", xs: "flex" }}
             flexDir="column"
-            alignItems="start"
+            w="full"
           >
             {linkDetails.map((item, index) => (
               <Button
@@ -45,11 +46,11 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
               </Button>
             ))}
           </Stack>
-          <ButtonGroup display={{ sm: "flex", xs:"flex" }}>
+          <ButtonGroup display={{ sm: "flex", xs: "flex" }}>
             <Button
               as="a"
               target="_blank"
-              href="https://drive.google.com/file/d/1sFBFE3quWw07F45CJJr5672j4zb-wF9J/view?usp=sharing"
+              href="https://drive.google.com/file/d/1cqjeOIraTcUvdCAirbveVmQU7AjP11RQ/view?usp=share_link"
               border="2px"
               variant="outline"
               size="sm"
