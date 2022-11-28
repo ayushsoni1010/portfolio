@@ -22,7 +22,7 @@ const Timeline = () => {
         <BaseText
           firstTitle="Featured"
           secondTitle="Timeline"
-          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/featured-timeline_mfh--P4f5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667325001664"
+          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/timeline.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669661038504"
         />
         <Box
           my="20"

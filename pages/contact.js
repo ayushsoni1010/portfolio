@@ -58,7 +58,7 @@ const Contact = () => {
             <BaseText
               firstTitle="Contact"
               secondTitle="Freelancer"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact_ohepgZrZ9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958913"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669660940053"
             />
             <Grid
               display={{
@@ -133,7 +133,7 @@ const Contact = () => {
           </BaseLayout>
         </main>
         <footer>
-            <Footer />
+          <Footer />
         </footer>
       </Box>
     </React.Fragment>
