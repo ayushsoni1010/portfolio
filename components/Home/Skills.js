@@ -12,8 +12,8 @@ const Skills = () => {
         <BaseText
           firstTitle="Skills"
           secondTitle="Languages"
-          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/featured-timeline_mfh--P4f5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667325001664"
-          spacing="14"
+          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/skills?ik-sdk-version=javascript-1.4.3&updatedAt=1669666366824"
+          leftSpacing="16"
         />
         <Box boxShadow="2xl" borderRadius="3xl" my="10" bgColor="white">
           <Flex

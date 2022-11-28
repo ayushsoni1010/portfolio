@@ -31,7 +31,9 @@ const About = () => {
             <BaseText
               firstTitle="About"
               secondTitle="Developer"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about_OAHDfHioo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666637958900"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about?ik-sdk-version=javascript-1.4.3&updatedAt=1669666323627"
+              leftSpacing="4"
+              topSpacing="2"
             />
             <Grid
               display={{
@@ -98,7 +100,7 @@ const About = () => {
                   contributed to open-source communities.
                 </Text>
                 <HStack
-                  mt="5"
+                  mt={{ base: 5, lg: 5, md: 5, sm: 10, xs: 10 }}
                   p="3"
                   w="fit-content"
                   borderRadius="10px"
@@ -117,7 +119,18 @@ const About = () => {
                     backend development.
                   </Text>
                 </HStack>
-                <VStack align="start" mt="10" spacing={3}>
+                <VStack
+                  display={{
+                    base: "flex",
+                    lg: "flex",
+                    md: "flex",
+                    sm: "none",
+                    xs: "none",
+                  }}
+                  align="start"
+                  mt="10"
+                  spacing={3}
+                >
                   <Button
                     border="2px"
                     variant="outline"
