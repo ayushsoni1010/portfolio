@@ -21,7 +21,8 @@ const Blog = () => {
             <BaseText
               firstTitle="Blogs"
               secondTitle="Content"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/682ec067-feb6-4dc2-938c-62ffa975eb39_eap6J1QJZ.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1669664202898"
+              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/blogs?ik-sdk-version=javascript-1.4.3&updatedAt=1669666499904"
+              topSpacing="2"
             />
           </BaseLayout>
         </main>
