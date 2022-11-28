@@ -45,11 +45,11 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
               </Button>
             ))}
           </Stack>
-          <ButtonGroup display={{ sm: "flex", xs:"flex" }}>
+          <ButtonGroup display={{ sm: "flex", xs: "flex" }}>
             <Button
               as="a"
               target="_blank"
-              href="https://drive.google.com/file/d/1sFBFE3quWw07F45CJJr5672j4zb-wF9J/view?usp=sharing"
+              href="https://drive.google.com/file/d/1cqjeOIraTcUvdCAirbveVmQU7AjP11RQ/view?usp=share_link"
               border="2px"
               variant="outline"
               size="sm"
