@@ -1,14 +1,25 @@
-import React from "React";
+import React from "react";
 import fs from "fs";
 import path from "path";
+import { remark } from "remark";
+import html from "remark-html";
 import matter from "gray-matter";
-import { Box } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  Tag,
+  Flex,
+  Divider,
+} from "@chakra-ui/react";
 import Seo from "../../components/Seo";
 import Header from "../../components/Header";
 import BaseLayout from "../../components/Wrapper/BaseLayout";
 import BaseText from "../../components/Wrapper/BaseText";
+import Footer from "../../components/Footer";
 
-const BlogPage = ({ frontmatter, slug, content }) => {
+const BlogPage = (blogsData) => {
   return (
     <React.Fragment>
       <Box>
@@ -27,8 +38,47 @@ const BlogPage = ({ frontmatter, slug, content }) => {
             textIcon="https://ik.imagekit.io/ayushsoni1010/Website/blogs?ik-sdk-version=javascript-1.4.3&updatedAt=1669666499904"
             topSpacing="2"
           />
+          <Box>
+            <Box>
+              <Box align="center">
+                <Image src={blogsData.cover_image} alt={blogsData.slug} />
+              </Box>
+              <Heading
+                fontSize={{
+                  base: "5xl",
+                  lg: "5xl",
+                  md: "5xl",
+                  sm: "3xl",
+                  xs: "3xl",
+                }}
+                fontWeight="800"
+                my="2"
+              >
+                {blogsData.title}
+              </Heading>
+              <Flex gap="3" my="3" flexWrap="wrap">
+                {blogsData.tags.split(", ").map((item, index) => {
+                  return (
+                    <Tag key={index} cursor="pointer">
+                      {item}
+                    </Tag>
+                  );
+                })}
+              </Flex>
+              <Text>{blogsData.date}</Text>
+            </Box>
+            <Divider my="4" />
+            <Box my="4">
+              <div
+                dangerouslySetInnerHTML={{ __html: blogsData.contentHtml }}
+              />
+            </Box>
+          </Box>
         </BaseLayout>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </React.Fragment>
   );
 };
@@ -41,7 +91,7 @@ export async function getStaticPaths() {
       slug: filename.replace(".md", ""),
     },
   }));
-  console.log(paths);
+
   return {
     paths,
     fallback: false,
@@ -49,15 +99,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  console.log(slug);
   const markdown = fs.readFileSync(path.join("posts", slug + ".md"), "utf-8");
 
-  const { data: frontmatter, content } = matter(markdown);
+  const matterResult = matter(markdown);
+
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
   return {
     props: {
-      frontmatter,
+      ...matterResult.data,
       slug,
-      content,
+      contentHtml,
     },
   };
 }
