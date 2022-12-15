@@ -23,7 +23,7 @@ const BlogPage = (blogsData) => {
   return (
     <React.Fragment>
       <Box>
-        <Seo />
+        <Seo title="Blogs | Ayush Soni" />
       </Box>
       <Box>
         <header>
