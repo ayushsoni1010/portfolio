@@ -1,4 +1,6 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
 import { Box } from "@chakra-ui/react";
 import Seo from "../../components/Seo";
 import Header from "../../components/Header";
@@ -10,7 +12,7 @@ const Blog = () => {
   return (
     <React.Fragment>
       <Box>
-        <Seo title="About | Ayush Soni" />
+        <Seo title="Blogs | Ayush Soni" />
         <Box>
           <header>
             <Header />
@@ -33,5 +35,22 @@ const Blog = () => {
     </React.Fragment>
   );
 };
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("posts"));
+
+  const blogs = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+
+    const markdown = fs.readFileSync(path.join("posts", filename), "utf-8");
+    return { slug, markdown };
+  });
+
+  return {
+    props: {
+      posts: blogs,
+    },
+  };
+}
 
 export default Blog;
