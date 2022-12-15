@@ -1,0 +1,76 @@
+---
+title: "Lets Grow with LetsGrowMore"
+date: "September 23, 2021"
+excerpt: "This is a excerpt"
+cover_image: "/images/blog.webp"
+---
+
+> **Let's Grow with LetsGrowMore**
+
+Learning Web Development is never been an easy task for me until I get some real hands-on experience. It all started in June 2021, I was exploring an open-source program on google, and I was also using LinkedIn for finding such technically experienced people. Suddenly, a post comes into my feed and that was about LetsGrowMore. And, then I was come to know that day LetsGrowMore is not just providing open-source enthusiasts a platform to showcase their skills in a different field but also provides an opportunity to undergraduates to work together with them as an intern in various fields.
+
+I grabbed the opportunity with both hands and applied and thus opening the gateway to the Open Source world!
+
+So, Now let's talk about What community is this and how they help beginner to boost their skills. For beginners, I would first like to clear some things. Here we go 🚀
+
+### **🤔What is Open Source?**
+
+I think you might’ve studied about this. There are generally two types of software that programmers code closed source software, and open-source software. open-source software is the one for which the source code is made freely available and may be redistributed and modified. This is done to accept bugs, issues, and other features from around the world helping the open-source software community. So next time when you’re on a website like Github, working on a project (repository), and contributing your code to it, consider yourself to be a lucky person because you’re now an open-source contributor, Open source has become a movement and a way of working that reaches beyond software production. The open-source movement uses the values and decentralized production model of open-source software to find new ways to solve problems in their communities and industries.
+
+### **🚀What is LetsGrowMore?**
+
+LetsGrowMore is a ground-based organization that aims at building the future through nourishing the present. LetsGrowMore believes in making our youth, especially the students self-aware and exploring the untouched world of technology and tremendous growth-making fields and our belief finally took us where we are standing today. Today LetsGrowMore is an officially MSME-registered start-up with nearly 100+ people working under the same establishment.
+
+Well, this is not what LetsGrowMore aims for, their plans are much higher and they are working for it. Soon they are coming up with new projects which target future building.
+
+### **🎯What are the main missions of LetsGrowMore?**
+
+1. **Help Everyone To Grow :**
+   Learning is a never-ending process! To make sure everyone will learn new things in the right way LetsGrowMore provides a healthy community where everyone can share.
+2. **Provide Learning Opportunity :**
+
+   At LetsGrowMore they aim to provide as many opportunities as possible.
+
+   For now, they are offering many free opportunities such as :
+
+   - [LGMVIP](https://letsgrowmore.in/vip)
+   - [LGMSoC'21](https://letsgrowmore.in/soc)
+   - [LGMWEP(For Girls-Only)](https://forms.gle/vi5YgBREv5LQ6CMw9)
+   - [Web Development](https://letsgrowmore.in/vip/)
+   - [Tech Intern](https://letsgrowmore.in/vip/)
+   - [Campus Ambassador](https://docs.google.com/forms/d/1kfEcNyxKit0Ib8xV5sU4c4KI2fY9JcK8DvYklfQuOz0/viewform?edit_requested=true)
+   - [Social Media Marketing](https://docs.google.com/forms/d/1ZnAdbukXaTVj_S0sgn6PfJh1UwKlpX4tuD87mdRhO_8/viewform?edit_requested=true)
+   - [Content Writing Intern](https://docs.google.com/forms/d/12VyIWPh3bmE8SfkhOy7JrYWZjclzCOP_Gp4Tn4zFVZo/viewform?edit_requested=true)
+   - [Graphic Designer](https://docs.google.com/forms/d/e/1FAIpQLSdXeL_soItd5fFZQByZeQyaceYPbEJoSf5Hx2W9XmAo0_m_sg/viewform?usp=sf_link)
+
+3. **Build a better tomorrow**
+
+   By investing in students, they not only provide students a platform, but they also focus on how students get all the in free of cost.
+
+4. **Knowledge grows by sharing**
+
+   Creating an educational open-source community will help beginners to build a solid network with more experienced individuals and under their guidance, they can pave their path in the field of development.
+
+### **🛡How this community helps you?**
+
+1. They enhance your understanding and appreciation of diversity.
+2. They provide various services within the community
+3. They allow members to gain personal and professional skills in the area of leadership and development.
+4. You can also grow within the community to become a mentor in the organization.
+5. They support and encourage students to explore their multiple identities.
+6. They provide convenient, up-to-date services to meet the current needs of the community.
+7. They provide leisure learning and continuing education courses for the campus and community.
+
+### **🧾What I have learned from this program?**
+
+Although I have learned many things but will emphasize some important points here. Having a huge team is a fantastic experience for me, more than 500+ contributors are working on several projects, which invokes teamwork within us which is a very important soft skill a student much have I'm also an introvert before joining this awesome community but after joining I learned many things like how to express my views with others, solving problems, helping new programmers, managing projects. Apart from the art of taking help from others, the art of helping others is also a silent feature of this program.
+
+`Please forgive me if I have done any grammatical errors in this article as I’m yet to improve my English.`
+
+```
+📢 “If everyone is moving forward together, then success takes care of itself.”
+
+- Henry Ford
+```
+
+Good luck to everyone who’s about to decide between contributing to this amazing and open world of coders🙌
