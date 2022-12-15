@@ -1,0 +1,99 @@
+---
+title: "How to deploy the Headless CMS Strapi app on Heroku"
+date: "December 20, 2021"
+excerpt: "Get started with the Strapi headless CMS"
+cover_image: "/images/strapi.png"
+href: "/blogs/how-to-deploy-the-headless-cms-strapi-app-on-heroku"
+tags: "Open Source, Headless CMS, Strapi, Node.js, Heroku, PostgreSQL, Community"
+---
+
+## **🚀Getting started with the Strapi**
+
+It is often confusing, how to deploy your strapi app by using cloud providers but we could not deploy it using static site hosting platforms such as **[Vercel](http://vercel.com), [Netlify](http://netlify.com), [Github Pages](https://www.notion.so/How-to-deploy-the-Headless-CMS-Strapi-app-on-Heroku-7f40b8f2d8414f3f81e8a0caccf9c1f1),** etc. because strapi runs an HTTP server based on Koa, a backend javascript framework. However, these are not that trivial for someone who is not into DevOps. I will walk you through how to install your Strapi instance on Heroku. In this article, I will demystify it through examples and code blocks.
+
+&nbsp;
+&nbsp;
+
+## **🤩Introduction to Strapi**
+
+Strapi is one of the best and leading open-source headless CMS based on Node.js and is used in designing API’s and managing content. It’s 100% JavaScript and fully customizable. Strapi helps us scaffold our backend and provide admin tools to create an API both Restful and GraphQL quickly and consume the API’s from the client side.
+
+Strapi contains both a server and a database. The server hosts the API’s and the database is used to store the applicant’s content. Strapi uses the Koa.js backend javascript framework to run the server.
+
+&nbsp;
+&nbsp;
+
+In strapi, the API’s are created using the Strapi admin panel in which respective content-type maps and access by its endpoint.
+
+- GET
+- POST
+- PUT
+- DELETE
+
+&nbsp;
+&nbsp;
+
+## **🫣Introduction to Heroku**
+
+Heroku is a container-based cloud platform as a service (PaaS) that enables developers to run, build and operate applications entirely on the cloud and supports several programming languages like Java, Nodejs, PHP, Go, Python, Clojure, Ruby, and Scala. Heroku is part of the Salesforce platform and it is so easy to use that’s a top choice for many deployment projects. Heroku is managed on containers called dynos within the Heroku paradigm system.
+
+&nbsp;
+&nbsp;
+
+## **✍️Prerequisites**
+
+To get started, we need to have the following in place:
+
+- You should have a GitHub account
+- You should have a Heroku account
+- Open any code editor for your repository
+- Git installed on your machine
+- Node.js v16+ installed
+- Strapi installed locally
+
+&nbsp;
+&nbsp;
+
+## **🎯Goal**
+
+In this guide, we are going to:
+
+- Create a new GitHub repository
+- Create a new Strapi proejct
+- Configure the Heroku CLI login with your GitHub repository
+- Connect the Postgres add-on database with your Strapi project provided by Heroku
+- Configure PostgreSQL for the production environment
+
+&nbsp;
+&nbsp;
+
+## **📝Installing Strapi locally**
+
+To install Strapi locally, run this command in your GitHub repository.
+
+&nbsp;
+
+💡 npx create-strapi-app@latest my-project --quickstart
+
+💡 yarn create strapi-app my-project --quickstart
+
+&nbsp;
+
+When the dependencies are installed and the local setup completes, it will create a project my-project, then you should be redirected to admin access [**http://localhost:1337/admin**](http://localhost:1337/admin) register an admin user using the form which opens in the browser.
+
+&nbsp;
+
+If you’re redirecting for the first time then you’re redirecting to [**http://localhost:1337/admin/auth/register-admin**](http://localhost:1337/admin/auth/register-admin). This is because we have no super admin yet in the database. By default, Strapi uses SQLite as a file-based database.
+
+&nbsp;
+
+When you are registered successfully, you’re the super admin of your app. You can invite other folks through email to get access to the super admin, author, and editor roles.
+
+> Available commands in your project:
+
+- yarn develop (Start Strapi in watch mode)
+
+&nbsp;
+&nbsp;
+
+**🛠️Under Construction**
