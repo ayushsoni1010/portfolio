@@ -1,6 +1,6 @@
 ---
 title: "How to deploy the Headless CMS Strapi app on Heroku"
-date: "December 20, 2021"
+date: "December 15, 2021"
 excerpt: "Get started with the Strapi headless CMS"
 cover_image: "/images/strapi.png"
 href: "/blogs/how-to-deploy-the-headless-cms-strapi-app-on-heroku"
