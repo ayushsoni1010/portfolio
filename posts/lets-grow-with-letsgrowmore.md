@@ -97,10 +97,9 @@ Please forgive me if I have done any grammatical errors in this article as I’m
 &nbsp;
 &nbsp;
 
-```
 📢 “If everyone is moving forward together, then success takes care of itself.”
-- Henry Ford
-```
+
+&nbsp;&nbsp;- Henry Ford
 
 &nbsp;
 
