@@ -14,7 +14,7 @@ const timelineDetails = [
       "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
     timeline_icon: <RiMapPinTimeLine />,
     timeline_place: "Indore",
-    timeline_date: "03rd - 04th December 2022",
+    timeline_date: "04th December 2022",
     timeline_day: "Sunday",
     timeline_hostedby: "Google Developer Groups",
     timeline_event_link: "https://devfest.gdgindore.in/",

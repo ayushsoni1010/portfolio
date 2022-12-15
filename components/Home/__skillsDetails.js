@@ -31,6 +31,7 @@ import { SiTypescript } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
 import { SiChakraui } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiGit } from "react-icons/di";
 import { DiNpm } from "react-icons/di";
@@ -169,16 +170,16 @@ const skillDetails = [
     iconURL: "/assets/vercel.svg",
   },
   {
+    name: "GitHub",
+    key: "gitHub",
+    icon: <SiFirebase />,
+    iconURL: "/assets/firebase.svg",
+  },
+  {
     name: "Git",
     key: "git",
     icon: <DiGit />,
     iconURL: "/assets/git.svg",
-  },
-  {
-    name: "GitHub",
-    key: "gitHub",
-    icon: <AiFillGithub />,
-    iconURL: "/assets/github.svg",
   },
   {
     name: "AdobeXD",
