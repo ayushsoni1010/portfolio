@@ -40,8 +40,33 @@ const BlogPage = (blogsData) => {
           />
           <Box>
             <Box>
-              <Box align="center">
-                <Image src={blogsData.cover_image} alt={blogsData.slug} />
+              <Box
+                align="center"
+                my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}
+                bgColor="gray.300"
+                p="10"
+                borderRadius="base"
+              >
+                <Image
+                  src={blogsData.cover_image}
+                  alt={blogsData.slug}
+                  w="700px"
+                  borderRadius={{
+                    base: "2xl",
+                    lg: "2xl",
+                    md: "2xl",
+                    sm: "xl",
+                    xs: "xl",
+                  }}
+                  transition="ease-in-out"
+                  transitionDuration="0.5s"
+                  _hover={{
+                    transform: "scale(1.15)",
+                    cursor: "pointer",
+                    transition: "ease-in-out",
+                    transitionDuration: "0.3s",
+                  }}
+                />
               </Box>
               <Heading
                 fontSize={{
@@ -56,10 +81,26 @@ const BlogPage = (blogsData) => {
               >
                 {blogsData.title}
               </Heading>
-              <Flex gap="3" my="3" flexWrap="wrap">
+              <Flex gap="3" my="4" flexWrap="wrap">
                 {blogsData.tags.split(", ").map((item, index) => {
                   return (
-                    <Tag key={index} cursor="pointer">
+                    <Tag
+                      key={index}
+                      cursor="pointer"
+                      size={{
+                        base: "lg",
+                        lg: "lg",
+                        md: "lg",
+                        sm: "md",
+                        xs: "sm",
+                      }}
+                      _active={{
+                        boxShadow: "outline",
+                        cursor: "pointer",
+                        transition: "ease-in-out",
+                        transitionDuration: "0.2s",
+                      }}
+                    >
                       {item}
                     </Tag>
                   );
