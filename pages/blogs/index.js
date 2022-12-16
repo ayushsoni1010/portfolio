@@ -44,12 +44,12 @@ const Blog = (blogsData) => {
               flexWrap="wrap"
               alignItems="start"
               rowGap="20"
+              gap="10"
             >
               {blogsData.frontmatter.map((item, index) => {
                 return (
                   <Box
                     key={index}
-                    bgColor="gray.100"
                     borderRadius="base"
                     w="400px"
                     h={{
@@ -60,8 +60,7 @@ const Blog = (blogsData) => {
                       xs: "480px",
                     }}
                     overflow="hidden"
-                    // eslint-disable-next-line react/jsx-no-duplicate-props
-                    bgColor={useColorModeValue("white", "gray.700")}
+                    bgColor={useColorModeValue("gray.50", "gray.700")}
                     boxShadow="outline"
                     transition="ease-in-out"
                     transitionDuration="0.5s"
@@ -72,6 +71,7 @@ const Blog = (blogsData) => {
                         src={item.cover_image}
                         alt={item.title}
                         h="250px"
+                        w="full"
                         borderRadius="base"
                         transition="ease-in-out"
                         transitionDuration="0.5s"
