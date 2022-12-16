@@ -23,7 +23,6 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
           borderRadius="md"
           minH="lg"
           justifyContent="space-between"
-          alignItems="center"
           bg={useColorModeValue("teal.100", "gray.700")}
         >
           <Stack
