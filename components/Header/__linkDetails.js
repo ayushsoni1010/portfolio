@@ -12,6 +12,10 @@ export const linkDetails = [
     link: "/blogs",
   },
   {
+    name: "Tweets",
+    link: "/tweets",
+  },
+  {
     name: "Projects",
     link: "/projects",
   },
