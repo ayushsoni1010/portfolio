@@ -117,12 +117,6 @@ const skillDetails = [
     iconURL: "/assets/express-js.svg",
   },
   {
-    name: "Chart.js",
-    key: "chart",
-    icon: <SiChartdotjs />,
-    iconURL: "/assets/chartjs.svg",
-  },
-  {
     name: "TailwindCSS",
     key: "tailwind",
     icon: <SiTailwindcss />,
@@ -181,6 +175,12 @@ const skillDetails = [
     key: "vercel",
     icon: <SiVercel />,
     iconURL: "/assets/vercel.svg",
+  },
+  {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiChartdotjs />,
+    iconURL: "/assets/chartjs.svg",
   },
   {
     name: "GitHub",
