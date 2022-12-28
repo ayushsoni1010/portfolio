@@ -30,9 +30,10 @@ import { SiStrapi } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
 import { SiChakraui } from "react-icons/si";
-import { SiPrisma } from "react-icons/si";
+import { SiPostcss } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNuxt } from "react-icons/tb";
 import { DiGit } from "react-icons/di";
 import { DiNpm } from "react-icons/di";
 
@@ -86,16 +87,22 @@ const skillDetails = [
     iconURL: "/assets/next-js.svg",
   },
   {
+    name: "Redux",
+    key: "redux",
+    icon: <SiRedux />,
+    iconURL: "/assets/redux.svg",
+  },
+  {
     name: "Vue.js",
     key: "vue",
     icon: <FaVuejs />,
     iconURL: "/assets/vue-js.svg",
   },
   {
-    name: "Redux",
-    key: "redux",
-    icon: <SiRedux />,
-    iconURL: "/assets/redux.svg",
+    name: "Nuxt.js",
+    key: "nuxt",
+    icon: <TbBrandNuxt />,
+    iconURL: "/assets/nuxt-js.svg",
   },
   {
     name: "Node.js",
@@ -110,12 +117,6 @@ const skillDetails = [
     iconURL: "/assets/express-js.svg",
   },
   {
-    name: "Chart.js",
-    key: "chart",
-    icon: <SiChartdotjs />,
-    iconURL: "/assets/chartjs.svg",
-  },
-  {
     name: "TailwindCSS",
     key: "tailwind",
     icon: <SiTailwindcss />,
@@ -126,6 +127,12 @@ const skillDetails = [
     key: "sass",
     icon: <FaSass />,
     iconURL: "/assets/sass.svg",
+  },
+  {
+    name: "Post CSS",
+    key: "postcss",
+    icon: <SiPostcss />,
+    iconURL: "/assets/postcss.svg",
   },
   {
     name: "MongoDB",
@@ -168,6 +175,12 @@ const skillDetails = [
     key: "vercel",
     icon: <SiVercel />,
     iconURL: "/assets/vercel.svg",
+  },
+  {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiChartdotjs />,
+    iconURL: "/assets/chartjs.svg",
   },
   {
     name: "GitHub",
@@ -229,12 +242,12 @@ const skillDetails = [
     icon: <FaYarn />,
     iconURL: "/assets/yarn.svg",
   },
-  {
-    name: "Styled-Components",
-    key: "styled-components",
-    icon: <SiStyledcomponents />,
-    iconURL: "/assets/styled-components.svg",
-  },
+  // {
+  //   name: "Styled-Components",
+  //   key: "styled-components",
+  //   icon: <SiStyledcomponents />,
+  //   iconURL: "/assets/styled-components.svg",
+  // },
   {
     name: "Chakra UI",
     key: "chakra-ui",
@@ -246,12 +259,6 @@ const skillDetails = [
     key: "ant-design",
     icon: <AiOutlineAntDesign />,
     iconURL: "/assets/ant-design.svg",
-  },
-  {
-    name: "Prisma",
-    key: "prisma",
-    icon: <SiPrisma />,
-    iconURL: "/assets/prisma.svg",
   },
 ];
 
