@@ -146,7 +146,6 @@ const timelineDetails = [
     timeline_tags: [
       { tag: "Salesforce" },
       { tag: "Trailblazer" },
-      { tag: "Community" },
       { tag: "Lightning Web Components" },
       { tag: "Event" },
       { tag: "Cloud Computing" },
@@ -208,7 +207,8 @@ const timelineDetails = [
       { tag: "HackCon" },
       { tag: "Conference" },
       { tag: "Community" },
-      { tag: "GitHub Education" },
+      { tag: "GitHub" },
+      { tag: "Education" },
       { tag: "MLH Fellowship" },
     ],
     timeline_card_color: "cyan.400",
