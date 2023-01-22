@@ -6,8 +6,32 @@ import { MdTimeline } from "react-icons/md";
 import { RiMapPinTimeLine } from "react-icons/ri";
 import { MdEventNote } from "react-icons/md";
 import { SiHiveBlockchain } from "react-icons/si";
+import { IoIosRocket } from "react-icons/io";
 
 const timelineDetails = [
+  {
+    timeline_title: "Experiential Learning, OmniStudio and Test Automation",
+    timeline_description:
+      "magni iste quibusdam, minima autem odio facere delectus obcaecati cum nisi! Voluptas quibusdam cupiditate laborum.",
+    timeline_icon: <IoIosRocket />,
+    timeline_place: "Indore",
+    timeline_date: "21st January 2023",
+    timeline_day: "Saturday",
+    timeline_hostedby: "Salesforce",
+    timeline_event_link: "https://www.salesforce.com/in/",
+    timeline_tags: [
+      { tag: "Salesforce" },
+      { tag: "Trailblazer" },
+      { tag: "Community" },
+      { tag: "Lightning Web Components" },
+      { tag: "OmniStudio" },
+      { tag: "Testing" },
+      { tag: "Automation" },
+      { tag: "Apex" },
+      { tag: "Flex Cards" },
+    ],
+    timeline_card_color: "purple.400",
+  },
   {
     timeline_title: "DevFest 2022",
     timeline_description:
