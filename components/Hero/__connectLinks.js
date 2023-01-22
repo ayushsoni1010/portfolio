@@ -13,7 +13,7 @@ export const connectionLinks = [
   },
   {
     name: "Twitter",
-    link: "https://github.com/ayushsoni1010",
+    link: "https://twitter.com/ayushsoni1010",
     icon: <FaTwitter />,
   },
   {
