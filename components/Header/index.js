@@ -32,7 +32,7 @@ const Header = () => {
         px={{ md: 20, lg: 20, sm: 5 }}
       >
         <Flex
-          backdropFilter="blur(4px)"
+          backdropFilter="blur(7px)"
           border="none"
           minH="60px"
           py={{ base: 3, md: 3, lg: 3, sm: 3, xs: 4 }}
