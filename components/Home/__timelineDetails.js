@@ -6,9 +6,31 @@ import { MdTimeline } from "react-icons/md";
 import { RiMapPinTimeLine } from "react-icons/ri";
 import { MdEventNote } from "react-icons/md";
 import { SiHiveBlockchain } from "react-icons/si";
+import { SiChainlink } from "react-icons/si";
 import { IoIosRocket } from "react-icons/io";
 
 const timelineDetails = [
+  {
+    timeline_title: "Developer's Brunch - Indore",
+    timeline_description:
+      "I deep down into various chains and learned about the BNB chain. Surrounded by the web3 people at the meetup, I connected and had great networking with many folks out there. It was an amazing web3 event and got cool swags.",
+    timeline_icon: <SiChainlink />,
+    timeline_place: "Indore",
+    timeline_date: "28th January 2023",
+    timeline_day: "Saturday",
+    timeline_hostedby: "Build N Build",
+    timeline_event_link: "https://www.bnbchain.org/en",
+    timeline_tags: [
+      { tag: "BNB Chain" },
+      { tag: "Web3" },
+      { tag: "Crypto" },
+      { tag: "Community" },
+      { tag: "Blockchain" },
+      { tag: "Chains" },
+      { tag: "dApps" },
+    ],
+    timeline_card_color: "cyan.400",
+  },
   {
     timeline_title: "Experiential Learning, OmniStudio and Test Automation",
     timeline_description:
