@@ -11,6 +11,29 @@ import { IoIosRocket } from "react-icons/io";
 
 const timelineDetails = [
   {
+    timeline_title: "Hack This Fall 3.0",
+    timeline_description:
+      "Hack This Fall 3.0 was the first in-person hackathon attended in Gujarat, Gandhinagar organized by Hack This Fall and Major League Hacking community. I met with fellow hackers, organizers, and other amazing like-minded folks. It was a 36hours long hackathon and my team HEKORS won the prize for the Most Creative Use of Twilio and enjoyed all the amazing activities",
+    timeline_icon: <MdOutlineEmojiEvents />,
+    timeline_place: "Gandhinagar",
+    timeline_date: "3rd - 5th February 2023",
+    timeline_day: "Friday - Sunday",
+    timeline_hostedby: "Hack This Fall",
+    timeline_event_link: "https://hackthisfall.tech/",
+    timeline_tags: [
+      { tag: "MLH" },
+      { tag: "Hackathon" },
+      { tag: "HTF 3.0" },
+      { tag: "Community" },
+      { tag: "GitHub" },
+      { tag: "Web3" },
+      { tag: "AR/VR" },
+      { tag: "Cloud" },
+      { tag: "Blockchain" },
+    ],
+    timeline_card_color: "orange.400",
+  },
+  {
     timeline_title: "Developer's Brunch - Indore",
     timeline_description:
       "I deep down into various chains and learned about the BNB chain. Surrounded by the web3 people at the meetup, I connected and had great networking with many folks out there. It was an amazing web3 event and got cool swags.",
@@ -58,7 +81,7 @@ const timelineDetails = [
       "It was an amazing experience meeting with the experts and other speakers at DevFest Indore 2022 hosted by Google Developer Groups Indore. I met with many folks at the event and mentored the same. I learned about various things related to flutter, game, and android development.",
     timeline_icon: <RiMapPinTimeLine />,
     timeline_place: "Indore",
-    timeline_date: "04th December 2022",
+    timeline_date: "03rd - 04th December 2022",
     timeline_day: "Sunday",
     timeline_hostedby: "Google Developer Groups",
     timeline_event_link: "https://devfest.gdgindore.in/",
