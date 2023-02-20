@@ -47,6 +47,8 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const { name, email, message } = data;
+
     if (!data.name) {
       setError({
         ...error,
@@ -72,6 +74,13 @@ const Contact = () => {
     }
 
     if (helpers.validEmail && name && email && message) {
+      setError({
+        isError: false,
+        errorNameMessage: "",
+        errorEmailMessage: "",
+        errorMessage: "",
+      });
+
       emailjs
         .sendForm(serviceId, templateId, form.current, publicApiKey)
         .then((res) => {
