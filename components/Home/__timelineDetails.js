@@ -11,6 +11,29 @@ import { IoIosRocket } from "react-icons/io";
 
 const timelineDetails = [
   {
+    timeline_title: "Bhopal FOSS",
+    timeline_description:
+      "Met with fellow developers and engaged in the panel discussions. Learned about Keploy services and got to know about Stage which is basically a OTT app and different mobile/desktop compabilities while building cross platforms apps using Flutter.",
+    timeline_icon: <MdEventAvailable />,
+    timeline_place: "Bhopal",
+    timeline_date: "5th March 2023",
+    timeline_day: "Sunday",
+    timeline_hostedby: "FOSS - Free and Open-Source Software",
+    timeline_event_link: "https://github.com/foss-dev",
+    timeline_tags: [
+      { tag: "FOSS" },
+      { tag: "Conference" },
+      { tag: "Flutter" },
+      { tag: "Community" },
+      { tag: "GitHub" },
+      { tag: "E2E Testing" },
+      { tag: "Cloud" },
+      { tag: "JavaScript" },
+      { tag: "Apache" },
+    ],
+    timeline_card_color: "teal.400",
+  },
+  {
     timeline_title: "Hack This Fall 3.0",
     timeline_description:
       "Hack This Fall 3.0 was the first in-person hackathon attended in Gujarat, Gandhinagar organized by Hack This Fall and Major League Hacking community. I met with fellow hackers, organizers, and other amazing like-minded folks. It was a 36hours long hackathon and my team HEKORS won the prize for the Most Creative Use of Twilio and enjoyed all the amazing activities",

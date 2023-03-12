@@ -11,9 +11,10 @@ const Skills = () => {
       <BaseLayout>
         <BaseText
           firstTitle="Skills"
-          secondTitle="Languages"
+          secondTitle="Programming"
           textIcon="https://ik.imagekit.io/ayushsoni1010/Website/skills?ik-sdk-version=javascript-1.4.3&updatedAt=1669666366824"
-          leftSpacing="16"
+          leftSpacing={20}
+          topSpacing={-4}
         />
         <Box boxShadow="2xl" borderRadius="3xl" my="10" bgColor="white">
           <Flex
