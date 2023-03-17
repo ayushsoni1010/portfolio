@@ -8,7 +8,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { linkDetails } from "./__linkDetails";
-import NextLink from "next/link";
 
 const CollapseMenu = ({ isOpen, setOpen }) => {
   return (
@@ -49,7 +48,7 @@ const CollapseMenu = ({ isOpen, setOpen }) => {
             <Button
               as="a"
               target="_blank"
-              href="https://drive.google.com/file/d/1CBhfTJt-qqFycPL1jmLkgIC0EYvrx7J1/view?usp=share_link"
+              href="/resume"
               border="2px"
               variant="outline"
               size="sm"

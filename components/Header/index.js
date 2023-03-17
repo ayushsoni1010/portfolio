@@ -4,7 +4,6 @@ import ColorModeSwitcher from "../../utils/ThemeToggleButton";
 import {
   Box,
   Flex,
-  Link,
   Stack,
   Button,
   ButtonGroup,
@@ -91,7 +90,7 @@ const Header = () => {
               <Button
                 as="a"
                 target="_blank"
-                href="https://drive.google.com/file/d/1CBhfTJt-qqFycPL1jmLkgIC0EYvrx7J1/view?usp=share_link"
+                href="/resume"
                 border="2px"
                 variant="outline"
                 size="md"
