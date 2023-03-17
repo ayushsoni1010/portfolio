@@ -26,29 +26,6 @@ jobs:
           name: Resume PDF
           path: public/resume/resume.pdf
 
-      # - name: Get Time
-      #   id: time
-      #   uses: nanzm/get-time-action@v1.1
-      #   with:
-      #     timeZone: -7
-      #     format: "YYYY-MM-DD"
-      # - name: Create Release
-      #   id: create_release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     name: Resume compiled on ${{ steps.time.outputs.time }}
-      #     tag_name: ${{ steps.time.outputs.time }}
-      # - name: Upload Release Asset
-      #   id: upload-release-asset
-      #   uses: actions/upload-release-asset@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-      #     asset_path: ./resume.pdf
-      #     asset_name: "resume.pdf"
-      #     asset_content_type: application/pdf
-
       - name: Install ghostscript
         run: sudo apt-get update --fix-missing && sudo apt install ghostscript
       - name: Change ImageMagick security policy
@@ -76,16 +53,36 @@ jobs:
         run: |
           cp resume.pdf public/resume/
           cp resume.png public/resume/
-          rm -rf resume.pdf
-          rm -rf resume.png
+
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@v1.1
+        with:
+          timeZone: -7
+          format: "YYYY-MM-DD"
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Resume compiled on ${{ steps.time.outputs.time }}
+          tag_name: ${{ steps.time.outputs.time }}
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./resume.pdf
+          asset_name: resume.pdf
+          asset_content_type: application/pdf
 
       - name: Commit PNG
         id: commit
         run: |
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
-          git add 
-          git add 
+          git add public/resume
           git commit -m "[bot] updated png and pdf"
 
       - name: Push changes
