@@ -1,6 +1,6 @@
 ---
 title: "Hacking at MLH HackCon"
-date: "December 17, 2021"
+date: "December 17, 2022"
 excerpt: "A beautiful journey to HackCon India"
 cover_image: "/images/hackcon.png"
 href: "/blogs/hacking-at-mlh-hackcon"
