@@ -78,20 +78,27 @@ const BlogPage = ({ data, slug, contentHtml }) => {
                   }}
                 />
               </Box>
-              <Heading
-                fontSize={{
-                  base: "5xl",
-                  lg: "5xl",
-                  md: "5xl",
-                  sm: "3xl",
-                  xs: "3xl",
-                }}
-                fontWeight="800"
-                my="2"
+              <Box px={{ base: 32, lg: 32, md: 0, sm: 0, xs: 0 }}>
+                <Heading
+                  fontSize={{
+                    base: "5xl",
+                    lg: "5xl",
+                    md: "5xl",
+                    sm: "3xl",
+                    xs: "3xl",
+                  }}
+                  fontWeight="800"
+                  my="2"
+                >
+                  {data.title}
+                </Heading>
+              </Box>
+              <Flex
+                gap="3"
+                my="4"
+                flexWrap="wrap"
+                px={{ base: 32, lg: 32, md: 0, sm: 0, xs: 0 }}
               >
-                {data.title}
-              </Heading>
-              <Flex gap="3" my="4" flexWrap="wrap">
                 {data.tags.split(", ").map((item, index) => {
                   return (
                     <Tag
@@ -116,10 +123,12 @@ const BlogPage = ({ data, slug, contentHtml }) => {
                   );
                 })}
               </Flex>
-              <Text>{data.date}</Text>
+              <Text px={{ base: 32, lg: 32, md: 0, sm: 0, xs: 0 }}>
+                {data.date}
+              </Text>
             </Box>
             <Divider my="4" />
-            <Box my="4">
+            <Box my="4" px={{ base: 32, lg: 32, md: 0, sm: 0, xs: 0 }}>
               <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </Box>
           </Box>
