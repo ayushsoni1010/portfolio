@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ayushsoni1010.com
+
+# Sitemaps
+Sitemap: https://ayushsoni1010.com/sitemap.xml
