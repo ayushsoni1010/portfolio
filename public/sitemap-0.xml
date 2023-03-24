@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://ayushsoni1010.com</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/about</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/contact</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/projects</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/resume</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/tweets</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs/api-architectural-style</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs/hacking-at-mlh-hackcon</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs/how-to-deploy-the-headless-cms-strapi-app-on-heroku</loc><lastmod>2023-03-24T22:17:07.368Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs/lets-grow-with-letsgrowmore</loc><lastmod>2023-03-24T22:17:07.369Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://ayushsoni1010.com/blogs/mvc-architecture-patterns</loc><lastmod>2023-03-24T22:17:07.369Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
