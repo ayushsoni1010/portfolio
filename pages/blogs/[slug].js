@@ -19,11 +19,21 @@ import BaseLayout from "../../components/Wrapper/BaseLayout";
 import BaseText from "../../components/Wrapper/BaseText";
 import Footer from "../../components/Footer";
 
-const BlogPage = (blogsData) => {
+const BlogPage = ({ data, slug, contentHtml }) => {
+  const blogDate = new Date(data.date);
+  const published_date = blogDate.toISOString().substring(0, 10);
+
   return (
     <React.Fragment>
       <Box>
-        <Seo title="Blogs | Ayush Soni" />
+        <Seo
+          title={data.title}
+          description={data.excerpt}
+          OGImage={`https://ayushsoni1010.com${data.cover_image}`}
+          OGType="article"
+          canonicalUrl={`https://ayushsoni1010.com${data.href}`}
+          publishedDate={published_date}
+        />
       </Box>
       <Box>
         <header>
@@ -48,8 +58,8 @@ const BlogPage = (blogsData) => {
                 borderRadius="base"
               >
                 <Image
-                  src={blogsData.cover_image}
-                  alt={blogsData.slug}
+                  src={data.cover_image}
+                  alt={slug}
                   w="700px"
                   borderRadius={{
                     base: "2xl",
@@ -79,10 +89,10 @@ const BlogPage = (blogsData) => {
                 fontWeight="800"
                 my="2"
               >
-                {blogsData.title}
+                {data.title}
               </Heading>
               <Flex gap="3" my="4" flexWrap="wrap">
-                {blogsData.tags.split(", ").map((item, index) => {
+                {data.tags.split(", ").map((item, index) => {
                   return (
                     <Tag
                       key={index}
@@ -106,13 +116,11 @@ const BlogPage = (blogsData) => {
                   );
                 })}
               </Flex>
-              <Text>{blogsData.date}</Text>
+              <Text>{data.date}</Text>
             </Box>
             <Divider my="4" />
             <Box my="4">
-              <div
-                dangerouslySetInnerHTML={{ __html: blogsData.contentHtml }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </Box>
           </Box>
         </BaseLayout>
@@ -151,7 +159,7 @@ export async function getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      ...matterResult.data,
+      data: matterResult.data,
       slug,
       contentHtml,
     },

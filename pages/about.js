@@ -21,7 +21,7 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <React.Fragment>
-      <Seo title="About | Ayush Soni" />
+      <Seo title="About" />
       <Box>
         <header>
           <Header />

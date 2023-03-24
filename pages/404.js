@@ -13,7 +13,7 @@ import Seo from "../components/Seo";
 const NotFound = () => {
   return (
     <React.Fragment>
-      <Seo title="Not Found | Ayush Soni" />
+      <Seo title="Not Found" />
       <Container m="auto" mt="20">
         <Heading as="h1">Not found</Heading>
         <Text>The page you&apos;re looking for was not found.</Text>

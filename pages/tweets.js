@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 const Projects = () => {
   return (
     <React.Fragment>
-      <Seo title="Tweets | Ayush Soni" />
+      <Seo title="Tweets" />
       <Box>
         <header>
           <Header />
