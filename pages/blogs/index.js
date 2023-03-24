@@ -24,7 +24,7 @@ const Blog = (blogsData) => {
   return (
     <React.Fragment>
       <Box>
-        <Seo title="Blogs | Ayush Soni" />
+        <Seo title="Blogs" />
         <Box>
           <header>
             <Header />
