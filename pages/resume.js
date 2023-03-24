@@ -4,7 +4,7 @@ import Seo from "../components/Seo";
 const Resume = () => {
   return (
     <Fragment>
-      <Seo title="Resume | Ayush Soni" />
+      <Seo title="Resume" />
       <div style={{ height: "100vh" }}>
         <iframe
           src="https://ayushsoni1010.com/resume/resume.pdf"

@@ -125,7 +125,7 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <Seo title="Contact | Ayush Soni" />
+      <Seo title="Contact" />
       <Box>
         <header>
           <Header />
