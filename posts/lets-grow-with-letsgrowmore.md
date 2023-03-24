@@ -2,7 +2,7 @@
 title: "Lets Grow with LetsGrowMore"
 date: "September 23, 2021"
 excerpt: "A constructive blog on open source contribution program and other opportunities"
-cover_image: "/images/blog.webp"
+cover_image: "/images/letsgrowmore.webp"
 href: "/blogs/lets-grow-with-letsgrowmore"
 tags: "Open Source, LetsGrowMore, Community, Open Source Program, LGMSOC'21"
 ---
