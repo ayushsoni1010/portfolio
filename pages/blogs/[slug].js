@@ -19,6 +19,9 @@ import BaseLayout from "../../components/Wrapper/BaseLayout";
 import BaseText from "../../components/Wrapper/BaseText";
 import Footer from "../../components/Footer";
 
+import ReactMarkdown from "react-markdown";
+import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+
 const BlogPage = ({ data, slug, contentHtml }) => {
   const blogDate = new Date(data.date);
   const published_date = blogDate.toISOString().substring(0, 10);
@@ -129,7 +132,12 @@ const BlogPage = ({ data, slug, contentHtml }) => {
             </Box>
             <Divider my="4" />
             <Box my="4" px={{ base: 32, lg: 32, md: 0, sm: 0, xs: 0 }}>
-              <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+              <ReactMarkdown
+                components={ChakraUIRenderer()}
+                // eslint-disable-next-line react/no-children-prop
+                children={contentHtml}
+                skipHtml
+              />
             </Box>
           </Box>
         </BaseLayout>
@@ -142,11 +150,11 @@ const BlogPage = ({ data, slug, contentHtml }) => {
 };
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join("data", "blogs"));
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace(".mdx", ""),
     },
   }));
 
@@ -157,20 +165,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const markdown = fs.readFileSync(path.join("posts", slug + ".md"), "utf-8");
+  const markdown = fs.readFileSync(
+    path.join("data", "blogs", slug + ".mdx"),
+    "utf-8"
+  );
 
   const matterResult = matter(markdown);
-
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
 
   return {
     props: {
       data: matterResult.data,
       slug,
-      contentHtml,
+      contentHtml: matterResult.content,
     },
   };
 }

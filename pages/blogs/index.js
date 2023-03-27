@@ -109,7 +109,7 @@ const Blog = (blogsData) => {
 };
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join("data", "blogs"));
 
   let slug = [];
   let markdown = [];
@@ -118,13 +118,16 @@ export async function getStaticProps() {
   let frontmatter = [];
 
   files.map((filename) => {
-    slug.push({ name: filename.replace(".md", "") });
-    markdown.push(fs.readFileSync(path.join("posts", filename), "utf-8"));
+    slug.push({ name: filename.replace(".mdx", "") });
+    markdown.push(
+      fs.readFileSync(path.join("data", "blogs", filename), "utf-8")
+    );
   });
 
   markdown.map(async (item, index) => {
     matterResult.push(matter(item));
     frontmatter.push(matterResult[index].data);
+
     const processedContent = await remark()
       .use(html)
       .process(matterResult[index].content);
