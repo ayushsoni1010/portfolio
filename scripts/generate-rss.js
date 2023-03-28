@@ -36,5 +36,5 @@ exports.generate = async () => {
     })
   );
 
-  await fs.writeFile("./public/feed.xml", feed.xml({ indent: true }));
+  await fs.writeFile("./public/rss.xml", feed.xml({ indent: true }));
 };
