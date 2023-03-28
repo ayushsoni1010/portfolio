@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "postbuild": "npm run sitemap && npm run rss:feed",
     "sitemap": "next-sitemap --config next-sitemap.config.js",
-    "rss:feed": "node scripts/generate-rss.js"
+    "rss:feed": "run-func scripts/generate-rss.js generate"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.6",
@@ -27,6 +28,7 @@
     "react-toastify": "^9.1.1",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
+    "run-func": "^3.0.0",
     "three": "^0.145.0"
   },
   "devDependencies": {

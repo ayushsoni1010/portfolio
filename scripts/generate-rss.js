@@ -3,7 +3,7 @@ const path = require("path");
 const RSS = require("rss");
 const matter = require("gray-matter");
 
-const generate = async () => {
+exports.generate = async () => {
   const feed = new RSS({
     title: "Ayush Soni",
     description: "Hey! I am Ayush, a full-stack developer from India",
@@ -36,7 +36,5 @@ const generate = async () => {
     })
   );
 
-  await fs.writeFile("../public/feed.xml", feed.xml({ indent: true }));
+  await fs.writeFile("./public/feed.xml", feed.xml({ indent: true }));
 };
-
-generate();

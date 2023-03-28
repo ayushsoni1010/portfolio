@@ -3531,6 +3531,11 @@ rss@^1.2.2:
     mime-types "2.1.13"
     xml "1.0.1"
 
+run-func@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/run-func/-/run-func-3.0.0.tgz"
+  integrity sha512-RZwVzBrD7biV5CiAgwEUdaRGt0hLjBrhn4PqemBuNogH9Sc/8Bv8p+6F6AweU5bxZXsb3Mxltgu+/f+TGi0udA==
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz"
