@@ -1,0 +1,77 @@
+---
+title: "Why is Nginx called a “reverse” proxy?"
+date: "March 27, 2023"
+excerpt: "Understanding Nginx's role as a Reverse Proxy"
+cover_image: "/images/proxy.png"
+href: "/blogs/why-is-nginx-called-a-reverse-proxy"
+tags: "Open Source, API, Web Servers, WebHooks, Web, Networking, Caching, Load Balancer, Proxy Server"
+---
+
+### 🔥**Introduction**
+
+Nginx is a highly performant, scalable, and reliable open-source web server software that is frequently utilized as a "reverse proxy.” But why is it labeled as a "reverse" proxy which raises the question?
+
+Many companies use proxy servers to route and secure traffic between networks. There is often confusion, however, on how this differs from a reverse proxy. In this blog, we will be exploring the origins of the term “reverse” and “forward” proxy and understanding how Nginx functions as a reverse proxy.
+
+### 🔥**Overview of Forward and Reverse Proxy**
+
+First, let's start with the basics of what a proxy server is. A proxy server, sometimes referred to as a “forward” proxy, is a server that acts as an intermediary between clients and other servers on the network. When a client makes a request, the forward proxy intercepts the request and forwards it to the appropriate server on behalf of the client. By doing so, the client’s identity and location are hidden, convert and mask IP addresses, block unknown traffic from the server and the server’s response is sent back to the forward proxy, which in turn forwards it back to the client.
+
+Now, let's dive into the concept of a "reverse" proxy. A reverse proxy is a type of proxy server. Unlike a traditional proxy server, which is used to protect clients, a reverse proxy is used to protect servers. A reverse proxy is not used to serve client requests directly. Instead, it acts as a gateway to servers that are behind it, allowing those servers to receive client requests without directly exposing them to the internet.
+
+The diagram below shows the differences between a **forward proxy** and a **reverse proxy.**
+
+![image](https://user-images.githubusercontent.com/76895975/228149345-fdbee27e-5628-40a9-9798-83663af68055.png)
+
+**A forward proxy is commonly used for:**
+
+- Avoid browser restrictions
+- Block access to certain content
+- Protect clients
+
+**A reverse proxy is good for:**
+
+- Protect servers
+- Load balancing
+- Caching static contents
+- Encrypt and Decrypt SSL communications
+
+In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP/2, TCP, and UDP protocols.
+
+### 🔥**Why is Nginx called a “reverse” proxy?**
+
+Nginx is called a reverse proxy because it acts as an intermediary server between clients and backend servers, intercepting responses from the backend servers and forwarding them to the appropriate clients. In this way, Nginx functions as a reverse proxy.
+
+![image](https://user-images.githubusercontent.com/76895975/228149289-7627a407-ef54-497c-bd43-b037dd00a19b.png)
+
+### 🔥Benefits of using Nginx as a reverse proxy:
+
+1. **Enhanced security:** Nginx can act as a firewall, blocking malicious traffic and protecting backend servers from attack.
+2. **High availability:** Nginx can be configured to distribute traffic among multiple backend servers, ensuring high availability and reducing the risk of downtime.
+3. **Simplified management:** Nginx can be used to serve multiple domains or applications from a single server and making it a highly efficient solution for managing complex web environments.
+4. **Load balancing:** Nginx can distribute incoming traffic across multiple backend servers, which can improve performance and ensure high availability.
+5. **SSL/TLS termination:** Nginx can terminate SSL/TLS connections, which can offload processing from backend servers and improve performance.
+
+### 🔥Over to you:
+
+Which proxy you will use: Reverse proxy or HAProxy?
+
+Let me know in the comments: which and why🤔
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+That's all for today.
+
+If you enjoyed this content, please share your feedback and consider retweeting the first tweet😀.
+
+New to my profile? 🎉
+
+Hey! I am Ayush, a full-stack developer from India. I tweet and document my coding journey🌸.
+
+Follow [@ayushsoni1010](https://twitter.com/ayushsoni1010) for more content like this🔥😉.
