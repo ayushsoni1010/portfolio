@@ -1,0 +1,279 @@
+---
+title: "Build an API with Serverless Functions in Next.js"
+date: "April 01, 2023"
+subtitle: "Creating Efficient and Scalable Serverless APIs"
+cover_image: "/images/build-an-api-with-serverless-functions-in-nextjs.png"
+href: "/blogs/build-an-api-with-serverless-functions-in-nextjs"
+tags: "Open Source, JavaScript, Node.js, API, Network, Routing, Request, Response, Server, Client, React, Next.js, Hooks, Serverless Functions, Vercel"
+url: "https://ayushsoni1010.hashnode.dev/build-an-api-with-serverless-functions-in-nextjs"
+---
+
+Next.js is a React framework that provides two ways of rendering React components into HTML pages - **server-side rendering(SSR)** and **static site generation(SSG).**
+
+In SSR, React components are rendered into HTML pages on the server after a page request comes from the browser, while in SSG, React components are rendered into HTML pages at build time.
+
+Regardless of which method is used, the rendered HTML pages are sent to the browser, making the app behave like a single-page application(SPA). This is in contrast to client-side rendering, where components are rendered in the browser. With Next.js, you can enjoy the benefits of both SSG and SSR, such as improved performance and better SEO. In addition to these features, Next.js also offers Serverless Functions, which we’ll be covering in this article.
+
+We'll cover the Next.js page and dynamic routes and learn about Next.js API and dynamic API routes, all while running Serverless Functions on Vercel, a platform designed specifically for Next.js applications.
+
+### **💎Introduction to Serverless Functions in Next.js**
+
+The term “serverless functions” is just a naming convention. AWS calls it Lambda Functions, but Vercel calls them their Serverless Functions, they are the same thing.
+
+Serverless Functions are not directly a part of the Next.js API. However, Next.js provides developers with API routes that can be deployed as Vercel Serverless Functions and this is the crux of this article.
+
+### **💎Pre-requisites**
+
+To benefit the most from this article, the following pre-requisites are required:
+
+- Basic understanding of JavaScript
+- Basic understanding of Next.js
+- Basic understanding of API design
+- The latest Node version is installed on your system.
+
+### **💎Setting up our application**
+
+We will start by bootstrapping the Next.js application and using `create-next-app` to automatically set everything up. To create a Next.js project, run the following command:
+
+```jsx
+yarn create-next-app
+```
+
+After the installation is complete, start your app by running `yarn dev`. When you visit [localhost:3000](http://localhost:3000) you will get:
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eiowl91ea6tq74725cnu.png)
+
+### **💎Page routes in Next.js**
+
+In Next.js, each page is driven by a component. For example, an “About” page will have an `About` component. Each page component has a file inside a `page` folder, thus, the file name and location of each page component are tied up to the particular page’s route.
+
+To elaborate on this, navigate your browser to [localhost:3000/about](http://localhost:3000/about) and you will get:
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w2sosevrruqdcm055nf9.png)
+
+The `404` page shown above simply shows that Next.js cannot find a component in the `page` folder called `about`. This is because we have not created an `About` component in the `pages` folder.
+
+To resolve this, create an `about.js` file inside the `pages` directory and add the following code:
+
+```jsx
+const About = () => {
+  return (
+    <div>
+      <h1>Hello World!</h1>
+    </div>
+  );
+};
+export default About;
+```
+
+Now, revisit to [localhost:3000/about](http://localhost:3000/about) and you get:
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/78artdnipioinba1bnln.png)
+
+When we created the `About` component in the `pages` folder, Next.js automatically created a route to server the `About` component. Thus, the route name is tied to the filename.
+
+### **💎Dynamic routes in Next.js**
+
+Next.js pages support [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes). This is useful because complex applications require more than just defining routes by using predefined paths.
+
+In Next.js, you can add brackets to a page component name, `[param.js]` to create a dynamic route for example. The page can be accessed via its dynamic route: `pages/users/[param].js`. Here, `[param]` is the page’s id, slug, pretty URLs, etc. Any route like `/users/1` or `/users/abcdef` can be matched.
+
+Next.js will send the matched path parameter as a query parameter to the page and if there are other query parameters, Next.js will link the matched path parameter with them.
+
+To elaborate on this, the matched route `/users/abcdef` of dynamic route `pages/users/[param].js`, will have the query object:
+
+```jsx
+{
+        "param":"abcdef"
+}
+```
+
+Similarly, the matched route `/users/abcdef?foo=bar` of a dynamic route, `pages/users[param].js`, will have the following query object:
+
+```jsx
+{
+	"foo":"bar",
+	"param":"abcdef"
+}
+```
+
+In your application, create a `user` folder, and inside it create a component named `[username].js`. Add the following code:
+
+```jsx
+import { useRouter } from "next/router";
+const User = () => {
+  const router = useRouter();
+  const username = router.query["username"];
+  return (
+    <div>
+      <h1>Hello! Welcome {username} </h1>
+    </div>
+  );
+};
+export default User;
+```
+
+Now, when you visit [http://localhost:3000/users/ayushsoni1010](http://localhost:3000/users/ayushsoni1010), you get the display content would be `Hello! Welcome ayushsoni1010`.
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uzab2gmroc2o9cj5vvhm.png)
+
+From the above demonstration, you see that Next.js matched `/users/ayushsoni1010` with the dynamic route `pages/users/[username].js`. Thus whatever `username` is passed in the route will be displayed on the page. You can try out different usernames.
+
+In addition to it, creating and serving pages with the page routes, Next.js can create APIs with the API routes. Based on our knowledge gained so far, let’s learn about Next.js API routes in the next section.
+
+### **💎 API Routing with Next.js Serverless Functions**
+
+[API routes were introduced in Next.js v9](https://nextjs.org/blog/next-9). They enable us to build backend application endpoints, leveraging hot reloading, and a unified build pipeline in the process.
+
+What this means is that Next>v9 encapsulates both the frontend and backend. We can rapidly develop full-stack React and Node.js applications that scale effortlessly.
+
+While the page routes serve Next.js pages as web pages, Next.js API routes are treated as an endpoint. The API routes live inside the `/pages/api` folder and Next.js maps any file inside the folder to `/api/*` as an endpoint.
+
+This feature is very interesting because it enables Next.js to render data on the frontend that is sorted in the Next.js app or render data that is fetched using Next.js API routes.
+
+By bootstrapping your application with `creat-next-app`, Next.js automatically creates an example API route, the `/pages/api/hello.js` file, for you. Inside `/pages/api/hello.js`, Next.js creates and exports a function named `handler` that returns a JSON object.
+
+You can access this endpoint via the browser by navigating to [http://localhost:3000/api/hello](http://localhost:3000/api/hello) and the following JSON is returned:
+
+```jsx
+{
+	"name": "John Doe"
+}
+```
+
+### **💎The request handler function**
+
+As seen above, to create a Next.js API route, you need to export a request handler function as default. The request handler function receives two parameters:
+
+- `req`: an object that is an instance of `http.IncomingMessage`, and some [prebuilt middlewares](https://nextjs.org/docs/api-routes/request-helpers).
+- `res`: an object that is an instance of `http.ServerResponse`, and some [helper functions](https://nextjs.org/docs/api-routes/response-helpers).
+
+To build an API with the API route, create a folder called `data` in the root directory. Create a `post.json` file inside the data folder with the following code:
+
+```jsx
+[
+  {
+    id: 1,
+    title: "I am title 1",
+    body: "Hello from post 1",
+  },
+  {
+    id: 2,
+    title: "I am title 2",
+    body: "Hello from post 2",
+  },
+  {
+    id: 3,
+    title: "I am title 3",
+    body: "Hello from post 3",
+  },
+  {
+    id: 4,
+    title: "I am title 4",
+    body: "Hello from post 4",
+  },
+  {
+    id: 5,
+    title: "I am title 5",
+    body: "Hello from post 5",
+  },
+];
+```
+
+Now, in the `pages/api` folder, create a new file called posts.js with the following code:
+
+```jsx
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import posts from "../../data/posts.json";
+export default function handler(req, res) {
+  res.status(200).json(posts);
+}
+```
+
+In the API route above, the handler function imports the JSON data posts and returns them as a response to a `GET` request. When you query for this data by visiting [http://localhost:3000/api/posts](http://localhost:3000/api/posts) from the browser, you get:
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/13p5l3prqj9c4rbwoef0.png)
+
+You can use the `request.method` object as seen below to handle other HTTP requests:
+
+```jsx
+export default (req, res) => {
+  switch (req.method) {
+    case "GET":
+      //...
+      break;
+    case "POST":
+      //...
+      break;
+    case "PUT":
+      //...
+      break;
+    case "DELETE":
+      //...
+      break;
+    default: // Method not allowed
+      res.status(405).end();
+      break;
+  }
+};
+```
+
+### **💎Dynamic API routes**
+
+Like page routes, Next.js API routes support dynamic routes and dynamic API routes follows the same file naming conventions and rules as page routes.
+
+To elaborate more on this, create a `posts` folder inside the `pages/api` folder. Create a file named `[postid].js` inside the `posts` folder and paste the following code to it:
+
+```jsx
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import posts from "../../../data/posts.json";
+export default function handler(req, res) {
+  const { postid } = req.query;
+  const post = posts.find((post) => post.id === parseInt(postid));
+  res.status(200).json(post);
+}
+```
+
+In the above code, Next.js automatically matched the `/posts/2` with the dynamic route `pages/api/posts/[postid].js`. Whichever post `id` is passed to the route `/posts/[postid]`: `/post/2`, `/post/3`, `/post/4`, etc. will be available in the `req.query` object.
+
+The request handler function above retrieves the passed post `id` from the `req.query` object, finds the post in the `posts` array, and sends it to the client.
+
+So to get the post with an `id` of `2`, navigate your browser to [`http://localhost:3000/api/posts/2`](http://localhost:3000/api/posts/2). You will get:
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d205qnr9xad9hf5kqe83.png)
+
+### 💎Advantages of API routes
+
+Next.js API routes are deployed as Serverless Functions in Vercel. This means they can be deployed to many regions across the world to improve latency and availability.
+
+Also, as Serverless Functions, they are cost-effective and enable you to run your code on demand. This removes the need to manage infrastructure, provision servers, or upgrade hardware.
+
+Another benefit of API routes is that they scale very well. Finally, they do not specify CORS by default because they are `same-origin`, however, you can customize this behavior by using the [CORS request helper](https://github.com/vercel/next.js/blob/canary/examples/api-routes-cors/pages/api/cors.ts).
+
+### 💎Over to you
+
+Which APIs have you built with Next.js API routes?
+
+### 💎Conclusion
+
+In this article, we learned about an interesting and powerful Next.js feature — API routes. We began by learning about the Next.js page route and delved into API routes. We also learned how to build an API using Next API routes, deployed as Vercel’s Serverless Functions.
+
+I do hope that at the end of this article, you can build APIs using Next.js APIs Route.
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+That's all for today.
+
+If you enjoyed this content, please share your feedback and consider retweeting the first tweet😀.
+
+New to my profile? 🎉
+
+Hey! I am Ayush, a full-stack developer from India. I tweet and document my coding journey🌸.
+
+Follow [@ayushsoni1010](https://twitter.com/ayushsoni1010) for more content like this🔥😉.

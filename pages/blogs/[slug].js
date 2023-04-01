@@ -31,7 +31,7 @@ const BlogPage = ({ data, slug, contentHtml }) => {
       <Box>
         <Seo
           title={data.title}
-          description={data.excerpt}
+          description={data.subtitle}
           OGImage={`https://ayushsoni1010.com${data.cover_image}`}
           OGType="article"
           canonicalUrl={`https://ayushsoni1010.com${data.href}`}

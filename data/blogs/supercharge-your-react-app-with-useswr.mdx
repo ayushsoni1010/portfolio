@@ -1,0 +1,256 @@
+---
+title: "Supercharge your React app with useSWR"
+date: "March 29, 2023"
+subtitle: "Saves You the Stress of Writing Your Own Logic"
+cover_image: "/images/supercharge-your-react-app-with-useswr.png"
+href: "/blogs/supercharge-your-react-app-with-useswr"
+tags: "JavaScript, Open Source, API, Error, Client, Request, Response, React, Hooks, Next.js, Frontend"
+url: "https://ayushsoni1010.hashnode.dev/supercharge-your-react-app-with-useswr"
+---
+
+### 🚩Introduction
+
+As a developer, you might find it challenging to handle error cases while writing code. Fetching and caching data efficiently is essential for improving app performance and reducing loading time. Whether you are working with APIs, remote data fetching, or from other sources, getting data into your app quickly and reliably can be a major challenge. In this blog, we will explore how to use **useSWR**, compare its existing hooks, and show why it's better.
+
+### 🚩Pre-requisites
+
+This article assumes that you are familiar with JavaScript, React, and Next.js. It would be helpful to have a good understanding of hooks, asynchronous JavaScript, and creating custom hooks. Let's dive straight in!
+
+### 🚩How useSWR works
+
+The **useSWR**
+hook takes two parameters: key and fetcher. The key is something that uniquely identifies the data to be fetched, usually the API URL, while the fetcher is a function that returns the data. The hook returns two values: data and error, representing the request's status. These two values can be used to set a loading state and an error fallback, respectively. The significant perk of the **useSWR**
+hook offers is how it simplifies the data fetching logic, delivering API data or returning an error response with just two lines of code. Furthermore, for each request made, a cached version is first returned while the server revalidates the request and returns updated data immediately after revalidation, helping optimize the web app and improve speed.
+
+### 🚩Getting started with useSWR
+
+The name **SWR** is derived from the concept called "stale-while-revalidate," which is an HTTP cache invalidation strategy popularized by HTTP RFC 5861. It performs data fetching in 3 steps:
+
+- Returns cached data first (stale)
+- Sends the fetch request (revalidate)
+- Returns the up-to-date data
+
+The hook comes with a display of benefits which includes:
+
+- Simplicity of Logic
+- Lightweight
+- Offers revalidation
+- Easy pagination
+- Supports TypeScript and a host of other perks.
+
+To get started with **useSWR,** you first need to install it as a dependency in your React or Next project:
+
+```jsx
+yarn add swr
+or
+npm install swr
+```
+
+Once installed, you can import the **useSWR** hook and use it in your components to fetch and cache data.
+
+Let’s understand it through an example:
+
+```jsx
+import useSWR from "swr";
+
+function MyComponent() {
+  const { data, error } = useSWR("/api/data");
+
+  if (error) return <div>Error fetching data</div>;
+  if (!data) return <div>Loading data...</div>;
+
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+    </div>
+  );
+}
+```
+
+As you can see, useSWR provides a more straightforward and concise way to fetch and cache data in React. It handles caching and error handling automatically and provides options for polling and deduplication.
+
+### 🚩Pagination
+
+Pagination is a crucial feature of modern web applications. It helps users to navigate through large amounts of data with ease. In React, the SWR library provides an API called useSWRInfinite for implementing complex pagination patterns. However, for common pagination patterns, useSWR is sufficient.
+
+Let’s take an example below:
+
+```jsx
+function Page({ index }) {
+  const { data, error } = useSWR(`/api/data?page=${index}`, fetcher);
+
+  // ... handle loading and error states
+
+  return data.map((item) => <div key={item.id}>{item.name}</div>);
+}
+
+function Pagination() {
+  const [pageIndex, setPageIndex] = useState(0);
+
+  // The API URL includes the page index, which is a React state.
+  const { data, error } = useSWR(`/api/data?page=${pageIndex}`, fetcher);
+
+  // ... handle loading and error states
+
+  return (
+    <div>
+      {data.map((item) => (
+        <div key={item.id}>{item.name}</div>
+      ))}
+      <button onClick={() => setPageIndex(pageIndex - 1)}>Previous</button>
+      <button onClick={() => setPageIndex(pageIndex + 1)}>Next</button>
+    </div>
+  );
+}
+```
+
+Of course, this works if the API has a provision for pagination. Also, since SWR provides caching, the preceding and previous pages are pre-fetched or preloaded when rendered in the abstracted div element. Other types of pagination such as Infinite Loading can also be achieved easily using SWR.
+
+### 🚩Comparing useSWR and existing hooks
+
+One common approach to fetching and caching remote data in React and Next is to use **useEffect** and **useState** hooks.
+
+Let’s understand it through an example:
+
+```jsx
+import { useEffect, useState } from "react";
+
+function MyComponent() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/data")
+      .then((response) => response.json())
+      .then(setData)
+      .catch(setError);
+  }, []);
+
+  if (error) return <div>Error fetching data</div>;
+  if (!data) return <div>Loading data...</div>;
+
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+    </div>
+  );
+}
+```
+
+While this approach works, it has some limitations. For example, it requires more code to handle caching and error handling. It also doesn't provide options for polling or deduplication.
+
+Now let’s compare this with **useSWR**:
+
+```jsx
+import useSWR from "swr";
+
+function MyComponent() {
+  const { data, error } = useSWR("/api/data");
+
+  if (error) return <div>Error fetching data</div>;
+  if (!data) return <div>Loading data...</div>;
+
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+    </div>
+  );
+}
+```
+
+As you can see that useSWR provides a simpler and more concise way to fetch and cache data in React or Next. It handles caching and error handling automatically and provides options for polling and deduplication.
+
+### 🚩Performance comparison
+
+To compare the performance of UseSWR with `useEffect` and `useState`, we'll use the same API endpoint for both approaches: **[jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos)**. We'll measure the time it takes to fetch and display 100 to-do items from the API.
+
+Here's the code for fetching and displaying todo items using `useEffect` and `useState`:
+
+```jsx
+import { useEffect, useState } from "react";
+
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((data) => setTodos(data.slice(0, 100)))
+      .catch((error) => console.error(error));
+  }, []);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <input type="checkbox" checked={todo.completed} />
+          <span>{todo.title}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+Using this approach, it took an average of 150-200 milliseconds to fetch and display the 100 to-do items.
+
+Now let's compare this with UseSWR:
+
+```jsx
+import useSWR from "swr";
+
+function TodoList() {
+  const { data, error } = useSWR("https://jsonplaceholder.typicode.com/todos");
+
+  if (error) return <div>Error fetching data</div>;
+  if (!data) return <div>Loading data...</div>;
+
+  const todos = data.slice(0, 100);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <input type="checkbox" checked={todo.completed} />
+          <span>{todo.title}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+Using UseSWR, it took an average of 100-150 milliseconds to fetch and display the same 100 to-do items.
+
+As you can see, UseSWR performs better than `useEffect` and `useState` in terms of speed, even though it handles caching and error handling automatically.
+
+### Over to you
+
+Have you used the **useSWR** hook before?
+
+Let me know in the comments😄
+
+### 🚩Conclusion
+
+The SWR hook saves us the stress of writing our own logic for data fetching, making our code a lot cleaner and simpler. A better option is to use the `useEffect` hook which perfects for static generated sites. Furthermore, it offers revalidation, and even more advanced options such as custom caching, middleware, and TypeScript support. Feel free to check out the **[official documentation](https://swr.vercel.app/docs/getting-started)** to learn more.
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+That's all for today.
+
+If you enjoyed this content, please share your feedback and consider retweeting the first tweet😀.
+
+New to my profile? 🎉
+
+Hey! I am Ayush, a full-stack developer from India. I tweet and document my coding journey🌸.
+
+Follow [@ayushsoni1010](https://twitter.com/ayushsoni1010) for more content like this🔥😉.

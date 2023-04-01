@@ -27,7 +27,7 @@ exports.generate = async () => {
 
       feed.item({
         title: frontmatter.data.title,
-        description: frontmatter.data.excerpt,
+        description: frontmatter.data.subtitle,
         url: frontmatter.data.url,
         author: "Ayush Soni",
         date: frontmatter.data.date,

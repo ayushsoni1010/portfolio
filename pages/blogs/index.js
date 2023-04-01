@@ -91,7 +91,7 @@ const Blog = (blogsData) => {
                       </Link>
                       <Text my="2">{item.date}</Text>
                       <Text my="2" fontWeight="600">
-                        {item.excerpt}
+                        {item.subtitle}
                       </Text>
                     </Box>
                   </Box>
