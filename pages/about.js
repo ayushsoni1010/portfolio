@@ -48,7 +48,7 @@ const About = () => {
                 lg: "repeat(5, 1fr)",
               }}
               gap={4}
-              my="5"
+              my="10"
             >
               <GridItem colSpan={2}>
                 <Image
