@@ -117,7 +117,7 @@ export const profiles = [
   {
     title: "Discord",
     name: "discord",
-    link: "https://discord.gg/pJv68Bjxhh",
+    link: "https://discord.gg/dThTajYw",
   },
   {
     title: "Bio.Link",
