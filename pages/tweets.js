@@ -1,12 +1,12 @@
 import React from "react";
+import { Box } from "@chakra-ui/react";
 import Header from "../components/Header";
 import BaseLayout from "../components/Wrapper/BaseLayout";
 import BaseText from "../components/Wrapper/BaseText";
 import Seo from "../components/Seo";
-import { Box } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 
-const Projects = () => {
+const Tweets = () => {
   return (
     <React.Fragment>
       <Seo title="Tweets" />
@@ -44,4 +44,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Tweets;

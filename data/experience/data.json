@@ -1,0 +1,68 @@
+[
+  {
+    "role": "Developer Relations Engineer",
+    "company": "FifthTry",
+    "company_url": "https://fifthtry.com",
+    "start_date": "April 2023",
+    "end_date": "Present",
+    "duration": "",
+    "location": "Bangalore",
+    "work_type": "Remote",
+    "role_description": [
+      "Building ftd programming language and fastn framework written in Rust"
+    ],
+    "tech_stack": ["ftd", "fastn", "Rust", "JavaScript"]
+  },
+  {
+    "role": "Product Engineer",
+    "company": "Magic",
+    "company_url": "https://magic.app",
+    "start_date": "January 2023",
+    "end_date": "March 2023",
+    "duration": "3 months",
+    "location": "Delhi",
+    "work_type": "Remote",
+    "role_description": [
+      "Worked on a dashboard application based on a SaaS product that helps Slack communities without leaving slack.",
+      "Worked on creating sitemaps for the product, auth and password recovery feature, and frontend UI improvements.",
+      "Implemented security measures of LogRocket and introduced events module feature for hosting community events."
+    ],
+    "tech_stack": [
+      "Vuejs",
+      "Nuxtjs",
+      "Nodejs",
+      "Parse server",
+      "JavaScript",
+      "Tailwindcss",
+      "API Development",
+      "MongoDb",
+      "Nginx"
+    ]
+  },
+  {
+    "role": "Software Engineer Intern",
+    "company": "Economize",
+    "company_url": "https://economize.cloud",
+    "start_date": "October 2021",
+    "end_date": "November 2022",
+    "duration": "1 year",
+    "location": "Bangalore",
+    "work_type": "Remote",
+    "role_description": [
+      "Worked on a dashboard application based on a SaaS product to optimize and manage cloud costs for AWS and GCP.",
+      "Improved UI: docs website, AWS/GCP cost-reports tables, dashboard, website, and GCP cloud assets backend fixes.",
+      "Implemented wrapper components using Ant Design library and ChartJs, configured storybook and strapi setup."
+    ],
+    "tech_stack": [
+      "Vuejs",
+      "Golang",
+      "JavaScript",
+      "Tailwindcss",
+      "TypeScript",
+      "Chartjs",
+      "Storybook",
+      "Ant design",
+      "Figma"
+    ]
+  }
+]

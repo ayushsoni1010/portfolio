@@ -16,8 +16,8 @@ export const linkDetails = [
     link: "/tweets",
   },
   {
-    name: "Projects",
-    link: "/projects",
+    name: "Experience",
+    link: "/experience",
   },
   {
     name: "Contact",
