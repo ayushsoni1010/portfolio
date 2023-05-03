@@ -1,0 +1,216 @@
+---
+title: "How to install fastn on your local machine"
+date: "May 03, 2023"
+subtitle: "A comprehensive guide on installation of fastn"
+cover_image: "/images/how-to-install-fastn-on-your-local-machine.png"
+href: "/blogs/how-to-install-fastn-on-your-local-machine"
+tags: "fastn, ftd, Web Development, Installation, API Development, fastn framework, Programming language, Full Stack Development, Open Source, Rust, framwork, JavaScript, HTML, CSS, Vercel, GitHub Pages"
+url: "https://ayushsoni1010.hashnode.dev/how-to-install-fastn-on-your-local-machine"
+---
+
+After gaining experience in website development, it's time to broaden your skills and learn how to develop, build, and deploy your fastn apps to showcase your work to the world. Let's explore the installation process.
+
+### 📌Introduction
+
+`fastn` is a powerful web framework written in Rust that allows you to build interactive user interfaces, full-stack web applications, and content-centric websites. For developers and non-developers, building websites and framing the user interface using HTML, CSS, and JavaScript can sometimes be troublesome.
+
+What if a non-programmer wants to build their portfolio or any website? It would take a lot of time to learn these languages while building the overall project or any websites. In this blog, we will delve into the installation process of fastn in various ways based on different machines and explore the functionalities of both fastn and ftd.
+
+### 📌What's ftd?
+
+`ftd` is a programming language for building beautiful user interfaces and content-centric websites. It is easy to learn and designed for everyone, not just for programmers, especially for non-programmers. Building websites and creating interfaces using HTML, CSS, and JavaScript can sometimes be challenging for both developers and non-developers.
+
+However, fastn provides a solution by offering a programming language called ftd that is designed with minimal syntax and is user-friendly that everyone can understand at first glance. It does not even look like a programming language and even non-programmers can quickly grasp its minimal syntax, which resembles markdown syntax and makes it highly human-readable and accessible.
+
+### 📌What's fastn?
+
+`fastn` is a web framework, a content management system, and even serves as an integrated development environment for `ftd`. It is a web server that compiles `ftd` to HTML, CSS, and JS. It allows you to deploy fastn applications on any static hosting provider, such as GitHub Pages, Vercel, fastn Cloud, or your own server.
+
+It also provides a lot of ready-made UI components that help to develop your websites faster in no time, and you can even create your custom components. fastn is used to work with ftd files, and it ships pre-built binaries for Linux, Mac, and Windows.
+
+To kickstart your journey with fastn, I recommend checking out the short video course available at **[fastn.com/expander](https://fastn.com/expander)**. This course provides a quick introduction to the basics of fastn and will help you get up to speed in no time.
+
+### 📌Prerequisites
+
+To benefit the most from this article, the following pre-requisites are required:
+
+- GitHub account
+- Install Git on your machine and set up Git
+- The latest cargo version is installed on your system.
+
+### 📌Installation of fastn
+
+Based on the machines, there are three ways to install fastn:
+
+1. Install fastn through the pre-built library on **Windows** (Recommended)
+2. Install fastn through the pre-built library on **MacOS/Linux** (Recommended)
+3. Install fastn using cargo
+4. Install fastn from source
+
+&nbsp;
+&nbsp;
+
+```
+💡 Recommendation
+
+We recommend you install `fastn` through `pre-built binary`.
+
+This is the preferred method as it only requires downloading the binary and installing it on your local system.
+```
+
+&nbsp;
+&nbsp;
+
+### 👉Install fastn through the pre-built library on **Windows**
+
+To install `fastn` through the pre-built library, follow these steps:
+
+- Download the executable from the **[Releases](https://github.com/fastn-stack/fastn/releases)** page
+- Check the latest release
+- Get the executable file for Windows on the releases page under Assets
+- Create a folder named `FASTN` in your **C** drive
+- Go to **Settings** and search for **Environmental Variable**
+- Check for **Path** and double-click on it in the user variables
+- Click on the **New** button and set a path for **FASTN** in your machine's **Environment Variable**
+- The recommended path would be `C:\\FASTN`, then apply settings.
+
+&nbsp;
+&nbsp;
+
+![gif](https://fastn.com/-/fastn.io/images/setup/windows-fastn-installation.gif)
+
+&nbsp;
+&nbsp;
+
+Installation of fastn is completed. To verify, open the command prompt and execute the command `fastn`.
+
+If you face any difficulty while installing fastn, check out the **[youtube](https://youtu.be/lw-qVPCJgZs)** video.
+
+
+![description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dchwhwnej9pllpjxysl9.png)
+
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+### 👉Install fastn through the pre-built library on MacOS/Linux
+
+For MacOS, we have an installer script, you just need to copy and paste the given below script into the terminal
+
+```
+
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/fastn-stack/fastn/main/install.sh)"
+
+```
+
+
+![Image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/65mjgbmk4x258db13o2t.png)
+
+![description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i16h7i23cx390lyqn6gf.png)
+
+
+Installation of fastn is completed. To verify, open the terminal and execute the command `fastn`. 
+
+If you face any difficulty while installing fastn, check out the **[youtube](https://youtu.be/cWdivkyoOTA)** video
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+### 👉Install fastn using cargo
+
+If you have `cargo` installed on your system, you can run the following command to install fastn.
+
+For more details on how to install cargo are given [**here**](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+
+```
+
+cargo install fastn
+
+```
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+### 👉Install fastn from source
+
+`fastn` is an open-source project. You can clone the fastn github repository:
+
+```
+
+git clone https://github.com/fastn-stack/fastn.git
+
+```
+
+fastn is implemented using Rust, using the 2021 edition, so the minimum supported Rust version (MSRV) is 1.65.0.
+
+```
+cd fastn
+cargo test
+cargo build
+```
+
+&nbsp;
+&nbsp;
+
+**Linux Dependencies**
+
+When building from source you will have to install SSL and SQLite dev packages:
+
+Once you have installed the `fastn` you can start using `ftd` files.
+
+```
+
+sudo apt-get install libsqlite3-dev libssl-dev
+
+```
+
+&nbsp;
+&nbsp;
+
+### 📌Conclusion
+
+`fastn` is a powerful web framework that helps developers and non-developers create interactive user interfaces, full-stack web applications, and content-centric websites. Its ftd programming language has minimal syntax and is user-friendly. fastn comes with many ready-made UI components, and developers can create custom components too. It's a great tool for showcasing work to the world.
+
+Overall, the article provides a comprehensive guide to installing fastn on Windows, MacOS, and Linux. The guide recommends using the pre-built binary method for installation. It also covers how to install fastn using cargo or from source code.
+
+&nbsp;
+&nbsp;
+
+### 📌Over to you
+
+Which static hosting providers do you use to host your fastn applications?
+
+Let me know in the comments😄
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+&nbsp;
+
+That's all for today.
+
+If you enjoyed this content, please share your feedback and consider retweeting the first tweet😀
+
+New to my profile? 🎉
+
+Hey! I am Ayush, a full-stack developer from India. I tweet and document my coding journey🌸
+
+Follow [@ayushsoni1010](https://twitter.com/ayushsoni1010) for more content like this🔥😉.
