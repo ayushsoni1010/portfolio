@@ -117,12 +117,17 @@ export const profiles = [
   {
     title: "Discord",
     name: "discord",
-    link: "https://discord.gg/dThTajYw",
+    link: "https://discord.gg/FNp6Acyu74",
   },
   {
     title: "Bio.Link",
     name: "biolink",
     link: "https://ayushsoni1010.bio.link/",
+  },
+  {
+    title: "fastn",
+    name: "fastn",
+    link: "https://github.com/fastn-stack",
   },
   {
     title: "Codepen",
