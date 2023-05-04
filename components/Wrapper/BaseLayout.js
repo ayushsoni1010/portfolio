@@ -9,6 +9,8 @@ const BaseLayout = ({ children, ...props }) => {
         pb="0"
         pt={{ base: "8", sm: "16", md: "20" }}
         {...props}
+        mx="auto"
+        maxW="1536"
       >
         {children}
       </Box>
