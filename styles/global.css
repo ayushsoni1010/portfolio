@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /***** Show custom scrollbar on screen *****/
 
 ::-webkit-scrollbar {
