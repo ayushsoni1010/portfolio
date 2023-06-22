@@ -51,12 +51,12 @@ const Blog = (blogsData) => {
                   <Box
                     key={index}
                     borderRadius="base"
-                    w="400px"
+                    w="375px"
                     h={{
-                      base: "430px",
-                      lg: "430px",
-                      md: "430px",
-                      sm: "430px",
+                      base: "440px",
+                      lg: "440px",
+                      md: "440px",
+                      sm: "440px",
                       xs: "480px",
                     }}
                     overflow="hidden"
