@@ -135,7 +135,7 @@ const Hero = () => {
                 colorScheme="teal"
                 target="_blank"
                 as="a"
-                href="https://calendly.com/ayushsoni1010/"
+                href="https://cal.com/ayushsoni1010/"
                 variant="solid"
                 size={{ base: "md", md: "md", sm: "sm" }}
                 bgGradient="linear(to-r, teal.500, green.400)"
