@@ -30,6 +30,11 @@ export const profiles = [
     link: "https://linktr.ee/ayushsoni1010",
   },
   {
+    title: "Threads",
+    name: "threads",
+    link: "https://threads.net/@aayushsoni1010",
+  },
+  {
     title: "Instragram",
     name: "instragram",
     link: "https://instagram.com/aayushsoni1010",
