@@ -17,6 +17,7 @@
 Welcome to my portfolio! I'm Ayush Soni, hailing from India. Join me on a captivating journey where you can explore my projects, experiences, and much more. Feel free to explore the various sections and discover the world I've created.
 
 ## Table of Contents
+
 - [Quick Links](#quick-links-)
 - [About Me](#about-me-)
 - [Projects](#projects-)
@@ -33,34 +34,43 @@ Welcome to my portfolio! I'm Ayush Soni, hailing from India. Join me on a captiv
 - [Issues](#issues-)
 
 ## Quick Links 🚀
+
 - [Website](https://www.ayushsoni1010.com/)
 - [LinkedIn](https://www.linkedin.com/in/ayushsoni1010/)
 - [Twitter](https://twitter.com/ayushsoni1010)
 - [GitHub](https://github.com/ayushsoni1010)
 - [Resume](https://ayushsoni1010.com/resume)
 - [Schedule a Call](https://ayushsoni1010.com/cal)
+- [Blogs](https://ayushsoni1010.com/blogs)
 
 ## About Me 👨🏻‍💻
+
 This is Ayush Soni, a passionate full-stack developer and devrel engineer with a love for open-source and UI designing. I specialize in building robust and scalable SaaS products, microservices, and design systems. With a strong grasp of frontend and backend architecture, I create intuitive designs for engaging user experiences.
 
 I have extensive experience in Javascript and Typescript, using them professionally and for personal projects. I'm involved in hackathons, open-source contributions, and community building as both a participant and mentor. Additionally, I also lead community initiatives, offer software development sessions, and provide team leadership.
 
 ## Projects 📂
+
 Explore my featured projects and experience my work firsthand. My portfolio showcases a diverse range of [projects](https://ayushsoni1010.com/projects), including web applications, mobile apps, and more.
 
 ## Featured Timeline 📅
+
 Get insights into my professional [journey](https://ayushsoni1010.com) and the milestones I've achieved throughout my career.
 
 ## Get in Touch 📬
+
 Feel free to reach out to me via email at [ayushsoni1010.work@gmail.com](mailto:ayushsoni1010.work@gmail.com). I'm open to collaborations, discussions, and new opportunities.
 
 ## Deliverables 🎯
+
 Explore my portfolio and discover the incredible projects and experiences I've had the privilege to work on. Join me on my journey, and let's create something amazing together!
 
 ## Craft Components 🎨
+
 For a more detailed view of my skills and expertise, visit my [Craft Component Page](https://www.ayushsoni1010.com/crafts).
 
 ## Tech Stack Used 🛠️
+
 Here's a glimpse of the technologies I've used:
 
 - Next.js
@@ -77,15 +87,18 @@ Here's a glimpse of the technologies I've used:
 - Vercel
 
 ## Getting Started 🚀
+
 To get started with Portfoliogram, follow the installation instructions in the project's documentation.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 1. Clone the repository to your local machine:
+
 ```
 git clone https://github.com/ayushsoni1010/portfolio.git
 ```
 
 2. Install the required dependencies:
+
 ```
 cd portfolio
 npm install
@@ -94,6 +107,7 @@ npm install
 3. Configure the environment variables, including API keys and settings.
 
 4. Start the application:
+
 ```bash
 npm run dev
 # or
