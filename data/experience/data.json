@@ -4,14 +4,16 @@
     "company": "FifthTry",
     "company_url": "https://fifthtry.com",
     "start_date": "April 2023",
-    "end_date": "Present",
-    "duration": "",
+    "end_date": "September 2023",
+    "duration": "6 months",
     "location": "Bangalore",
     "work_type": "Remote",
     "role_description": [
-      "Building ftd programming language and fastn framework written in Rust"
+      "Spearheaded strategic enhancements, built numerous sample apps with fastn, and handled other engineering tasks.",
+      "Led documentation site development, conducted developer training, enhanced the fastn framework written in Rust.",
+      "Curated nationwide events, managed marketing efforts, fostered community growth, and handled client relations."
     ],
-    "tech_stack": ["ftd", "fastn", "Rust", "JavaScript"]
+    "tech_stack": ["Rust", "JavaScript"]
   },
   {
     "role": "Product Engineer",
