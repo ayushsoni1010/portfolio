@@ -11,10 +11,10 @@ export const linkDetails = [
     name: "Blogs",
     link: "/blogs",
   },
-  {
-    name: "Tweets",
-    link: "/tweets",
-  },
+  // {
+  //   name: "Tweets",
+  //   link: "/tweets",
+  // },
   {
     name: "Experience",
     link: "/experience",
