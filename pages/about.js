@@ -73,7 +73,7 @@ const About = () => {
                   >
                     Ayush Soni
                   </span>{" "}
-                  , a junior-year computer science undergraduate, pursuing
+                  , a final-year computer science undergraduate, pursuing
                   B.Tech from Medi-Caps University, Indore. I am always
                   fascinated by programming and passionate about exploring the
                   latest technology and developing new cool and innovative
