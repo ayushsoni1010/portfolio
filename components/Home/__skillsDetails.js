@@ -34,6 +34,13 @@ import { SiPostcss } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { SiNestjs } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
+import { SiNginx } from "react-icons/si";
+import { SiRadixui } from "react-icons/si";
+import { SiGithubactions } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+import { SiGithubpages } from "react-icons/si";
+import { SiWebpack } from "react-icons/si";
+import { SiVite } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { TbBrandNuxt } from "react-icons/tb";
 import { DiGit } from "react-icons/di";
@@ -131,28 +138,16 @@ const skillDetails = [
     iconURL: "/assets/firebase.svg",
   },
   {
-    name: "Syntactically Awesome Style Sheets",
-    key: "sass",
-    icon: <FaSass />,
-    iconURL: "/assets/sass.svg",
+    name: "firebase",
+    key: "firebase",
+    icon: <SiSupabase />,
+    iconURL: "/assets/supabase.svg",
   },
   {
-    name: "TailwindCSS",
-    key: "tailwind",
-    icon: <SiTailwindcss />,
-    iconURL: "/assets/tailwind-css.svg",
-  },
-  {
-    name: "Post CSS",
-    key: "postcss",
-    icon: <SiPostcss />,
-    iconURL: "/assets/postcss.svg",
-  },
-  {
-    name: "MySQL",
-    key: "mysql",
-    icon: <SiMysql />,
-    iconURL: "/assets/mysql.svg",
+    name: "MongoDB",
+    key: "mongodb",
+    icon: <SiMongodb />,
+    iconURL: "/assets/mongodb.svg",
   },
   {
     name: "Prisma",
@@ -161,11 +156,12 @@ const skillDetails = [
     iconURL: "/assets/prisma.svg",
   },
   {
-    name: "MongoDB",
-    key: "mongodb",
-    icon: <SiMongodb />,
-    iconURL: "/assets/mongodb.svg",
+    name: "MySQL",
+    key: "mysql",
+    icon: <SiMysql />,
+    iconURL: "/assets/mysql.svg",
   },
+
   {
     name: "Heroku",
     key: "heroku",
@@ -204,16 +200,34 @@ const skillDetails = [
     iconURL: "/assets/google-cloud.svg",
   },
   {
-    name: "Chart.js",
-    key: "chart",
-    icon: <SiChartdotjs />,
-    iconURL: "/assets/chartjs.svg",
+    name: "Nginx",
+    key: "nginx",
+    icon: <SiNginx />,
+    iconURL: "/assets/nginx.svg",
   },
   {
     name: "Postman",
     key: "postman",
     icon: <SiPostman />,
     iconURL: "/assets/postman.svg",
+  },
+  {
+    name: "Syntactically Awesome Style Sheets",
+    key: "sass",
+    icon: <FaSass />,
+    iconURL: "/assets/sass.svg",
+  },
+  {
+    name: "TailwindCSS",
+    key: "tailwind",
+    icon: <SiTailwindcss />,
+    iconURL: "/assets/tailwind-css.svg",
+  },
+  {
+    name: "Post CSS",
+    key: "postcss",
+    icon: <SiPostcss />,
+    iconURL: "/assets/postcss.svg",
   },
   {
     name: "Strapi",
@@ -252,10 +266,46 @@ const skillDetails = [
     iconURL: "/assets/yarn.svg",
   },
   {
+    name: "Vite",
+    key: "vite",
+    icon: <SiVite />,
+    iconURL: "/assets/vite.svg",
+  },
+  // {
+  //   name: "Webpack",
+  //   key: "webpack",
+  //   icon: <SiWebpack />,
+  //   iconURL: "/assets/webpack.svg",
+  // },
+  {
     name: "Git",
     key: "git",
     icon: <DiGit />,
     iconURL: "/assets/git.svg",
+  },
+  {
+    name: "GitHub Actions",
+    key: "githubactions",
+    icon: <SiGithubactions />,
+    iconURL: "/assets/githubactions.svg",
+  },
+  {
+    name: "GitHub Pages",
+    key: "githubpages",
+    icon: <SiGithubpages />,
+    iconURL: "/assets/githubpages.svg",
+  },
+  {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiChartdotjs />,
+    iconURL: "/assets/chartjs.svg",
+  },
+  {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiRadixui />,
+    iconURL: "/assets/radix.svg",
   },
   {
     name: "Chakra UI",
