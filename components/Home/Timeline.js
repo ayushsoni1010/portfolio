@@ -18,8 +18,9 @@ import { timelineDetails } from "./__timelineDetails";
 const Timeline = () => {
   return (
     <React.Fragment>
-      <BaseLayout>
+      <BaseLayout id="timeline">
         <BaseText
+          id="timeline-header-wrapper"
           firstTitle="Featured"
           secondTitle="Timeline"
           textIcon="https://ik.imagekit.io/ayushsoni1010/Website/timeline?ik-sdk-version=javascript-1.4.3&updatedAt=1669666586717"
@@ -34,6 +35,7 @@ const Timeline = () => {
             sm: "none",
             xs: "none",
           }}
+          id="timeline-wrapper"
         >
           {timelineDetails.map((item, index) => {
             return index % 2 ? (

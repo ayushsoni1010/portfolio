@@ -72,7 +72,7 @@ const Hero = () => {
                 </Text>
               </Stack>
               <Stack display="flex" direction="row">
-                <Text colorScheme="black">full stack</Text>
+                <Text colorScheme="black">fullstack</Text>
                 <Text
                   bgGradient="linear(to-tr, teal.500, green.400)"
                   bgClip="text"
