@@ -1,9 +1,9 @@
 %------------------------
   % Resume in Latex
-  % Author: Jake Gutierrez
-  % Based off of: https://github.com/sb2nov/resume
+  % Name: Ayush Soni
+  % GitHub: https://github.com/ayushsoni1010
   % License: MIT
-  %------------------------
+%------------------------
 
   \documentclass[letterpaper,11pt]{article}
 
@@ -64,7 +64,7 @@
     \vspace{-4pt}\scshape\raggedright\large
   }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-  % Ensure that generate pdf is machine readable/ATS parsable
+  % Ensure that generated pdf is machine readable/ATS parsable
   \pdfgentounicode=1
 
   %-------------------------
@@ -81,50 +81,47 @@
   }
 
   \newcommand{\resumeSubheading}[4]{
-    \vspace{-2pt}\item
+    \item
       \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
         {#1} & #2 \\
         \textit{\small#3} & \textit{\small #4} \\
-      \end{tabular*}\vspace{-7pt}
+      \end{tabular*}\vspace{-5pt}
   }
 
   \newcommand{\resumeSubSubheading}[2]{
       \item
       \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \textit{\small#1} & \textit{\small #2} \\
-      \end{tabular*}\vspace{-7pt}
+      \end{tabular*}\vspace{-5pt}
   }
 
   \newcommand{\resumeProjectHeading}[2]{
       \item
       \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \small#1 & #2 \\
-      \end{tabular*}\vspace{-7pt}
+      \end{tabular*}\vspace{-5pt}
   }
-
-  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
   \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
   \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
   \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
   \newcommand{\resumeItemListStart}{\begin{itemize}}
-  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-  %-------------------------------------------
-  %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-------------------------------------------
+%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING----------
+% ---------- HEADING ----------
 
 \begin{center}
-  \textbf{\Huge \scshape Ayush Soni} \\ \vspace{1pt}
+  \textbf{\Huge \scshape Ayush Soni} \\ \vspace{10pt}
   \href{tel:9644963410}{+91 9644963410} $|$
   {Indore, India} $|$
   {Full Stack Developer} $|$
-  \href{mailto:ayushsoni1010.work@gmail.com}{ayushsoni1010.work@gmail.com} \\ \vspace{1pt}
+  \href{mailto:ayushsoni1010.work@gmail.com}{ayushsoni1010.work@gmail.com} \\ \vspace{3pt}
 
   \href{https://linkedin.com/in/ayushsoni1010}{\underline{linkedin.com/in/ayushsoni1010}} $|$
   \href{https://github.com/ayushsoni1010}{\underline{github.com/ayushsoni1010}} $|$
@@ -132,53 +129,40 @@
   \href{https://ayushsoni1010.com}{\underline{ayushsoni1010.com}}
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Medi-Caps University}{Indore, Madhya Pradesh}
-{Bachelor of Technology in Computer Science and Engineering}{CGPA: 8.7/10}
-\resumeSubHeadingListEnd
 
+% ---------- PROGRAMMING SKILLS ----------
 
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Javascript, Typescript, Go, Java, SQL } \\
-        \vspace{1pt}\textbf{Libraries/Frameworks}{: React, Redux, React Native, Next, Vue, Nuxt, NodeJS, Express, ChartJS, Strapi, SASS, Tailwind} \\
-        \vspace{1pt}\textbf{UI Component libraries}{: Chakra UI, Shadcn UI, Radix UI, Ant Design, Material UI, Next UI, styled-components} \\
-        \vspace{1pt}\textbf{Databases/Servers}{: MongoDB, MySQL, PostgreSQL, Prisma, Firebase, Supabase, Nginx} \\
-        \vspace{1pt}\textbf{Platforms/Tools}{: AWS, Vercel, Git, CI/CD, Figma, Storybook, Postman, Docker, Vite, NPM, Yarn, Netlify, GitHub Pages } 
-        \\
-        \vspace{1pt}\textbf{Other}{: Mentoring, Freelancing, UI-UX Designing, Open-Source, Cloud Computing, Public Speaking, Web Scraping }
+        \textbf{Languages}{: \hfill Javascript, Typescript, Go, Java, SQL } \\
+        \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React, Redux, React Native, Vue, Nextjs, Nuxtjs, Nestjs, Nodejs, Express, Chartjs, Strapi, Socket.io} \\
+        \vspace{3pt}\textbf{UI Component Libraries}{: \hfill Chakra UI, Shadcn UI, Radix UI, Ant Design, Material UI, Next UI, styled-components, Tailwind} \\
+        \vspace{3pt}\textbf{Databases/Servers}{: \hfill MongoDB, MySQL, PostgreSQL, Redis, Mongoose, Prisma, Firebase, Supabase, Nginx} \\
+        \vspace{3pt}\textbf{Platforms/Tools}{: \hfill AWS, Vercel, Git, CI/CD, Figma, Storybook, Postman, Docker, Vite, NPM, Yarn, Netlify, GitHub Pages } \\
+        \vspace{3pt}\textbf{Other}{: \hfill WebSockets, REST, GraphQL, tRPC, Jest, Cypress, Kubernetes, Jenkins,  Swagger, Prometheus, Grafana, Puppeteer }
         }}
 \end{itemize}
 
-\vspace{-1.1\baselineskip}
 
-%-----------EXPERIENCE-----------
+% ---------- EXPERIENCE ----------
+
 \section{Experience}
 \resumeSubHeadingListStart
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
+% ------------------------
 \resumeSubheading
 {\textbf{\href{https://go2work.com}{Go2work}\hspace{5pt}}{{[TypeScript, Nextjs, Firebase, AWS]}}}{(Remote) Houston, Texas, United States}
-{\textbf{Senior Frontend Engineer – Full time}}{November 2023 -- Present}
+{\textbf{Frontend Engineer – Full time}}{November 2023 -- Present}
 \resumeItemListStart
 \resumeItem{Led library transition, built dashboard from scratch with wrapper components for hiring platform using Shadcn UI.}
 \resumeItem{Optimized app performance, improved UI, and implemented chaos engineering for enhanced user experience.}
 \resumeItem{Integrated WebSocket chat, push notifications, Strapi and managed authentication flow using Firebase in frontend.}
 \resumeItemListEnd
+% ------------------------
 
+
+% ------------------------
 \resumeSubheading
 {\textbf{\href{https://fifhtry.com}{FifthTry}\hspace{5pt}}{{[Rust]}}}{(Remote) Bengaluru, India}
 {\textbf{Developer Relations Engineer – Full time}}{April 2023 -- September 2023}
@@ -187,8 +171,10 @@
 \resumeItem{Led documentation site development, conducted developer training, enhanced the fastn framework written in Rust}
 \resumeItem{Curated nationwide events, managed marketing efforts, fostered community growth, and handled client relations.}
 \resumeItemListEnd
+% ------------------------
 
 
+% ------------------------
 \resumeSubheading
 {\textbf{\href{https://magic.app}{Magic}\hspace{3pt}}{{[NuxtJS, NodeJS, Parse Server]}}}{(Remote) Delhi, India}
 % {Magic}{Remote, Delhi}
@@ -198,8 +184,10 @@
 \resumeItem{Worked on creating sitemaps for the product, auth and password recovery feature, and frontend UI improvements. }
 \resumeItem{Implemented security measures of LogRocket and introduced events module feature for hosting community events.}
 \resumeItemListEnd
+% ------------------------
 
 
+% ------------------------
 \resumeSubheading
 {\textbf{\href{https://economize.cloud}{Economize}\hspace{3pt}}{{[Vue, Go]}}}{(Remote) Bengaluru, India}
 % {Economize}{Remote, Bengaluru}
@@ -210,10 +198,22 @@
 \resumeItem{Implemented wrapper components using Ant Design library and ChartJs, configured storybook and strapi setup.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+% ------------------------
 
 
-%-----------PROJECTS-----------
+% ---------- PROJECTS ----------
+
 \section{Projects}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/ayushsoni1010/inklink}{Inklink}\hspace{5pt}}{{[Nextjs, TypeScript, Nodejs, MongoDB, Shadcn UI]}}}{}
+\resumeItemListStart
+\resumeItem{Building a product that simplifies content creation by posting to multiple platforms with a single click in no time.}
+\resumeItem{Integrating multiple platforms in one place, helping creators save time on writing once and share everywhere.}
+\resumeItem{Users can engage with content by liking, posting, sharing, subscribing to newsletters, building a creator portfolio.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 \resumeSubHeadingListStart
 \resumeProjectHeading
@@ -226,19 +226,35 @@
 \resumeSubHeadingListEnd
 
 
-%-----------Awards, Community and Volunteer Experience---------------
+
+% ---------- EDUCATION ----------
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Medi-Caps University}{Indore, Madhya Pradesh, India}
+{Bachelor of Technology in Computer Science and Engineering}{CGPA: 8.7/10}
+\resumeSubHeadingListEnd
+
+
+
+% ---------- Awards, Community and Volunteer Experience ----------
 \section{Awards, Community \& Volunteer Experience}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \resumeItemListStart
-                \resumeItem{\textbf{\href{https://mlh.io}{Major League Hacking}}{: Participated in multiple hackathons organized by MLH like Abracadabra Hacks, MLH INIT, Local Hack Day, Design-a-thon, Wittyhacks and attended MLH HackCon IN conference in-person in Delhi.}} \vspace{2pt}
-                \resumeItem{\textbf{\href{https://studentambassadors.microsoft.com/}{Microsoft Learn Student Ambassador}}{: Conducted hands-on sessions on Git, GitHub, frontend development, open source contribution, taught best practices and promoted Hacktoberfest, and built hands-on projects.}} \vspace{2pt}
+                \resumeItem{\textbf{\href{https://mlh.io}{Major League Hacking}}{: Participated in multiple hackathons organized by MLH like Abracadabra Hacks, MLH INIT, Local Hack Day, Design-a-thon, Wittyhacks and attended MLH HackCon IN conference in-person in Delhi.}} \vspace{3pt}
+                \resumeItem{\textbf{\href{https://studentambassadors.microsoft.com/}{Microsoft Learn Student Ambassador}}{: Conducted hands-on sessions on Git, GitHub, frontend development, open source contribution, taught best practices and promoted Hacktoberfest, and built hands-on projects.}} \vspace{3pt}
                 \resumeItem{\textbf{Mentor at {\href{https://hackacode.anyonecanco.de}{AnyoneCanCo.de}}, {\href{https://hackthenorth.com}{HackTheNorth}}, {\href{https://swoc.scriptindia.org}{Script Winter of Code}}, {\href{https://gdsc.community.dev/medi-caps-university-indore}{GDSC Medicaps}}:}
- {I've mentored aspiring developers, and designers in hackathons and open-source programs, helping them build innovative projects.}} \vspace{2pt}
-                \resumeItem{\textbf{\href{https://devpost.com/software/budgetstay}{Hackathon Winner at HackThisFall for Most Creative Use of Twilio}}} \vspace{2pt}
-                \resumeItem{{As a hacker, built a {\textbf{\href{https://devfolio.co/projects/mystic-899b}{{P2P based Play-to-Earn game}}}} in a team at {\textbf{\href{https://ethindia.co/}{{ETHIndia'23}}}} hackathon and won NFTs \& bounties. }} \vspace{2pt} 
+ {I've mentored aspiring developers, and designers in hackathons and open-source programs, helping them build innovative projects.}} \vspace{3pt}
+                \resumeItem{\textbf{\href{https://devpost.com/software/budgetstay}{Hackathon Winner at HackThisFall for Most Creative Use of Twilio}}} \vspace{3pt}
+                \resumeItem{{As a hacker, built a {\textbf{\href{https://devfolio.co/projects/mystic-899b}{{P2P based Play-to-Earn game}}}} in a team at {\textbf{\href{https://ethindia.co/}{{ETHIndia'23}}}} hackathon and won NFTs \& bounties. }} \vspace{3pt} 
       \resumeItemListEnd
     }}
  \end{itemize}
 
 \end{document}
+
+
+%%%%%%%%%%%  RESUME ENDS HERE  %%%%%%%%%%%
+%-------------------------------------------
