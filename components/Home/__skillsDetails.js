@@ -1,50 +1,59 @@
-import { FaReact } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { FaVuejs } from "react-icons/fa";
-import { FaSass } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
-import { FaFigma } from "react-icons/fa";
-import { FaDocker } from "react-icons/fa";
-import { FaYarn } from "react-icons/fa";
-import { AiFillHtml5 } from "react-icons/ai";
-import { AiOutlineAntDesign } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
-import { SiGooglecloud } from "react-icons/si";
-import { SiNetlify } from "react-icons/si";
-import { SiVercel } from "react-icons/si";
-import { SiAdobexd } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { SiChartdotjs } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
-import { SiHeroku } from "react-icons/si";
-import { SiStorybook } from "react-icons/si";
-import { SiPostman } from "react-icons/si";
-import { SiGoland } from "react-icons/si";
-import { SiStrapi } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiStyledcomponents } from "react-icons/si";
-import { SiChakraui } from "react-icons/si";
-import { SiPostcss } from "react-icons/si";
-import { SiFirebase } from "react-icons/si";
-import { SiNestjs } from "react-icons/si";
-import { SiPrisma } from "react-icons/si";
-import { SiNginx } from "react-icons/si";
-import { SiRadixui } from "react-icons/si";
-import { SiGithubactions } from "react-icons/si";
-import { SiSupabase } from "react-icons/si";
-import { SiGithubpages } from "react-icons/si";
-import { SiWebpack } from "react-icons/si";
-import { SiVite } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-import { TbBrandNuxt } from "react-icons/tb";
-import { DiGit } from "react-icons/di";
-import { DiNpm } from "react-icons/di";
+import {
+  FaReact,
+  FaJava,
+  FaCss3Alt,
+  FaNodeJs,
+  FaVuejs,
+  FaSass,
+  FaAws,
+  FaFigma,
+  FaBootstrap,
+  FaDocker,
+  FaYarn,
+} from "react-icons/fa";
+import { AiFillHtml5, AiOutlineAntDesign, AiFillApi } from "react-icons/ai";
+import {
+  SiSocketdotio,
+  SiNetlify,
+  SiVercel,
+  SiAdobexd,
+  SiKubernetes,
+  SiReacthookform,
+  SiNextui,
+  SiShadcnui,
+  SiRedis,
+  SiZod,
+  SiRedux,
+  SiReactquery,
+  SiMui,
+  SiExpress,
+  SiChartdotjs,
+  SiTailwindcss,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiStorybook,
+  SiStrapi,
+  SiPostman,
+  SiTypescript,
+  SiStyledcomponents,
+  SiChakraui,
+  SiNestjs,
+  SiPostcss,
+  SiPrisma,
+  SiFirebase,
+  SiNginx,
+  SiRadixui,
+  SiGithubactions,
+  SiSupabase,
+  SiVite,
+  SiPrometheus,
+  SiGrafana,
+  SiGraphql,
+  SiSwagger,
+} from "react-icons/si";
+import { TbBrandNextjs, TbBrandNuxt } from "react-icons/tb";
+import { DiGit, DiNpm } from "react-icons/di";
 
 const skillDetails = [
   {
@@ -60,12 +69,6 @@ const skillDetails = [
     iconURL: "/assets/css3.svg",
   },
   {
-    name: "Java",
-    key: "java",
-    icon: <FaJava />,
-    iconURL: "/assets/java.svg",
-  },
-  {
     name: "JavaScript",
     key: "js",
     icon: <SiJavascript />,
@@ -78,28 +81,10 @@ const skillDetails = [
     iconURL: "/assets/typescript.svg",
   },
   {
-    name: "Go",
-    key: "go",
-    icon: <SiGoland />,
-    iconURL: "/assets/golang.svg",
-  },
-  {
     name: "React.js",
     key: "react",
     icon: <FaReact />,
     iconURL: "/assets/react.svg",
-  },
-  {
-    name: "Vue.js",
-    key: "vue",
-    icon: <FaVuejs />,
-    iconURL: "/assets/vue-js.svg",
-  },
-  {
-    name: "Redux",
-    key: "redux",
-    icon: <SiRedux />,
-    iconURL: "/assets/redux.svg",
   },
   {
     name: "Next.js",
@@ -108,16 +93,28 @@ const skillDetails = [
     iconURL: "/assets/next-js.svg",
   },
   {
+    name: "Redux",
+    key: "redux",
+    icon: <SiRedux />,
+    iconURL: "/assets/redux.svg",
+  },
+  {
+    name: "Vue.js",
+    key: "vue",
+    icon: <FaVuejs />,
+    iconURL: "/assets/vue-js.svg",
+  },
+  {
     name: "Nuxt.js",
     key: "nuxt",
     icon: <TbBrandNuxt />,
     iconURL: "/assets/nuxt-js.svg",
   },
   {
-    name: "Nest.js",
-    key: "nest",
-    icon: <SiNestjs />,
-    iconURL: "/assets/nest-js.svg",
+    name: "Java",
+    key: "java",
+    icon: <FaJava />,
+    iconURL: "/assets/java.svg",
   },
   {
     name: "Node.js",
@@ -132,22 +129,40 @@ const skillDetails = [
     iconURL: "/assets/express-js.svg",
   },
   {
-    name: "firebase",
+    name: "Nest.js",
+    key: "nest",
+    icon: <SiNestjs />,
+    iconURL: "/assets/nest-js.svg",
+  },
+  {
+    name: "Firebase",
     key: "firebase",
     icon: <SiFirebase />,
     iconURL: "/assets/firebase.svg",
   },
   {
-    name: "firebase",
-    key: "firebase",
+    name: "Supabase",
+    key: "supabase",
     icon: <SiSupabase />,
-    iconURL: "/assets/supabase.svg",
+    iconURL: "/assets/supabase.png",
   },
   {
-    name: "MongoDB",
-    key: "mongodb",
-    icon: <SiMongodb />,
-    iconURL: "/assets/mongodb.svg",
+    name: "Socket.io",
+    key: "socket.io",
+    icon: <SiSocketdotio />,
+    iconURL: "/assets/socket-io.png",
+  },
+  {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiChartdotjs />,
+    iconURL: "/assets/chartjs.svg",
+  },
+  {
+    name: "Strapi",
+    key: "strapi",
+    icon: <SiStrapi />,
+    iconURL: "/assets/strapi.svg",
   },
   {
     name: "Prisma",
@@ -156,17 +171,40 @@ const skillDetails = [
     iconURL: "/assets/prisma.svg",
   },
   {
+    name: "MongoDB",
+    key: "mongodb",
+    icon: <SiMongodb />,
+    iconURL: "/assets/mongodb.svg",
+  },
+  {
+    name: "SQL",
+    key: "sql",
+    icon: <SiMysql />,
+    iconURL: "/assets/sql.svg",
+  },
+  {
     name: "MySQL",
     key: "mysql",
     icon: <SiMysql />,
     iconURL: "/assets/mysql.svg",
   },
-
   {
-    name: "Heroku",
-    key: "heroku",
-    icon: <SiHeroku />,
-    iconURL: "/assets/heroku.svg",
+    name: "PostgreSQL",
+    key: "postgresql",
+    icon: <SiMysql />,
+    iconURL: "/assets/postgresql.png",
+  },
+  {
+    name: "Redis",
+    key: "redis",
+    icon: <SiRedis />,
+    iconURL: "/assets/redis.svg",
+  },
+  {
+    name: "Postman",
+    key: "postman",
+    icon: <SiPostman />,
+    iconURL: "/assets/postman.svg",
   },
   {
     name: "Vercel",
@@ -174,30 +212,23 @@ const skillDetails = [
     icon: <SiVercel />,
     iconURL: "/assets/vercel.svg",
   },
+  // {
+  //   name: "Netlify",
+  //   key: "netlify",
+  //   icon: <SiNetlify />,
+  //   iconURL: "/assets/netlify.svg",
+  // },
   {
-    name: "Netlify",
-    key: "netlify",
-    icon: <SiNetlify />,
-    iconURL: "/assets/netlify.svg",
+    name: "Vite",
+    key: "vite",
+    icon: <SiVite />,
+    iconURL: "/assets/vite.png",
   },
-
   {
     name: "Amazon Web Services",
     key: "aws",
     icon: <FaAws />,
     iconURL: "/assets/amazon-web-services.svg",
-  },
-  {
-    name: "Docker",
-    key: "docker",
-    icon: <FaDocker />,
-    iconURL: "/assets/docker.svg",
-  },
-  {
-    name: "Google Cloud Platform",
-    key: "gcp",
-    icon: <SiGooglecloud />,
-    iconURL: "/assets/google-cloud.svg",
   },
   {
     name: "Nginx",
@@ -206,10 +237,46 @@ const skillDetails = [
     iconURL: "/assets/nginx.svg",
   },
   {
-    name: "Postman",
-    key: "postman",
-    icon: <SiPostman />,
-    iconURL: "/assets/postman.svg",
+    name: "Docker",
+    key: "docker",
+    icon: <FaDocker />,
+    iconURL: "/assets/docker.svg",
+  },
+  {
+    name: "Kubernetes",
+    key: "kubernetes",
+    icon: <SiKubernetes />,
+    iconURL: "/assets/kubernetes.png",
+  },
+  {
+    name: "Websockets",
+    key: "websockets",
+    icon: <SiSocketdotio />,
+    iconURL: "/assets/websockets.png",
+  },
+  {
+    name: "Prometheus",
+    key: "prometheus",
+    icon: <SiPrometheus />,
+    iconURL: "/assets/prometheus.png",
+  },
+  {
+    name: "Grafana",
+    key: "grafana",
+    icon: <SiGrafana />,
+    iconURL: "/assets/grafana.png",
+  },
+  {
+    name: "GraphQL",
+    key: "graphql",
+    icon: <SiGraphql />,
+    iconURL: "/assets/graphql.png",
+  },
+  {
+    name: "Rest API",
+    key: "rest",
+    icon: <AiFillApi />,
+    iconURL: "/assets/rest.png",
   },
   {
     name: "Syntactically Awesome Style Sheets",
@@ -230,10 +297,10 @@ const skillDetails = [
     iconURL: "/assets/postcss.svg",
   },
   {
-    name: "Strapi",
-    key: "strapi",
-    icon: <SiStrapi />,
-    iconURL: "/assets/strapi.svg",
+    name: "Less",
+    key: "less",
+    icon: <SiPostcss />,
+    iconURL: "/assets/less.png",
   },
   {
     name: "Figma",
@@ -266,18 +333,6 @@ const skillDetails = [
     iconURL: "/assets/yarn.svg",
   },
   {
-    name: "Vite",
-    key: "vite",
-    icon: <SiVite />,
-    iconURL: "/assets/vite.svg",
-  },
-  // {
-  //   name: "Webpack",
-  //   key: "webpack",
-  //   icon: <SiWebpack />,
-  //   iconURL: "/assets/webpack.svg",
-  // },
-  {
     name: "Git",
     key: "git",
     icon: <DiGit />,
@@ -290,20 +345,56 @@ const skillDetails = [
     iconURL: "/assets/githubactions.svg",
   },
   {
-    name: "GitHub Pages",
-    key: "githubpages",
-    icon: <SiGithubpages />,
-    iconURL: "/assets/githubpages.svg",
+    name: "Jest",
+    key: "jest",
+    icon: <SiGithubactions />,
+    iconURL: "/assets/jest.png",
   },
   {
-    name: "Chart.js",
-    key: "chart",
-    icon: <SiChartdotjs />,
-    iconURL: "/assets/chartjs.svg",
+    name: "Cypress",
+    key: "cypress",
+    icon: <SiGithubactions />,
+    iconURL: "/assets/cypress.png",
   },
   {
-    name: "Chart.js",
-    key: "chart",
+    name: "Swagger UI",
+    key: "swagger",
+    icon: <SiSwagger />,
+    iconURL: "/assets/swagger.png",
+  },
+  {
+    name: "Puppeteer",
+    key: "puppeteer",
+    icon: <SiSwagger />,
+    iconURL: "/assets/puppeteer.png",
+  },
+  {
+    name: "React Query",
+    key: "react-query",
+    icon: <SiReactquery />,
+    iconURL: "/assets/react-query.png",
+  },
+  {
+    name: "React Hook Form",
+    key: "react-hook-form",
+    icon: <SiReacthookform />,
+    iconURL: "/assets/react-hook-form.svg",
+  },
+  {
+    name: "Zod",
+    key: "zod",
+    icon: <SiZod />,
+    iconURL: "/assets/zod.png",
+  },
+  {
+    name: "Shadcn UI",
+    key: "shadcn",
+    icon: <SiShadcnui />,
+    iconURL: "/assets/shadcn.png",
+  },
+  {
+    name: "Radix UI",
+    key: "radix",
     icon: <SiRadixui />,
     iconURL: "/assets/radix.svg",
   },
@@ -317,13 +408,37 @@ const skillDetails = [
     name: "Styled-Components",
     key: "styled-components",
     icon: <SiStyledcomponents />,
-    iconURL: "/assets/styled-components.svg",
+    iconURL: "/assets/styled-components.png",
   },
   {
     name: "Ant-Design",
     key: "ant-design",
     icon: <AiOutlineAntDesign />,
     iconURL: "/assets/ant-design.svg",
+  },
+  {
+    name: "Material UI",
+    key: "material-ui",
+    icon: <SiMui />,
+    iconURL: "/assets/material-ui.png",
+  },
+  {
+    name: "Bootstrap",
+    key: "bootstrap",
+    icon: <FaBootstrap />,
+    iconURL: "/assets/bootstrap.png",
+  },
+  {
+    name: "React Bootstrap",
+    key: "react-bootstrap",
+    icon: <FaBootstrap />,
+    iconURL: "/assets/react-bootstrap.svg",
+  },
+  {
+    name: "Next UI",
+    key: "next-ui",
+    icon: <SiNextui />,
+    iconURL: "/assets/next-ui.png",
   },
 ];
 
