@@ -64,7 +64,7 @@ const About = () => {
                 mt={{ base: 0, md: 0, lg: 0, sm: 10, xs: 10 }}
               >
                 <Text>
-                  👨‍🎓This is{" "}
+                  👨‍🎓 This is{" "}
                   <span
                     style={{
                       color: "var(--chakra-colors-teal-500)",
@@ -73,43 +73,15 @@ const About = () => {
                   >
                     Ayush Soni
                   </span>{" "}
-                  , a final-year computer science undergraduate, pursuing
-                  B.Tech from Medi-Caps University, Indore. I am always
-                  fascinated by programming and passionate about exploring the
-                  latest technology and developing new cool and innovative
-                  products. I am an enthusiastic and curious individual who
-                  works hard and is highly ambitious in improving my knowledge
-                  of real-world applications.
+                  , a passionate full-stack developer and devrel engineer with a
+                  love for open-source and UI designing. I specialize in
+                  building robust and scalable SaaS products, microservices, and
+                  design systems. With a strong grasp of frontend and backend
+                  architecture, I create intuitive designs for engaging user
+                  experiences.
                 </Text>
                 <Text mt="5">
-                  ⚡I am a{" "}
-                  <span
-                    style={{
-                      color: "var(--chakra-colors-teal-500)",
-                      fontWeight: 500,
-                    }}
-                  >
-                    Full Stack Developer, an avid Open-Source Enthusiast, and
-                    UX/UI Designer
-                  </span>
-                  {", "}I enjoy building SaaS products and microservices
-                  applications while also creating feasible design systems. My
-                  deep understanding of{" "}
-                  <span
-                    style={{
-                      color: "var(--chakra-colors-teal-500)",
-                      fontWeight: 500,
-                    }}
-                  >
-                    frontend and backend
-                  </span>{" "}
-                  application structure and architecture allows me to build
-                  robust and scalable products using core principles. By
-                  leveraging design principles, I can deliver engaging and
-                  intuitive designs that provide seamless user experiences.
-                </Text>
-                <Text mt="5">
-                  🎯In terms of technical skills, I work with{" "}
+                  🚀 I have extensive experience in {""}
                   <span
                     style={{
                       color: "var(--chakra-colors-teal-500)",
@@ -117,13 +89,12 @@ const About = () => {
                     }}
                   >
                     Javascript and Typescript
-                  </span>{" "}
-                  on a daily basis, both professionally and on personal
-                  projects. I have actively participated in various hackathons
-                  and open-source contribution programs as both a participant
-                  and mentor, and I have taken sessions in the community to help
-                  with community building, team leadership, and different
-                  methodologies in developing software.
+                  </span>
+                  , using them professionally and for personal projects.
+                  I&apos;m involved in hackathons, community building, and
+                  open-source contributions as both a participant and mentor.
+                  Additionally, I also lead community initiatives, offer
+                  software development sessions, and provide team leadership.
                 </Text>
                 <HStack
                   mt={{ base: 8, lg: 8, md: 8, sm: 10, xs: 10 }}
