@@ -10,7 +10,6 @@ import { FaDocker } from "react-icons/fa";
 import { FaYarn } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
 import { AiOutlineAntDesign } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
 import { SiGooglecloud } from "react-icons/si";
 import { SiNetlify } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
@@ -22,10 +21,8 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
-import { SiHeroku } from "react-icons/si";
 import { SiStorybook } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
-import { SiGoland } from "react-icons/si";
 import { SiStrapi } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
@@ -60,12 +57,6 @@ const skillDetails = [
     iconURL: "/assets/css3.svg",
   },
   {
-    name: "Java",
-    key: "java",
-    icon: <FaJava />,
-    iconURL: "/assets/java.svg",
-  },
-  {
     name: "JavaScript",
     key: "js",
     icon: <SiJavascript />,
@@ -78,28 +69,10 @@ const skillDetails = [
     iconURL: "/assets/typescript.svg",
   },
   {
-    name: "Go",
-    key: "go",
-    icon: <SiGoland />,
-    iconURL: "/assets/golang.svg",
-  },
-  {
     name: "React.js",
     key: "react",
     icon: <FaReact />,
     iconURL: "/assets/react.svg",
-  },
-  {
-    name: "Vue.js",
-    key: "vue",
-    icon: <FaVuejs />,
-    iconURL: "/assets/vue-js.svg",
-  },
-  {
-    name: "Redux",
-    key: "redux",
-    icon: <SiRedux />,
-    iconURL: "/assets/redux.svg",
   },
   {
     name: "Next.js",
@@ -108,16 +81,28 @@ const skillDetails = [
     iconURL: "/assets/next-js.svg",
   },
   {
+    name: "Redux",
+    key: "redux",
+    icon: <SiRedux />,
+    iconURL: "/assets/redux.svg",
+  },
+  {
+    name: "Vue.js",
+    key: "vue",
+    icon: <FaVuejs />,
+    iconURL: "/assets/vue-js.svg",
+  },
+  {
     name: "Nuxt.js",
     key: "nuxt",
     icon: <TbBrandNuxt />,
     iconURL: "/assets/nuxt-js.svg",
   },
   {
-    name: "Nest.js",
-    key: "nest",
-    icon: <SiNestjs />,
-    iconURL: "/assets/nest-js.svg",
+    name: "Java",
+    key: "java",
+    icon: <FaJava />,
+    iconURL: "/assets/java.svg",
   },
   {
     name: "Node.js",
@@ -132,22 +117,22 @@ const skillDetails = [
     iconURL: "/assets/express-js.svg",
   },
   {
-    name: "firebase",
+    name: "Nest.js",
+    key: "nest",
+    icon: <SiNestjs />,
+    iconURL: "/assets/nest-js.svg",
+  },
+  {
+    name: "Firebase",
     key: "firebase",
     icon: <SiFirebase />,
     iconURL: "/assets/firebase.svg",
   },
   {
-    name: "firebase",
-    key: "firebase",
+    name: "Supabase",
+    key: "supabase",
     icon: <SiSupabase />,
-    iconURL: "/assets/supabase.svg",
-  },
-  {
-    name: "MongoDB",
-    key: "mongodb",
-    icon: <SiMongodb />,
-    iconURL: "/assets/mongodb.svg",
+    iconURL: "/assets/supabase.png",
   },
   {
     name: "Prisma",
@@ -156,18 +141,54 @@ const skillDetails = [
     iconURL: "/assets/prisma.svg",
   },
   {
+    name: "Chart.js",
+    key: "chart",
+    icon: <SiChartdotjs />,
+    iconURL: "/assets/chartjs.svg",
+  },
+  {
+    name: "Strapi",
+    key: "strapi",
+    icon: <SiStrapi />,
+    iconURL: "/assets/strapi.svg",
+  },
+  {
+    name: "MongoDB",
+    key: "mongodb",
+    icon: <SiMongodb />,
+    iconURL: "/assets/mongodb.svg",
+  },
+
+  {
+    name: "MySQL",
+    key: "mysql",
+    icon: <SiMysql />,
+    iconURL: "/assets/sql.svg",
+  },
+  {
     name: "MySQL",
     key: "mysql",
     icon: <SiMysql />,
     iconURL: "/assets/mysql.svg",
   },
-
   {
-    name: "Heroku",
-    key: "heroku",
-    icon: <SiHeroku />,
-    iconURL: "/assets/heroku.svg",
+    name: "MySQL",
+    key: "mysql",
+    icon: <SiMysql />,
+    iconURL: "/assets/postgresql.png",
   },
+  {
+    name: "Nginx",
+    key: "nginx",
+    icon: <SiNginx />,
+    iconURL: "/assets/nginx.svg",
+  },
+  // {
+  //   name: "Heroku",
+  //   key: "heroku",
+  //   icon: <SiHeroku />,
+  //   iconURL: "/assets/heroku.svg",
+  // },
   {
     name: "Vercel",
     key: "vercel",
@@ -199,12 +220,7 @@ const skillDetails = [
     icon: <SiGooglecloud />,
     iconURL: "/assets/google-cloud.svg",
   },
-  {
-    name: "Nginx",
-    key: "nginx",
-    icon: <SiNginx />,
-    iconURL: "/assets/nginx.svg",
-  },
+
   {
     name: "Postman",
     key: "postman",
@@ -228,12 +244,6 @@ const skillDetails = [
     key: "postcss",
     icon: <SiPostcss />,
     iconURL: "/assets/postcss.svg",
-  },
-  {
-    name: "Strapi",
-    key: "strapi",
-    icon: <SiStrapi />,
-    iconURL: "/assets/strapi.svg",
   },
   {
     name: "Figma",
@@ -295,12 +305,7 @@ const skillDetails = [
     icon: <SiGithubpages />,
     iconURL: "/assets/githubpages.svg",
   },
-  {
-    name: "Chart.js",
-    key: "chart",
-    icon: <SiChartdotjs />,
-    iconURL: "/assets/chartjs.svg",
-  },
+
   {
     name: "Chart.js",
     key: "chart",
