@@ -1,5 +1,31 @@
 [
   {
+    "role": "Frontend Engineer",
+    "company": "Go2work",
+    "company_url": "https://go2work.com",
+    "start_date": "November 2023",
+    "end_date": "",
+    "duration": "",
+    "location": "Houston, Texas, United States",
+    "work_type": "Remote",
+    "role_description": [
+      "Led library transition, built dashboard from scratch with wrapper components for hiring platform using Shadcn UI.",
+      "Optimized app performance, improved UI, and implemented chaos engineering for enhanced user experience.",
+      "Integrated WebSocket chat, push notifications, Strapi and managed authentication flow using Firebase in frontend."
+    ],
+    "tech_stack": [
+      "TypeScript",
+      "Firebase",
+      "MongoDb",
+      "MongoDb",
+      "Nodejs",
+      "WebSockets",
+      "Shadcn UI",
+      "Materia UI",
+      "Tailwind"
+    ]
+  },
+  {
     "role": "Developer Relations Engineer",
     "company": "FifthTry",
     "company_url": "https://fifthtry.com",
