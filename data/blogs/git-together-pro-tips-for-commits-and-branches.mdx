@@ -1,0 +1,282 @@
+---
+title: "Git Together: Pro Tips for Commits and Branches"
+date: "July 22, 2024"
+subtitle: "Maximize Git efficiency for smooth development"
+cover_image: "/images/git-together-pro-tips-for-commits-and-branches.png"
+href: "/blogs/git-together-pro-tips-for-commits-and-branches"
+tags: "Open Source, Git, GitHub, Version Control System, Development"
+url: "https://ayushsoni1010.hashnode.dev/git-together-pro-tips-for-commits-and-branches"
+---
+
+Hey everyone, In today's blog, I want to share some best practices for using Git more effectively. You know Git, right? Yes, the Git that you’re already familiar with and that amazing tool which makes our coding journey smooth. Git is like your trusty sidekick in coding, making project collaboration a breeze.
+
+When a developer looks back at commits from 6–8 months ago, it’s often hard to remember why a particular commit was made. This usually happens because the commit message wasn’t clear. Following commit message standards is key. By adopting these practices, your commits will be clear and easy to understand for you or anyone reviewing them later.
+
+A well-written Git commit message is the best way to convey the context of changes to other developers. Also, the team should agree on a commit message convention that clearly specifies the version control history of the project/product they are building.
+
+> 📘 **Before you dive in**:
+
+> **-** I have organised each sub-section on **Branch Naming Conventions** and **Commit Message Conventions** into basic, intermediate and advanced rules.
+
+> **-** Feel free to follow the rules up to whichever level suits your needs, but I recommend sticking to at least the **intermediate level** for the best results.
+
+> **-** The content here is adapted and organised from various resources, which you’ll find listed in the **Reference** section.
+
+</aside>
+
+Do you often create branches without knowing why, struggle to understand your own commits or find yourself digging through file changes to make sense of a commit? If that sounds familiar, don't worry. I've got some easy-to-follow tips to help you out.
+
+### Why should I follow the standards?
+
+1. **Clarity and Understanding:** Ever looked at a commit from months ago and wondered, “**What was I thinking?**”. Clear commit messages make it easy to understand the purpose of changes, even after a long time.
+2. **Collaboration and Teamwork:** Well-written messages help everyone on the team stay on the same page and work together more effectively.
+3. **Ease of Navigation and Maintenance:** Following standards makes navigating and maintaining the codebase straightforward and less of a headache.
+4. **Documentation and Knowledge Transfer:** Good commit messages act like mini-documents, helping new team members quickly get up to speed on the project history.
+5. **Project Quality:** Consistent practices improve the overall quality and reliability of the project, making it stronger and more resilient.
+6. **Automated Changelogs:** By sticking to standards, you can generate automated changelogs, making release management a breeze.
+7. **Optimizing CI/CD:** Clear commit messages can enhance your continuous integration and continuous deployment processes, providing essential context for automated tools.
+8. **Debugging and Issue Resolution:** When problems arise, standardised messages help quickly identify the cause, making debugging and issue resolution faster and easier.
+9. **Accountability:** Clear messages document who made specific changes and why, adding. a layer of accountability to the project.
+10. **Consistency Across Projects:** Adhering to commit message standards ensures consistency across different projects, making it easier for the developers to switch between projects and understand their histories.
+
+---
+
+## Branch Naming Conventions
+
+### Basics
+
+1. **Descriptive Names:** A well-named branch gives immediate context for its purpose. Instead of generic names, choose clarity.
+    
+    For example:
+    
+    - `feature/login`
+    - `bugfix/navbar-overflow`
+2. **Use Hyphens:** Use hyphens (kebab case) to separate words in branch names for better readability.
+    
+    For example:
+    
+    - `bugfix/fix-login-issue` is more readable than `bugfix/fixLoginIssue` or `bugfix/fix_login_issue`.
+3. **Alphanumeric Lowercase Characters:** Stick to alphanumeric lowercase characters (a-z,0-9) and hyphens. Avoid punctuation, spaces, underscores, or special characters whenever possible.
+4. **Avoid Unnecessary Hyphens:** Don’t use unnecessary hyphens like subsequent or trailing hyphens.
+    
+    For example:
+    
+    - `feat/new—login—` is a bad practice.
+5. **Short and Effective:** Keep branch names simple. They should be descriptive yet concise enough to convey the goal at a glance.
+
+### Prefix or Type
+
+Prefixing branches helps to organise them according to their purpose. This not only improves clarity but also aids in automating workflows.
+
+Here are some common branch type prefixes and their usage:
+
+1. **feature/**: For developing new features. 
+For example: 
+    - `feature/new-dashboard`
+    - `feature/user-profile-page`
+    - `feature/new-feature`
+2. **bugfix/**: For fixing bugs in the code. Often associated with an issue. Examples: 
+    
+    For example: 
+    
+    - `bugfix/login-error`
+    - `bugfix/incorrect-calculation`
+3. **hotfix/**: For addressing critical bugs in production. 
+    
+    For example: 
+    
+    - `hotfix/memory-leak`
+    - `hotfix/urgent-security-patch`
+4. **release/**: For preparing a new release, typically used for final touches and revisions. 
+    
+    For example: 
+    
+    - `release/version-1.0.0`
+    - `release/2.1.0-final`
+    - `release/version-1.0.0`
+5. **docs/**: For writing, modifying, or correcting documentation. 
+    
+    For example: 
+    
+    - `docs/update-api-docs`
+    - `docs/installation-guide`
+6. **chore/**: For routine tasks and maintenance that don’t affect the code’s functionality, like updating dependencies or building scripts. 
+    
+    For example: 
+    
+    - `chore/dependency-update`
+    - `chore/refactor-build-scripts`
+    - `chore/update-dependencies`
+7. **test/**: For adding or updating tests. 
+    
+    For example: 
+    
+    - `test/add-unit-tests`
+    - `test/fix-integration-tests`
+8. **style/**: For changes that do not affect the code's functionality but improve formatting, like code style or linting fixes.
+    
+    For example: 
+    
+    - `style/code-cleanup`
+    - `style/fix-indentation`
+9. **perf/**: For performance improvements.
+    
+    For example: 
+    
+    - `perf/optimize-loading-time`
+    - `perf/reduce-memory-usage`
+10. **revert/**: For reverting previous changes.
+    
+    For example: 
+    
+    - `revert/feature-branch-name`
+    - `revert/hotfix-issue-123`
+11. **refactor/**: For code refactoring that doesn’t change functionality but improves code structure or readability.
+    
+    For example:
+    
+    - `refactor/optimize-helpers`
+12. **experiment/:** For experimental features or changes that are still in the testing phase.
+    
+    For example: 
+    
+    - `experiment/new-algorithm-test`
+13. **build/**: For changes to the build process or configuration.
+    
+    For example:
+    
+    - `build/update-webpack-config`
+
+### Including Ticket Numbers
+
+If your project uses an issue tracking system like Jira, GitHub Issues, or another tool, include the issue token in the branch name. This practice makes it easy to track and reference related tasks.
+
+- Example: `feature/PROJ-123-footer-links`
+
+### Additional Context
+
+Using a consistent branch naming convention helps everyone on the team understand the purpose of each branch at a glance and streamlines the development workflow. It also makes it easier to integrate with CI/CD pipelines and automated tools, as well as to maintain a clean and organized repository.
+
+---
+
+## Commit Messages Convention
+
+As an open-source contributor/maintainer who experienced these good practices at a startup, squash feature branches onto `master` or `main` and write a standardized commit message while doing so. Writing clear and effective commit messages is crucial for maintaining a well-documented codebase. Here’s how you can structure your commit messages for maximum clarity and consistency:
+
+```markdown
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+### Message Subject
+
+1. **Imperative Mood:** Write commit messages in the imperative mood. Start with a verb to indicate what the commit does.
+    
+    For example:
+    
+    - Use `fix: correct typo in homepage` instead of `fix: Corrected typo in homepage`
+2. **Short and Standardized:** Keep the subject line within 50 characters to ensure readability in various Git tools, like when using `git log --oneline`. Avoid trailing periods and unnecessary words or symbols.
+3. **Capitalize the Description:** Start the subject line with a capital letter.
+
+### Type and Message Body
+
+1. **Type Prefix:** Use a type prefix in the subject line to represent the nature of the changes included in the commit. The commit type should include:
+    - `feat:` Summarizes a feature in the codebase.
+    - `fix:` Addresses a fix to the codebase.
+    - `build`, `chore`, `ci`, `style` and `refactor` are other examples.
+2. **Scope:** Optionally add a scope  to the commit’s type to provide additional context. Enclose the scope in parentheses.
+    
+    For example:
+    
+    - `feat(auth): add OAuth support`
+3. **Message Body:** Add detailed explanations in the commit body. Leave a blank line after the subject line to separate it from the body.
+    
+    <aside>
+    💡 **Wrap the body at 72 characters:** Use multiple lines of body text, ensuring each line does not exceed 72 characters limit.
+    
+    </aside>
+    
+
+### Footer and Extended Message Body
+
+1. **Footer:** Use the footer to convey additional details regarding the commit like such as `Reviewed-by` or `Approved-by`, etc.
+    
+    For example:
+    
+    - `Signed-off-by: John <john@example.com>`
+2. **Breaking change:** Indicate breaking changes with a `“BREAKING CHANGE”` footer or by adding a `!` sign after the type/scope.
+    
+    For example:
+    
+    - Message: `chore!: drop support for Node 6`
+    - Extended footer should be as follows:
+        
+        ```markdown
+        BREAKING CHANGE: Remove support for Node 6 as it lacks necessary features.
+        ```
+        
+3. **Multi-paragraph Body:** Use multiple paragraphs in the body to explain the what, why and how of the commit changes in greater detail.
+    
+    For example:
+    
+    ```markdown
+    fix: Resolve issue with user login
+    
+    The previous implementation caused a login failure when the
+    user had special characters in their password. This commit
+    refactors the login validation to properly handle special 
+    characters.
+    
+    Additional tests have been added to cover edge cases.
+    ```
+    
+    By following these conventions, you ensure your commit messages are informative, consistent, and helpful for anyone working on the project now and in the future.
+    
+
+---
+
+## Simplifying Commit Messages with Handy Tools
+
+To make sure your commit messages are consistent and clear, you can use tools like [Glitter](https://github.com/Milo123459/glitter) or [Commitizen](http://commitizen.github.io/cz-cli/). These tools help you stick to a standardized format for your commit messages.
+
+For an extra layer of consistency, try [Commitlint](https://commitlint.js.org/#/). I had personally utilized this  and found it right for standardized commit messages. This tool checks your commit messages and throw an error if someone does not follow the guidelines, ensuring everyone on  the team stays on the same page.
+
+Many companies uses JIRA, ClickUp or any other project management tool for ticket IDs as commit message. This practice makes it easy to link and trace changes, keeping the codebase maintainable for future developers.
+
+Adding emojis to commit messages is also popular. I have put together a list of emojis and their meanings that you can use to make your commit messages more expressive. Check it out here: https://gist.github.com/ayushsoni1010/cfc409ebabaae68b84a70306cc67c297
+
+---
+
+## Conclusion
+
+Mastering the art of writing effective commit messages is an invaluable skill that enhances collaboration and maintains the integrity of your codebase. By following these conventions, you ensure that your commit history is clear, informative, and easy to navigate. Whether you’re working alone or as part of a team, these practices will make your version control process more efficient and your codebase more maintainable. 
+
+Remember, a little attention to detail in your commit messages can save countless hours in the future and contribute to a smoother development workflow for everyone involved. 
+
+Happy committing🌱
+
+---
+
+## References
+
+1. https://www.conventionalcommits.org/en/v1.0.0-beta.2/
+2. https://www.geeksforgeeks.org/how-to-naming-conventions-for-git-branches/
+3. https://se-education.org/guides/conventions/git.html
+4. https://cbea.ms/git-commit/
+5. https://git-scm.com/docs/git-interpret-trailers
+6. https://phoenixnap.com/kb/git-branch-name-convention
+7. https://gist.github.com/ayushsoni1010/cfc409ebabaae68b84a70306cc67c297
+
+---
+
+That's all for today.
+If you enjoyed this content, please share your feedback.
+
+New to my profile? 🎉
+
+Hey! I am Ayush, a full-stack developer from India. I tweet and document my coding journey🌸.
+
+Follow [@ayushsoni1010](https://x.com/ayushsoni1010) for more content like this🔥😉.
