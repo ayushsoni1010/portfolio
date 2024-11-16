@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.3.0",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.20",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1",
     "next-sitemap": "^4.0.6",
