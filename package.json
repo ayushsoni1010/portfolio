@@ -22,7 +22,6 @@
     "chakra-ui-markdown-renderer": "^4.1.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.11.17",
-    "graphql": "^16.6.0",
     "gray-matter": "^4.0.3",
     "next": "12.3.1",
     "react": "18.2.0",
