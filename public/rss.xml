@@ -4,33 +4,34 @@
         <description><![CDATA[Hey! I am Ayush, a full-stack developer from India]]></description>
         <link>https://ayushsoni1010.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 28 Mar 2023 20:35:56 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 17 Nov 2024 08:30:27 GMT</lastBuildDate>
         <atom:link href="https://ayushsoni1010.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <copyright><![CDATA[Ayush Soni | 2023]]></copyright>
+        <copyright><![CDATA[Ayush Soni | 2024]]></copyright>
         <language><![CDATA[en]]></language>
         <managingEditor><![CDATA[Ayush Soni]]></managingEditor>
         <webMaster><![CDATA[Ayush Soni]]></webMaster>
         <item>
-            <title><![CDATA[Hacking at MLH HackCon]]></title>
-            <description><![CDATA[A beautiful journey to HackCon India]]></description>
-            <link>https://ayushsoni1010.hashnode.dev/hacking-at-mlh-hackcon</link>
-            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/hacking-at-mlh-hackcon</guid>
-            <category><![CDATA[MLH]]></category>
+            <title><![CDATA[Build an API with Serverless Functions in Next.js]]></title>
+            <description><![CDATA[Creating Efficient and Scalable Serverless APIs]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/build-an-api-with-serverless-functions-in-nextjs</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/build-an-api-with-serverless-functions-in-nextjs</guid>
             <category><![CDATA[Open Source]]></category>
-            <category><![CDATA[Community]]></category>
-            <category><![CDATA[Hackathons]]></category>
-            <category><![CDATA[GitHub]]></category>
-            <category><![CDATA[Conference]]></category>
-            <category><![CDATA[GitHub Global Campus]]></category>
-            <category><![CDATA[Meetup]]></category>
-            <category><![CDATA[MLH Fellowship]]></category>
-            <category><![CDATA[Open Source Program]]></category>
-            <category><![CDATA[Major League Hacking]]></category>
-            <category><![CDATA[GitHub Education]]></category>
-            <category><![CDATA[GitHub Campus Experts]]></category>
-            <category><![CDATA[Community Leaders]]></category>
+            <category><![CDATA[JavaScript]]></category>
+            <category><![CDATA[Node.js]]></category>
+            <category><![CDATA[API]]></category>
+            <category><![CDATA[Network]]></category>
+            <category><![CDATA[Routing]]></category>
+            <category><![CDATA[Request]]></category>
+            <category><![CDATA[Response]]></category>
+            <category><![CDATA[Server]]></category>
+            <category><![CDATA[Client]]></category>
+            <category><![CDATA[React]]></category>
+            <category><![CDATA[Next.js]]></category>
+            <category><![CDATA[Hooks]]></category>
+            <category><![CDATA[Serverless Functions]]></category>
+            <category><![CDATA[Vercel]]></category>
             <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
-            <pubDate>Fri, 16 Dec 2022 18:30:00 GMT</pubDate>
+            <pubDate>Fri, 31 Mar 2023 18:30:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[API Architectural Styles]]></title>
@@ -68,6 +69,96 @@
             <category><![CDATA[UX Writing]]></category>
             <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
             <pubDate>Sat, 25 Mar 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Deploy your React app using GitHub pages]]></title>
+            <description><![CDATA[Showcase your React app to the world with Github Pages]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/deploy-your-react-app-using-github-pages</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/deploy-your-react-app-using-github-pages</guid>
+            <category><![CDATA[Open Source]]></category>
+            <category><![CDATA[React]]></category>
+            <category><![CDATA[GitHub]]></category>
+            <category><![CDATA[JavaScript]]></category>
+            <category><![CDATA[Deployment]]></category>
+            <category><![CDATA[GitHub Pages]]></category>
+            <category><![CDATA[Web Development]]></category>
+            <category><![CDATA[JavaScript]]></category>
+            <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
+            <pubDate>Sun, 02 Apr 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to deploy the Headless CMS Strapi app on Heroku]]></title>
+            <description><![CDATA[Get started with the Strapi headless CMS]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/how-to-deploy-the-headless-cms-strapi-app-on-heroku</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/how-to-deploy-the-headless-cms-strapi-app-on-heroku</guid>
+            <category><![CDATA[Open Source]]></category>
+            <category><![CDATA[Headless CMS]]></category>
+            <category><![CDATA[Strapi]]></category>
+            <category><![CDATA[Node.js]]></category>
+            <category><![CDATA[Heroku]]></category>
+            <category><![CDATA[PostgreSQL]]></category>
+            <category><![CDATA[Community]]></category>
+            <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
+            <pubDate>Tue, 14 Dec 2021 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hacking at MLH HackCon]]></title>
+            <description><![CDATA[A beautiful journey to HackCon India]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/hacking-at-mlh-hackcon</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/hacking-at-mlh-hackcon</guid>
+            <category><![CDATA[MLH]]></category>
+            <category><![CDATA[Open Source]]></category>
+            <category><![CDATA[Community]]></category>
+            <category><![CDATA[Hackathons]]></category>
+            <category><![CDATA[GitHub]]></category>
+            <category><![CDATA[Conference]]></category>
+            <category><![CDATA[GitHub Global Campus]]></category>
+            <category><![CDATA[Meetup]]></category>
+            <category><![CDATA[MLH Fellowship]]></category>
+            <category><![CDATA[Open Source Program]]></category>
+            <category><![CDATA[Major League Hacking]]></category>
+            <category><![CDATA[GitHub Education]]></category>
+            <category><![CDATA[GitHub Campus Experts]]></category>
+            <category><![CDATA[Community Leaders]]></category>
+            <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
+            <pubDate>Fri, 16 Dec 2022 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to install fastn on your local machine]]></title>
+            <description><![CDATA[A comprehensive guide on installation of fastn]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/how-to-install-fastn-on-your-local-machine</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/how-to-install-fastn-on-your-local-machine</guid>
+            <category><![CDATA[fastn]]></category>
+            <category><![CDATA[ftd]]></category>
+            <category><![CDATA[Web Development]]></category>
+            <category><![CDATA[Installation]]></category>
+            <category><![CDATA[API Development]]></category>
+            <category><![CDATA[fastn framework]]></category>
+            <category><![CDATA[Programming language]]></category>
+            <category><![CDATA[Full Stack Development]]></category>
+            <category><![CDATA[Open Source]]></category>
+            <category><![CDATA[Rust]]></category>
+            <category><![CDATA[framwork]]></category>
+            <category><![CDATA[JavaScript]]></category>
+            <category><![CDATA[HTML]]></category>
+            <category><![CDATA[CSS]]></category>
+            <category><![CDATA[Vercel]]></category>
+            <category><![CDATA[GitHub Pages]]></category>
+            <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
+            <pubDate>Tue, 02 May 2023 18:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lets Grow with LetsGrowMore]]></title>
+            <description><![CDATA[A constructive blog on open source contribution program and other opportunities]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/lets-grow-with-letsgrowmore</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/lets-grow-with-letsgrowmore</guid>
+            <category><![CDATA[Open Source]]></category>
+            <category><![CDATA[LetsGrowMore]]></category>
+            <category><![CDATA[Community]]></category>
+            <category><![CDATA[Open Source Program]]></category>
+            <category><![CDATA[LGMSOC'21]]></category>
+            <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
+            <pubDate>Wed, 22 Sep 2021 18:30:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[HTTP Status Codes]]></title>
@@ -120,32 +211,36 @@
             <pubDate>Sun, 26 Mar 2023 18:30:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Lets Grow with LetsGrowMore]]></title>
-            <description><![CDATA[A constructive blog on open source contribution program and other opportunities]]></description>
-            <link>https://ayushsoni1010.hashnode.dev/lets-grow-with-letsgrowmore</link>
-            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/lets-grow-with-letsgrowmore</guid>
+            <title><![CDATA[Supercharge your React app with useSWR]]></title>
+            <description><![CDATA[Saves You the Stress of Writing Your Own Logic]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/supercharge-your-react-app-with-useswr</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/supercharge-your-react-app-with-useswr</guid>
+            <category><![CDATA[JavaScript]]></category>
             <category><![CDATA[Open Source]]></category>
-            <category><![CDATA[LetsGrowMore]]></category>
-            <category><![CDATA[Community]]></category>
-            <category><![CDATA[Open Source Program]]></category>
-            <category><![CDATA[LGMSOC'21]]></category>
+            <category><![CDATA[API]]></category>
+            <category><![CDATA[Error]]></category>
+            <category><![CDATA[Client]]></category>
+            <category><![CDATA[Request]]></category>
+            <category><![CDATA[Response]]></category>
+            <category><![CDATA[React]]></category>
+            <category><![CDATA[Hooks]]></category>
+            <category><![CDATA[Next.js]]></category>
+            <category><![CDATA[Frontend]]></category>
             <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
-            <pubDate>Wed, 22 Sep 2021 18:30:00 GMT</pubDate>
+            <pubDate>Tue, 28 Mar 2023 18:30:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[How to deploy the Headless CMS Strapi app on Heroku]]></title>
-            <description><![CDATA[Get started with the Strapi headless CMS]]></description>
-            <link>https://ayushsoni1010.hashnode.dev/how-to-deploy-the-headless-cms-strapi-app-on-heroku</link>
-            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/how-to-deploy-the-headless-cms-strapi-app-on-heroku</guid>
+            <title><![CDATA[Git Together: Pro Tips for Commits and Branches]]></title>
+            <description><![CDATA[Maximize Git efficiency for smooth development]]></description>
+            <link>https://ayushsoni1010.hashnode.dev/git-together-pro-tips-for-commits-and-branches</link>
+            <guid isPermaLink="true">https://ayushsoni1010.hashnode.dev/git-together-pro-tips-for-commits-and-branches</guid>
             <category><![CDATA[Open Source]]></category>
-            <category><![CDATA[Headless CMS]]></category>
-            <category><![CDATA[Strapi]]></category>
-            <category><![CDATA[Node.js]]></category>
-            <category><![CDATA[Heroku]]></category>
-            <category><![CDATA[PostgreSQL]]></category>
-            <category><![CDATA[Community]]></category>
+            <category><![CDATA[Git]]></category>
+            <category><![CDATA[GitHub]]></category>
+            <category><![CDATA[Version Control System]]></category>
+            <category><![CDATA[Development]]></category>
             <dc:creator><![CDATA[Ayush Soni]]></dc:creator>
-            <pubDate>Tue, 14 Dec 2021 18:30:00 GMT</pubDate>
+            <pubDate>Sun, 21 Jul 2024 18:30:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
