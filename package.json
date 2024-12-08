@@ -7,12 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "npm run sitemap && npm run rss:feed",
-    "sitemap": "next-sitemap --config next-sitemap.config.js",
-    "rss:feed": "run-func scripts/generate-rss.js generate"
+    "tsc:sitemap": "tsc next-sitemap.config.ts --outDir dist",
+    "sitemap": "npm run tsc:sitemap && next-sitemap --config dist/next-sitemap.config.js",
+    "rss:feed": "tsx scripts/generate-rss.ts"
   },
   "dependencies": {
+    "@chakra-ui/checkbox": "^2.3.2",
+    "@chakra-ui/image": "^2.1.0",
+    "@chakra-ui/layout": "^2.3.1",
     "@chakra-ui/react": "^2.3.6",
+    "@chakra-ui/system": "^2.6.2",
+    "@chakra-ui/table": "^2.1.0",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -24,8 +29,8 @@
     "framer-motion": "^11.13.1",
     "gray-matter": "^4.0.3",
     "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
     "react-markdown": "^8.0.6",
     "react-toastify": "^9.1.1",
@@ -37,12 +42,16 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.20",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.23",
     "rss": "^1.2.2",
-    "tailwindcss": "^3.4.16"
+    "tailwindcss": "^3.4.16",
+    "tsx": "^4.19.4",
+    "typescript": "5.8.3"
   }
 }
