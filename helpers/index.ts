@@ -1,8 +1,8 @@
-import { toast } from "react-toastify";
+import { toast, ToastPosition } from "react-toastify";
 
 const helpers = {
   /***** Hardcoded RegEx for Email validations *****/
-  validEmail: (email) => {
+  validEmail: (email: string): boolean => {
     let valid =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -12,9 +12,12 @@ const helpers = {
   },
 
   /***** Toast for Base Error Messages by using React Toastify library *****/
-  alertToastHandling: (message, position = "top-right") => {
+  alertToastHandling: (
+    message: string,
+    position: ToastPosition = "top-right"
+  ): void => {
     toast(message, {
-      position: "top-right" || position,
+      position,
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,

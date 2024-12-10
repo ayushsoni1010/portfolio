@@ -36,10 +36,10 @@ const Blog = (blogsData) => {
               firstTitle="Blogs"
               secondTitle="Content"
               textIcon="https://ik.imagekit.io/ayushsoni1010/Website/blogs?ik-sdk-version=javascript-1.4.3&updatedAt=1669666499904"
-              topSpacing="2"
+              topSpacing={2}
             />
             <Flex
-              mt="24"
+              
               justify="space-evenly"
               flexWrap="wrap"
               alignItems="start"

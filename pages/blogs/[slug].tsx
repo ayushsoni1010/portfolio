@@ -49,12 +49,12 @@ const BlogPage = ({ data, slug, contentHtml }) => {
             firstTitle="Technical"
             secondTitle="Writer"
             textIcon="https://ik.imagekit.io/ayushsoni1010/Website/blogs?ik-sdk-version=javascript-1.4.3&updatedAt=1669666499904"
-            topSpacing="2"
+            topSpacing={2}
           />
           <Box>
             <Box>
               <Box
-                align="center"
+                alignItems="center"
                 my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}
                 bgColor="gray.300"
                 p="10"

@@ -4,133 +4,142 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../utils/model";
 import { DogSpinner, DogContainer } from "./blender-dog";
 
-function easeOutCirc(x) {
+function easeOutCirc(x: number): number {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
 
 const VoxelDog = () => {
-  const refContainer = useRef();
+  const refContainer = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
-  const refRenderer = useRef();
-  const urlDogGLB =
-    (process.env.NODE_ENV === "production"
-      ? "https://craftzdog.global.ssl.fastly.net/homepage"
-      : "") + "/dog.glb";
+  const refRenderer = useRef<THREE.WebGLRenderer | null>(null);
+  const refScene = useRef<THREE.Scene | null>(null);
+  const refCamera = useRef<THREE.OrthographicCamera | null>(null);
+  const refControls = useRef<OrbitControls | null>(null);
+  const refAnimationFrame = useRef<number | null>(null);
+  const refFrame = useRef<number>(0);
+
+  const urlDogGLB = (process.env.NODE_ENV === "production"
+    ? "https://craftzdog.global.ssl.fastly.net/homepage"
+    : "") + "/dog.glb";
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer;
     const { current: container } = refContainer;
-    if (container && renderer) {
-      const scW = container.clientWidth;
-      const scH = container.clientHeight;
+    const { current: camera } = refCamera;
+    
+    if (container && renderer && camera) {
+      let scW = container.clientWidth;
+      let scH = container.clientHeight;
 
-      if (window.matchMedia("screen and (max-width: 768px)").matches) {
-        scH = 400;
-        scW = 400;
-      }
+      const breakpoints = [
+        { width: 768, size: 400 },
+        { width: 500, size: 300 },
+        { width: 300, size: 250 },
+        { width: 250, size: 200 }
+      ];
 
-      if (window.matchMedia("screen and (max-width: 500px)").matches) {
-        scH = 300;
-        scW = 300;
-      }
-
-      if (window.matchMedia("screen and (max-width: 300px)").matches) {
-        scH = 250;
-        scW = 250;
-      }
-      if (window.matchMedia("screen and (max-width: 250px)").matches) {
-        scH = 200;
-        scW = 200;
+      for (const { width, size } of breakpoints) {
+        if (window.matchMedia(`screen and (max-width: ${width}px)`).matches) {
+          scH = size;
+          scW = size;
+          break;
+        }
       }
 
       renderer.setSize(scW, scH);
+      const scale = scH * 0.005 + 4.8;
+      camera.left = -scale;
+      camera.right = scale;
+      camera.top = scale;
+      camera.bottom = -scale;
+      camera.updateProjectionMatrix();
     }
   }, []);
 
-  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const { current: container } = refContainer;
-    if (container) {
-      const scW = container.clientWidth;
-      const scH = container.clientHeight;
+    if (!container) return;
 
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true,
-      });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(scW, scH);
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      container.appendChild(renderer.domElement);
-      refRenderer.current = renderer;
-      const scene = new THREE.Scene();
+    const scW = container.clientWidth;
+    const scH = container.clientHeight;
 
-      const target = new THREE.Vector3(-0.5, 1.2, 0);
-      const initialCameraPosition = new THREE.Vector3(
-        20 * Math.sin(0.2 * Math.PI),
-        10,
-        20 * Math.cos(0.2 * Math.PI)
-      );
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(scW, scH);
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    container.appendChild(renderer.domElement);
+    refRenderer.current = renderer;
 
-      // 640 -> 240
-      // 8   -> 6
-      const scale = scH * 0.005 + 4.8;
-      const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.01,
-        50000
-      );
-      camera.position.copy(initialCameraPosition);
-      camera.lookAt(target);
+    const scene = new THREE.Scene();
+    refScene.current = scene;
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
-      scene.add(ambientLight);
+    const target = new THREE.Vector3(-0.5, 1.2, 0);
+    const initialCameraPosition = new THREE.Vector3(
+      20 * Math.sin(0.2 * Math.PI),
+      10,
+      20 * Math.cos(0.2 * Math.PI)
+    );
 
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.autoRotate = true;
-      controls.target = target;
+    const scale = scH * 0.005 + 4.8;
+    const camera = new THREE.OrthographicCamera(
+      -scale,
+      scale,
+      scale,
+      -scale,
+      0.01,
+      50000
+    );
+    camera.position.copy(initialCameraPosition);
+    camera.lookAt(target);
+    refCamera.current = camera;
 
-      loadGLTFModel(scene, "/dog.glb", {
-        receiveShadow: false,
-        castShadow: false,
-      }).then(() => {
-        animate();
-        setLoading(false);
-      });
+    const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+    scene.add(ambientLight);
 
-      let req = null;
-      let frame = 0;
-      const animate = () => {
-        req = requestAnimationFrame(animate);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.autoRotate = true;
+    controls.target = target;
+    refControls.current = controls;
 
-        frame = frame <= 100 ? frame + 1 : frame;
+    loadGLTFModel(scene, "/dog.glb", {
+      receiveShadow: false,
+      castShadow: false,
+    }).then(() => {
+      animate();
+      setLoading(false);
+    });
 
-        if (frame <= 100) {
-          const p = initialCameraPosition;
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
+    const animate = () => {
+      refAnimationFrame.current = requestAnimationFrame(animate);
+      const frame = refFrame.current;
 
-          camera.position.y = 10;
-          camera.position.x =
-            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
-          camera.position.z =
-            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed);
-          camera.lookAt(target);
-        } else {
-          controls.update();
-        }
+      if (frame <= 100) {
+        const p = initialCameraPosition;
+        const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
 
-        renderer.render(scene, camera);
-      };
+        camera.position.y = 10;
+        camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
+        camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed);
+        camera.lookAt(target);
+        refFrame.current = frame + 1;
+      } else {
+        controls.update();
+      }
 
-      return () => {
-        cancelAnimationFrame(req);
-        renderer.domElement.remove();
-        renderer.dispose();
-      };
-    }
+      renderer.render(scene, camera);
+    };
+
+    return () => {
+      if (refAnimationFrame.current) {
+        cancelAnimationFrame(refAnimationFrame.current);
+      }
+      renderer.domElement.remove();
+      renderer.dispose();
+      controls.dispose();
+    };
   }, []);
 
   useEffect(() => {

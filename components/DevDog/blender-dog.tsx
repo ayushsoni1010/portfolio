@@ -1,6 +1,37 @@
 import { forwardRef } from "react";
 import { Box, Spinner } from "@chakra-ui/react";
 
+export const DogContainer = forwardRef(
+  (
+    { children }: { children: React.ReactNode },
+    ref: React.Ref<HTMLDivElement>
+  ) => (
+    <Box
+      ref={ref}
+      className="blender-dog"
+      m="auto"
+      mt={{ md: "-120px", lg: "-120px", sm: "0px", xs: "0px" }}
+      w={{
+        md: 600,
+        lg: 600,
+        sm: 400,
+        xs: 300,
+      }}
+      h={{
+        md: 640,
+        lg: 640,
+        sm: 400,
+        xs: 300,
+      }}
+      position="relative"
+    >
+      {children}
+    </Box>
+  )
+);
+
+DogContainer.displayName = "DogContainer";
+
 export const DogSpinner = () => (
   <Spinner
     size="xl"
@@ -11,31 +42,6 @@ export const DogSpinner = () => (
     mt="calc(0px - var(--spinner-size))"
   />
 );
-
-// eslint-disable-next-line react/display-name
-export const DogContainer = forwardRef(({ children }, ref) => (
-  <Box
-    ref={ref}
-    className="blender-dog"
-    m="auto"
-    mt={{ md: "-120px", lg: "-120px", sm: "0px", xs: "0px" }}
-    w={{
-      md: 600,
-      lg: 600,
-      sm: 400,
-      xs: 300,
-    }}
-    h={{
-      md: 640,
-      lg: 640,
-      sm: 400,
-      xs: 300,
-    }}
-    position="relative"
-  >
-    {children}
-  </Box>
-));
 
 const Loader = () => {
   return (
