@@ -25,48 +25,54 @@ jobs:
         with:
           name: Resume PDF
           path: public/resume/resume.pdf
-      - name: Install ghostscript
-        run: sudo apt-get update --fix-missing && sudo apt install -y ghostscript
+
+      - name: Install ImageMagick & ghostscript
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick ghostscript
+
       - name: Change ImageMagick security policy
         run: |
-          DQT='"'
-          SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
-          RPL="rights=${DQT}read|write${DQT} pattern=${DQT}PDF${DQT}"
-          HGT="name=${DQT}height${DQT} value=${DQT}10KP${DQT}"
-          HGTR="name=${DQT}height${DQT} value=${DQT}128Kp${DQT}"
-          WDT="name=${DQT}width${DQT} value=${DQT}10KP${DQT}"
-          WDTR="name=${DQT}width${DQT} value=${DQT}128Kp${DQT}"
-          MAP="name=${DQT}map${DQT} value=${DQT}512MiB${DQT}"
-          MAPR="name=${DQT}map${DQT} value=${DQT}4GiB${DQT}"
-          MEM="name=${DQT}memory${DQT} value=${DQT}256MiB${DQT}"
-          MEMR="name=${DQT}memory${DQT} value=${DQT}2GiB${DQT}"
-          sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
-          sudo sed -i "s/$HGT/$HGTR/" /etc/ImageMagick-6/policy.xml
-          sudo sed -i "s/$WDT/$WDTR/" /etc/ImageMagick-6/policy.xml
-          sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
-          sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
+          for policy in /etc/ImageMagick-6/policy.xml /etc/ImageMagick/policy.xml; do
+            if [ -f "$policy" ]; then
+              DQT='"'
+              SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
+              RPL="rights=${DQT}read|write${DQT} pattern=${DQT}PDF${DQT}"
+              HGT="name=${DQT}height${DQT} value=${DQT}10KP${DQT}"
+              HGTR="name=${DQT}height${DQT} value=${DQT}128Kp${DQT}"
+              WDT="name=${DQT}width${DQT} value=${DQT}10KP${DQT}"
+              WDTR="name=${DQT}width${DQT} value=${DQT}128Kp${DQT}"
+              MAP="name=${DQT}map${DQT} value=${DQT}512MiB${DQT}"
+              MAPR="name=${DQT}map${DQT} value=${DQT}4GiB${DQT}"
+              MEM="name=${DQT}memory${DQT} value=${DQT}256MiB${DQT}"
+              MEMR="name=${DQT}memory${DQT} value=${DQT}2GiB${DQT}"
+              sudo sed -i "s/$SRC/$RPL/" "$policy" || true
+              sudo sed -i "s/$HGT/$HGTR/" "$policy" || true
+              sudo sed -i "s/$WDT/$WDTR/" "$policy" || true
+              sudo sed -i "s/$MAP/$MAPR/" "$policy" || true
+              sudo sed -i "s/$MEM/$MEMR/" "$policy" || true
+            fi
+          done
+
       - name: Convert PDF to PNG
-        run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
+        run: convert -density 900 -background white -alpha off public/resume/resume.pdf -resize 25% -quality 90 -colorspace RGB public/resume/resume.png
+
       - name: Get Time
         id: time
         uses: nanzm/get-time-action@v2.0
         with:
           timeZone: -7
           format: "YYYY-MM-DD"
-      - name: Create Release
+
+      - name: Create Release and Upload Assets
         id: create_release
-        uses: softprops/action-gh-release@v2
-        with:
-          name: Resume compiled on ${{ steps.time.outputs.time }}
-          tag_name: ${{ steps.time.outputs.time }}
-      - name: Upload Release Asset
-        id: upload-release-asset
         uses: softprops/action-gh-release@v2
         with:
           name: Resume compiled on ${{ steps.time.outputs.time }}
           tag_name: ${{ steps.time.outputs.time }}
           files: |
             public/resume/resume.pdf
+
       - name: Commit PNG and PDF
         run: |
           git config --local user.email "action[bot]@github.com"
