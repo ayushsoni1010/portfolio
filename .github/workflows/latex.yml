@@ -21,7 +21,7 @@ jobs:
         with:
           root_file: public/resume/resume.tex
       - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Resume PDF
           path: public/resume/resume.pdf
