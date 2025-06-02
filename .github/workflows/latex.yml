@@ -46,7 +46,7 @@ jobs:
           sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
-        run: convert -density 900 -background white -alpha off public/resume/resume.pdf -resize 25% -quality 90 -colorspace RGB public/resume/resume.png
+        run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
       - name: Get Time
         id: time
         uses: nanzm/get-time-action@v2.0
