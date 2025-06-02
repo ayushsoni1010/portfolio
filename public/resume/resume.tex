@@ -5,7 +5,7 @@
   % License: MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -102,6 +102,15 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeEduheading}[4]{
+\vspace{2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    {#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4}\\
+    % \textit{\small#5} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -119,7 +128,7 @@
 \begin{center}
 \textbf{\Huge \scshape Ayush Soni} \\ \vspace{10pt}
 \href{tel:9644963410}{+91 9644963410} $|$
-{Indore, India} $|$
+{Pune, India} $|$
 {Full Stack Developer} $|$
 \href{mailto:ayushsoni1010.work@gmail.com}{ayushsoni1010.work@gmail.com} \\ \vspace{3pt}
 
@@ -135,12 +144,12 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
-      \textbf{Languages}{: \hfill Javascript, Typescript, Java, SQL } \\
-      \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React, React Native, Redux, Nextjs, Vue, Nuxtjs, Nodejs, Express, Chartjs, Strapi, Socket.io} \\
-      \vspace{3pt}\textbf{UI Component Libraries}{: \hfill Chakra UI, Shadcn UI, Radix UI, Ant Design, Material UI, styled-components, Tailwind, Next UI} \\
-      \vspace{3pt}\textbf{Databases/Servers}{: \hfill MongoDB, MySQL, PostgreSQL, Redis, Mongoose, Prisma, Firebase, Supabase, Nginx} \\
-      \vspace{3pt}\textbf{Platforms/Tools}{: \hfill AWS, Vercel, Git, CI/CD, Figma, Storybook, Postman, Docker, Kubernetes, NPM, Yarn, Netlify } \\
-      \vspace{3pt}\textbf{Other}{: \hfill WebSockets, REST, GraphQL, tRPC, Jest, Cypress, Swagger, Prometheus, Grafana, Puppeteer }
+      \textbf{Languages}{: \hfill Javascript, Typescript, Python, SQL } \\
+      \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React/React Native/Next.js, Vue/Nuxtjs, Redux/Zustand, Nodejs/Express, FastAPI, Socket.io} \\
+      \vspace{3pt}\textbf{UI Component Libraries/CSS}{: \hfill Chakra UI, Shadcn UI, Radix UI, Ant Design, Material UI, styled-components, TailwindCSS} \\
+      \vspace{3pt}\textbf{Databases/Servers}{: \hfill Firebase, Supabase, MongoDB, MySQL, PostgreSQL, Redis, Prisma, Nginx} \\
+      \vspace{3pt}\textbf{Platforms/Tooling}{: \hfill AWS, Docker, Vercel/Netlify, Webpack, Vite, GitHub Actions} \\
+      \vspace{3pt}\textbf{Others}{: \hfill WebSockets/REST/GraphQL, Jest/Cypress/Storybook, Puppeteer, Chartjs, Strapi, Figma, Swagger/Postman}
       }}
 \end{itemize}
 
@@ -152,24 +161,36 @@
 
 % ------------------------
 \resumeSubheading
-{\textbf{\href{https://go2work.com}{Go2work}\hspace{5pt}}{{[TypeScript, Nextjs, Firebase, AWS]}}}{(Remote) Houston, Texas, United States}
-{\textbf{Frontend Engineer – Full time}}{November 2023 -- Present}
+{\textbf{\href{https://attentions.ai}{Attentions AI}\hspace{5pt}}{{[Next.js, AI Agents, Pub-Sub, WebSockets, MCP]}}}{(Onsite) Pune, India}
+{\textbf{Software Development Engineer I – Full-time}}{October 2024 -- Present}
 \resumeItemListStart
-\resumeItem{Led library transition, built dashboard from scratch with wrapper components for hiring platform using Shadcn UI.}
-\resumeItem{Optimized app performance, improved UI, and implemented chaos engineering for enhanced user experience.}
-\resumeItem{Integrated WebSocket chat, push notifications, Strapi and managed authentication flow using Firebase in frontend.}
+\resumeItem{Built 4 production micro-frontends(Artigen, Connect, Docu, Lumina) for Q\&A on documents, call centers, e-commerce solution.}
+\resumeItem{Improved app performance by 40\%, implemented WebSocket streaming, built markdown wrapper, \& real-time pub-sub systems.}
+\resumeItem{Developing enterprise Chat SDK with voice, numerous AI agents, MCP connectors and integrations for the B2B client workflows.}
 \resumeItemListEnd
 % ------------------------
 
 
 % ------------------------
 \resumeSubheading
-{\textbf{\href{https://fifhtry.com}{FifthTry}\hspace{5pt}}{{[Rust]}}}{(Remote) Bengaluru, India}
+{\textbf{\href{https://go2work.com}{Go2work}\hspace{5pt}}{{[TypeScript, Next.js, Firebase, AWS, Shadcn UI]}}}{(Remote) Houston, Texas, United States}
+{\textbf{Frontend Engineer – Full time}}{November 2023 -- October 2024}
+\resumeItemListStart
+\resumeItem{Built hiring platform dashboard from scratch using TypeScript/Next.js, architected reusable component library with Shadcn UI.}
+\resumeItem{Optimized application performance by 70\% through code refactoring, UI improvements, and chaos engineering implementation.}
+\resumeItem{Delivered real-time WebSocket chat system, push notifications, and secure Firebase authentication for seamless user workflows.}
+\resumeItemListEnd
+% ------------------------
+
+
+% ------------------------
+\resumeSubheading
+{\textbf{\href{https://fifhtry.com}{FifthTry}\hspace{5pt}}{{[JavaScript, React, fastn]}}}{(Remote) Bengaluru, India}
 {\textbf{Developer Relations Engineer – Full time}}{April 2023 -- September 2023}
 \resumeItemListStart
-\resumeItem{Spearheaded strategic enhancements, built numerous sample apps with fastn, and handled other engineering tasks}
-\resumeItem{Led documentation site development, conducted developer training, enhanced the fastn framework written in Rust}
-\resumeItem{Curated nationwide events, managed marketing efforts, fostered community growth, and handled client relations.}
+\resumeItem{Built 10+ sample applications with fastn framework, contributed to Rust-based core development, driving developer adoption.}
+\resumeItem{Developed comprehensive documentation platform, delivered technical workshops to 5000+ developers across multiple cities.}
+\resumeItem{Organized 12+ nationwide community events, grew developer community by 300\%, established key partnership relationships.}
 \resumeItemListEnd
 % ------------------------
 
@@ -180,9 +201,9 @@
 % {Magic}{Remote, Delhi}
 {\textbf{Product Engineer – Intern}}{January 2023 -- March 2023}
 \resumeItemListStart
-\resumeItem{Worked on a dashboard application based on a SaaS product that helps Slack communities without leaving slack. }
-\resumeItem{Worked on creating sitemaps for the product, auth and password recovery feature, and frontend UI improvements. }
-\resumeItem{Implemented security measures of LogRocket and introduced events module feature for hosting community events.}
+\resumeItem{Engineered SaaS dashboard for 10+ Slack communities, eliminating 60\% of platform switching and boosting engagement rates.}
+\resumeItem{Developed authentication system, password recovery flows, and created the sitemaps using NuxtJS and Parse Server integration.}
+\resumeItem{Delivered community events module, implemented LogRocket analytics integration that decreased bug resolution time by 60\%.}
 \resumeItemListEnd
 % ------------------------
 
@@ -193,9 +214,10 @@
 % {Economize}{Remote, Bengaluru}
 {\textbf{Software Engineer – Intern}}{October 2021 -- November 2022}
 \resumeItemListStart
-\resumeItem{Worked on a dashboard application based on a SaaS product to optimize and manage cloud costs for AWS and GCP.}
-\resumeItem{Improved UI: docs website, AWS/GCP cost-reports tables, dashboard, website, and GCP cloud assets backend fixes.}
-\resumeItem{Implemented wrapper components using Ant Design library and ChartJs, configured storybook and strapi setup.}
+\resumeItem{Developed cloud cost optimization SaaS dashboard serving 500+ enterprise clients across AWS and GCP platforms using Vue.js.}
+\resumeItem{Delivered 40\% UX improvement of documentation, AWS/GCP report tables, and implemented Storybook + Strapi CMS setup.
+}
+\resumeItem{Created component library with 15+ reusable elements using Ant Design and Chart.js, accelerating team development by 30\%.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 % ------------------------
@@ -226,12 +248,11 @@
 \resumeSubHeadingListEnd
 
 
-
 % ---------- EDUCATION ----------
 
 \section{Education}
 \resumeSubHeadingListStart
-\resumeSubheading
+\resumeEduheading
 {Medi-Caps University}{Indore, Madhya Pradesh, India}
 {Bachelor of Technology in Computer Science and Engineering}{CGPA: 8.7/10}
 \resumeSubHeadingListEnd
