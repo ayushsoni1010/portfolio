@@ -10,16 +10,19 @@ on:
     paths:
       - "public/resume/resume.tex"
       - ".github/workflows/**"
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: public/resume/resume.tex
+
       - name: Uploading artifact
         uses: actions/upload-artifact@v3
         with:
@@ -27,12 +30,13 @@ jobs:
           path: public/resume/resume.pdf
 
       - name: Install ghostscript
-        run: sudo apt-get update --fix-missing && sudo apt install ghostscript
+        run: sudo apt-get update --fix-missing && sudo apt install -y ghostscript
+
       - name: Change ImageMagick security policy
         run: |
-          DQT='"' 
+          DQT='"'
           SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
-          RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
+          RPL="rights=${DQT}read|write${DQT} pattern=${DQT}PDF${DQT}"
           HGT="name=${DQT}height${DQT} value=${DQT}10KP${DQT}"
           HGTR="name=${DQT}height${DQT} value=${DQT}128Kp${DQT}"
           WDT="name=${DQT}width${DQT} value=${DQT}10KP${DQT}"
@@ -46,13 +50,9 @@ jobs:
           sudo sed -i "s/$WDT/$WDTR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MAP/$MAPR/" /etc/ImageMagick-6/policy.xml
           sudo sed -i "s/$MEM/$MEMR/" /etc/ImageMagick-6/policy.xml
-      - name: Convert PDF to PNG
-        run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
 
-      - name: Post Processing
-        run: |
-          cp resume.pdf public/resume/
-          # cp resume.png public/resume/
+      - name: Convert PDF to PNG
+        run: convert -density 900 -background white -alpha off public/resume/resume.pdf -resize 25% -quality 90 -colorspace RGB public/resume/resume.png
 
       - name: Get Time
         id: time
@@ -60,12 +60,14 @@ jobs:
         with:
           timeZone: -7
           format: "YYYY-MM-DD"
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
           name: Resume compiled on ${{ steps.time.outputs.time }}
           tag_name: ${{ steps.time.outputs.time }}
+
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
@@ -73,17 +75,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./resume.pdf
+          asset_path: public/resume/resume.pdf
           asset_name: resume.pdf
           asset_content_type: application/pdf
 
-      - name: Commit PNG
-        id: commit
+      - name: Commit PNG and PDF
         run: |
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/resume
-          git commit -m "[bot] updated png and pdf"
+          git add public/resume/resume.pdf public/resume/resume.png
+          git diff --cached --quiet || git commit -m "[bot] updated png and pdf"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
