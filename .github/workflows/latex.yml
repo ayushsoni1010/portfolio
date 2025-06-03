@@ -60,7 +60,7 @@ jobs:
       - name: Post Processing
         run: |
           cp resume.pdf public/resume/
-          cp resume.png public/resume/
+          # cp resume.png public/resume/
 
       - name: Get Time
         id: time
