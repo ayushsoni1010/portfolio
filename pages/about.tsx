@@ -32,8 +32,8 @@ const About = () => {
               firstTitle="About"
               secondTitle="Developer"
               textIcon="https://ik.imagekit.io/ayushsoni1010/Website/about?ik-sdk-version=javascript-1.4.3&updatedAt=1669666323627"
-              leftSpacing="4"
-              topSpacing="2"
+              leftSpacing={4}
+              topSpacing={2}
             />
             <Grid
               display={{
@@ -122,6 +122,7 @@ const About = () => {
             >
               <Flex gap="4" alignItems={"center"}>
                 <IconButton
+                  aria-label="Announce Icon"
                   size="lg"
                   width={{ base: 14, lg: 14, md: 14, sm: 14, xs: 10 }}
                   height={{ base: 14, lg: 14, md: 14, sm: 14, xs: 10 }}

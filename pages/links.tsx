@@ -21,7 +21,7 @@ const Links = () => {
             firstTitle="Links"
             secondTitle="Connect"
             textIcon="https://ik.imagekit.io/ayushsoni1010/Website/notion?updatedAt=1669666487240"
-            leftSpacing="4"
+            leftSpacing={4}
           />
           <VStack
             spacing={4}

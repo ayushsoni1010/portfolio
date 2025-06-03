@@ -24,7 +24,7 @@ const Timeline = () => {
           firstTitle="Featured"
           secondTitle="Timeline"
           textIcon="https://ik.imagekit.io/ayushsoni1010/Website/timeline?ik-sdk-version=javascript-1.4.3&updatedAt=1669666586717"
-          topSpacing="2"
+          topSpacing={2}
         />
         <Box
           my="20"
@@ -53,7 +53,7 @@ const Timeline = () => {
                 gridColumnGap="80px"
                 gridRowGap="20px"
               >
-                <Box alignSelf="center">
+                <Box textAlign="center">
                   <Text
                     textAlign={{
                       base: "right",
@@ -160,7 +160,7 @@ const Timeline = () => {
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
                     _hover={{ boxShadow: "outline" }}
-                    align="center"
+                    textAlign="center"
                   >
                     <IconButton
                       as="a"
@@ -291,7 +291,7 @@ const Timeline = () => {
                     transition={"ease-in-out"}
                     transitionDuration="0.5s"
                     _hover={{ boxShadow: "outline" }}
-                    align="center"
+                    textAlign="center"
                   >
                     <IconButton
                       as="a"
@@ -335,7 +335,7 @@ const Timeline = () => {
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   />
                 </Box>
-                <Box alignSelf="center">
+                <Box textAlign="center">
                   <Text>{item.timeline_date}</Text>
                   <Link href={item.timeline_event_link} isExternal={true}>
                     <Text>{item.timeline_hostedby}</Text>
@@ -478,7 +478,7 @@ const Timeline = () => {
                       transition={"ease-in-out"}
                       transitionDuration="0.5s"
                       _hover={{ boxShadow: "outline" }}
-                      align="center"
+                      textAlign="center"
                     >
                       <IconButton
                         as="a"

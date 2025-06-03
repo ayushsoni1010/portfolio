@@ -46,7 +46,10 @@ const Home = () => {
           idea to a finished hiqh quality app, polished with fantastic design
           and running on state of the art software.
         </Text>
-        <Box align="center" my={{ base: 20, lg: 20, md: 20, sm: 14, xs: 14 }}>
+        <Box
+          textAlign="center"
+          my={{ base: 20, lg: 20, md: 20, sm: 14, xs: 14 }}
+        >
           <Grid
             display={{
               base: "grid",
@@ -72,7 +75,7 @@ const Home = () => {
                       w="60px"
                       h="60px"
                       borderRadius="full"
-                      align="center"
+                      alignSelf="center"
                       bg={item?.bgColor}
                       mb="2"
                       boxShadow="2xl"
@@ -117,7 +120,10 @@ const Home = () => {
           I provide you the following perks for your product development
           process, and more.
         </Text>
-        <Box align="center" my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}>
+        <Box
+          alignSelf="center"
+          my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}
+        >
           <Grid
             display={{
               base: "grid",
@@ -143,7 +149,7 @@ const Home = () => {
                       w="60px"
                       h="60px"
                       borderRadius="full"
-                      align="center"
+                      textAlign="center"
                       bg={item.bgColor}
                       mb="2"
                       boxShadow="2xl"

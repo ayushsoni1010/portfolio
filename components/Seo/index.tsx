@@ -1,13 +1,23 @@
 import React from "react";
 import Head from "next/head";
 
-const Seo = ({
+interface SEOProps {
+  title?: string;
+  description?: string;
+  OGImage?: string;
+  OGType?: string;
+  canonicalUrl?: string;
+  publishedDate?: string;
+  children?: React.ReactNode;
+}
+
+const Seo: React.FunctionComponent<SEOProps> = ({
   title = "Ayush Soni",
   description = "Hey! I am Ayush, a full-stack developer from India.",
   OGImage = "https://ayushsoni1010.com/profile.jpg",
   OGType = "website",
   canonicalUrl = "https://ayushsoni1010.com/",
-  publishedDate = new Date(),
+  publishedDate = new Date().toISOString(),
   children,
 }) => {
   return (
