@@ -56,16 +56,12 @@ jobs:
           done
       - name: Convert PDF to PNG
         run: convert -density 900 -background white -alpha off public/resume/resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
+      
       - name: Post Processing
         run: |
-          # Copy the processed files to the public/resume directory
-          cp public/resume/resume.pdf resume.pdf  # Keep a copy in root for release
-          cp resume.png public/resume/resume.png  # Copy PNG to public/resume
-          # Verify files exist
-          ls -la resume.pdf
-          ls -la resume.png
-          ls -la public/resume/resume.pdf
-          ls -la public/resume/resume.png
+          cp resume.pdf public/resume/
+          # cp resume.png public/resume/
+
       - name: Get Time
         id: time
         uses: nanzm/get-time-action@v2.0
