@@ -55,7 +55,12 @@ jobs:
           done
 
       - name: Convert PDF to PNG
-        run: convert -density 900 -background white -alpha off public/resume/resume.pdf -resize 25% -quality 90 -colorspace RGB public/resume/resume.png
+        run: convert -density 900 -background white -alpha off resume.pdf -resize 25% -quality 90 -colorspace RGB resume.png
+
+      - name: Post Processing
+        run: |
+          cp resume.pdf public/resume/
+          cp resume.png public/resume/
 
       - name: Get Time
         id: time
