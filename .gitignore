@@ -37,3 +37,4 @@ next-env.d.ts
 
 .vercel
 .env
+/dist/next-sitemap.config.js

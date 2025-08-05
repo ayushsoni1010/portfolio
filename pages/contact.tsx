@@ -136,7 +136,7 @@ const Contact = () => {
               firstTitle="Contact"
               secondTitle="Freelancer"
               textIcon="https://ik.imagekit.io/ayushsoni1010/Website/contact?ik-sdk-version=javascript-1.4.3&updatedAt=1669666339518"
-              leftSpacing="4"
+              leftSpacing={4}
             />
             <Grid
               display={{

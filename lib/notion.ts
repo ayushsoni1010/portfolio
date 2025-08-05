@@ -8,7 +8,7 @@ const getNotionPagesData = async (databaseId) => {
   try {
     const response = await notion.databases.query({ database_id: databaseId });
     const data = response.results.map((e) => e.properties);
-    
+
     return data;
   } catch (error) {
     if (error.code === APIErrorCode.ObjectNotFound) {

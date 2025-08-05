@@ -1,9 +1,9 @@
-const { promises: fs } = require("fs");
-const path = require("path");
-const RSS = require("rss");
-const matter = require("gray-matter");
+import { promises as fs } from "fs";
+import path from "path";
+import RSS from "rss";
+import matter from "gray-matter";
 
-exports.generate = async () => {
+(async function generate() {
   const feed = new RSS({
     title: "Ayush Soni",
     description: "Hey! I am Ayush, a full-stack developer from India",
@@ -15,15 +15,14 @@ exports.generate = async () => {
     copyright: `Ayush Soni | ${new Date().getFullYear()}`,
   });
 
-  const posts = await fs.readdir(path.join(__dirname, "..", "data", "blogs"));
+  const postsDir = path.join(__dirname, "..", "data", "blogs");
+  const posts = await fs.readdir(postsDir);
 
   await Promise.all(
     posts.map(async (filename) => {
-      const blogsData = await fs.readFile(
-        path.join(path.join(__dirname, "..", "data", "blogs", filename))
-      );
-
-      const frontmatter = matter(blogsData);
+      const filePath = path.join(postsDir, filename);
+      const fileContent = await fs.readFile(filePath, "utf8");
+      const frontmatter = matter(fileContent);
 
       feed.item({
         title: frontmatter.data.title,
@@ -31,10 +30,10 @@ exports.generate = async () => {
         url: frontmatter.data.url,
         author: "Ayush Soni",
         date: frontmatter.data.date,
-        categories: frontmatter.data.tags.split(", "),
+        categories: frontmatter.data.tags?.split(", "),
       });
     })
   );
 
   await fs.writeFile("./public/rss.xml", feed.xml({ indent: true }));
-};
+})();
