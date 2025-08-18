@@ -7,10 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "echo \"No tests specified\" && exit 0",
+    "typecheck": "tsc --noEmit",
+    "lint:check": "next lint",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
     "tsc:sitemap": "tsc next-sitemap.config.ts --outDir dist",
     "sitemap": "npm run tsc:sitemap && next-sitemap --config dist/next-sitemap.config.js",
     "rss:feed": "tsx scripts/generate-rss.ts",
-    "changelog": "auto-changelog"
+    "changelog": "auto-changelog",
+    "commitlint": "commitlint --from HEAD~1 --to HEAD --verbose",
+    "prepare": "husky",
+    "postbuild": "next-sitemap --config dist/next-sitemap.config.js"
   },
   "dependencies": {
     "@chakra-ui/checkbox": "^2.3.2",
@@ -87,6 +95,8 @@
     "zod": "^4.0.17"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3",
     "@mdx-js/loader": "^2.3.0",
     "@tailwindcss/postcss": "^4",
@@ -99,6 +109,8 @@
     "husky": "^9.1.7",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.23",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "rss": "^1.2.2",
     "tailwindcss": "^4",
     "tsx": "^4.19.4",
