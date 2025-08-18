@@ -9,7 +9,8 @@
     "lint": "next lint",
     "tsc:sitemap": "tsc next-sitemap.config.ts --outDir dist",
     "sitemap": "npm run tsc:sitemap && next-sitemap --config dist/next-sitemap.config.js",
-    "rss:feed": "tsx scripts/generate-rss.ts"
+    "rss:feed": "tsx scripts/generate-rss.ts",
+    "changelog": "auto-changelog"
   },
   "dependencies": {
     "@chakra-ui/checkbox": "^2.3.2",
@@ -92,8 +93,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "auto-changelog": "^2.5.0",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
+    "husky": "^9.1.7",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.23",
     "rss": "^1.2.2",
@@ -101,5 +104,11 @@
     "tsx": "^4.19.4",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
