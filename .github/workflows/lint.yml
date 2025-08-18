@@ -1,0 +1,78 @@
+name: Code Quality & Build Check
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-check:
+    name: 🔍 Code Quality & Build Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch more commits for better analysis
+          fetch-depth: 0
+
+      - name: ⚡ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔬 ESLint check
+        run: npm run lint:check
+
+      - name: 🔎 TypeScript type check
+        run: npm run typecheck
+
+      - name: 💅 Prettier format check
+        run: npm run format:check
+
+      - name: 🧪 Run tests
+        run: npm test
+
+      - name: 🏗️ Build check
+        run: npm run build
+        env:
+          # Add any environment variables needed for build
+          NODE_ENV: production
+
+      - name: 📝 Commitlint check (on PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          # Check commits in PR
+          npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  # Optional: Separate job for deployment preview (if using Vercel)
+  preview-deployment:
+    name: 🚀 Preview Deployment
+    runs-on: ubuntu-latest
+    needs: quality-check
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🎯 Deploy to Vercel Preview
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./

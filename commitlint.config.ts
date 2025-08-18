@@ -44,6 +44,7 @@ module.exports = {
         "perf",
         "revert",
         "vercel",
+        "script",
       ],
     ],
   },
