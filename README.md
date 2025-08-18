@@ -70,6 +70,7 @@ Explore my portfolio and discover the incredible projects and experiences I've h
 For a more detailed view of my skills and expertise, visit my [Craft Component Page](https://www.ayushsoni1010.com/crafts).
 
 ## Tech Stack Used 💅🏻
+
 Here's a glimpse of the technologies I've used:
 
 - Next.js
