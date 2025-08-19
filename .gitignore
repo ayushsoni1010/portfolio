@@ -3,7 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -25,16 +30,29 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env*.local
+# env files (can opt-in for committing if needed)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
+
+# next-sitemap
+robots.txt
+sitemap.xml
+
+# rss
+rss.xml
+
+# scripts
+scripts/out
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
-.env
+# next sitemap
 /dist/next-sitemap.config.js
