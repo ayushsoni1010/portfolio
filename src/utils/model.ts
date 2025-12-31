@@ -1,10 +1,16 @@
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import type { Scene, Object3D } from "three";
+
+interface LoadGLTFModelOptions {
+  receiveShadow?: boolean;
+  castShadow?: boolean;
+}
 
 export function loadGLTFModel(
-  scene,
-  glbPath,
-  options = { receiveShadow: true, castShadow: true }
-) {
+  scene: Scene,
+  glbPath: string,
+  options: LoadGLTFModelOptions = { receiveShadow: true, castShadow: true }
+): Promise<Object3D> {
   const { receiveShadow, castShadow } = options;
   return new Promise((resolve, reject) => {
     const loader = new GLTFLoader();

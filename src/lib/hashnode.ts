@@ -16,11 +16,17 @@ const GET_USER_ARTICLES = `
 `;
 
 async function gql(query = GET_USER_ARTICLES, variables = { page: 0 }) {
+  const apiKey = process.env.HASNODE_API_KEY || process.env.NEXT_PUBLIC_HASHNODE_KEY;
+  
+  if (!apiKey) {
+    throw new Error("Hashnode API key is not configured");
+  }
+
   const response = await fetch("https://api.hashnode.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: process.env.HASNODE_API_KEY,
+      Authorization: apiKey,
     },
     body: JSON.stringify({ query, variables }),
   });
