@@ -1,8 +1,7 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
-import SocialProfiles from "../Hero/SocialProfiles";
-import BaseLayout from "../Wrapper/BaseLayout";
+import SocialProfiles from "@/components/Hero/SocialProfiles";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
 
 const Footer = () => {
   const year = new Date();

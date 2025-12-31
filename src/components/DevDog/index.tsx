@@ -1,7 +1,9 @@
+"use client";
+
 import { useState, useEffect, useRef, useCallback } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { loadGLTFModel } from "../../utils/model";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { loadGLTFModel } from "@/utils/model";
 import { DogSpinner, DogContainer } from "./blender-dog";
 
 function easeOutCirc(x: number): number {
@@ -18,15 +20,16 @@ const VoxelDog = () => {
   const refAnimationFrame = useRef<number | null>(null);
   const refFrame = useRef<number>(0);
 
-  const urlDogGLB = (process.env.NODE_ENV === "production"
-    ? "https://craftzdog.global.ssl.fastly.net/homepage"
-    : "") + "/dog.glb";
+  // const urlDogGLB =
+  //   (process.env.NODE_ENV === "production"
+  //     ? "https://craftzdog.global.ssl.fastly.net/homepage"
+  //     : "") + "/dog.glb";
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer;
     const { current: container } = refContainer;
     const { current: camera } = refCamera;
-    
+
     if (container && renderer && camera) {
       let scW = container.clientWidth;
       let scH = container.clientHeight;
@@ -35,7 +38,7 @@ const VoxelDog = () => {
         { width: 768, size: 400 },
         { width: 500, size: 300 },
         { width: 300, size: 250 },
-        { width: 250, size: 200 }
+        { width: 250, size: 200 },
       ];
 
       for (const { width, size } of breakpoints) {

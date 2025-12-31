@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import VoxelDogLoader from "../DevDog/blender-dog";
-import BaseLayout from "../Wrapper/BaseLayout";
+import VoxelDogLoader from "@/components/DevDog/blender-dog";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
 import {
   Button,
   VStack,
@@ -12,10 +12,10 @@ import {
   Link,
   ButtonGroup,
 } from "@chakra-ui/react";
-import SocialProfiles from "./SocialProfiles";
+import SocialProfiles from "@/components/Hero/SocialProfiles";
 
-const LazyVoxelDog = dynamic(() => import("../DevDog"), {
-  ssr: false,
+const LazyVoxelDog = dynamic(() => import("@/components/DevDog"), {
+  ssr: true,
   loading: () => <VoxelDogLoader />,
 });
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { Box, Flex, IconButton } from "@chakra-ui/react";
-import BaseLayout from "../Wrapper/BaseLayout";
-import BaseText from "../Wrapper/BaseText";
-import { skillDetails } from "./__skillsDetails";
+import { Box, Flex } from "@chakra-ui/react";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
+import BaseText from "@/components/Wrapper/BaseText";
+import { skillDetails } from "@/components/Home/__skillsDetails";
 
 const Skills = () => {
   return (

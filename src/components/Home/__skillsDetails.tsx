@@ -212,12 +212,12 @@ const skillDetails = [
     icon: <SiVercel />,
     iconURL: "/assets/vercel.svg",
   },
-  // {
-  //   name: "Netlify",
-  //   key: "netlify",
-  //   icon: <SiNetlify />,
-  //   iconURL: "/assets/netlify.svg",
-  // },
+  {
+    name: "Netlify",
+    key: "netlify",
+    icon: <SiNetlify />,
+    iconURL: "/assets/netlify.svg",
+  },
   {
     name: "Vite",
     key: "vite",

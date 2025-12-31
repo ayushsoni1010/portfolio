@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Divider,
@@ -11,9 +13,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import BaseLayout from "../Wrapper/BaseLayout";
-import BaseText from "../Wrapper/BaseText";
-import { timelineDetails } from "./__timelineDetails";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
+import BaseText from "@/components/Wrapper/BaseText";
+import { timelineDetails } from "@/components/Home/__timelineDetails";
 
 const Timeline = () => {
   return (
@@ -53,7 +55,7 @@ const Timeline = () => {
                 gridColumnGap="80px"
                 gridRowGap="20px"
               >
-                <Box textAlign="center">
+                <Box textAlign="center" my="auto">
                   <Text
                     textAlign={{
                       base: "right",
@@ -178,6 +180,7 @@ const Timeline = () => {
                       boxShadow="inner"
                       position="relative"
                       top={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
+                      left={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
                       icon={item.timeline_icon}
                     />
                   </Box>
@@ -309,6 +312,7 @@ const Timeline = () => {
                       boxShadow="inner"
                       position="relative"
                       top={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
+                      left={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
                       icon={item.timeline_icon}
                     />
                   </Box>
@@ -335,7 +339,7 @@ const Timeline = () => {
                     bgGradient="linear(to-tr, teal.500, green.400)"
                   />
                 </Box>
-                <Box textAlign="center">
+                <Box textAlign="left" my="auto">
                   <Text>{item.timeline_date}</Text>
                   <Link href={item.timeline_event_link} isExternal={true}>
                     <Text>{item.timeline_hostedby}</Text>
@@ -496,6 +500,7 @@ const Timeline = () => {
                         boxShadow="inner"
                         position="relative"
                         top={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
+                        left={{ base: 3, lg: 3, md: 3, sm: 2, xs: 2 }}
                         icon={item.timeline_icon}
                       />
                     </Box>

@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import NextLink from "next/link";
-import ColorModeSwitcher from "../../utils/ThemeToggleButton";
+import ColorModeSwitcher from "@/utils/ThemeToggleButton";
 import {
   Box,
   Flex,

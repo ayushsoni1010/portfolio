@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
-import BaseLayout from "../Wrapper/BaseLayout";
-import Skills from "./Skills";
-import Timeline from "./Timeline";
-import { productCardDetails } from "./__productCardDetails";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
+import Skills from "@/components/Home/Skills";
+import Timeline from "@/components/Home/Timeline";
+import { productCardDetails } from "@/components/Home/__productCardDetails";
 
 import { IoIosRocket } from "react-icons/io";
 
@@ -51,6 +51,9 @@ const Home = () => {
           my={{ base: 20, lg: 20, md: 20, sm: 14, xs: 14 }}
         >
           <Grid
+            gap={20}
+            mx="auto"
+            maxW="3xl"
             display={{
               base: "grid",
               md: "grid",
@@ -59,8 +62,6 @@ const Home = () => {
               xs: "block",
             }}
             templateColumns="repeat(2,1fr)"
-            maxW="3xl"
-            gap="20"
           >
             {productCardDetails.map(
               (item, index) =>
@@ -125,6 +126,9 @@ const Home = () => {
           my={{ base: 20, lg: 20, md: 20, sm: 10, xs: 10 }}
         >
           <Grid
+            gap={20}
+            mx="auto"
+            maxW="3xl"
             display={{
               base: "grid",
               md: "grid",
@@ -133,8 +137,6 @@ const Home = () => {
               xs: "block",
             }}
             templateColumns="repeat(2,1fr)"
-            gap="20"
-            maxW="3xl"
           >
             {productCardDetails.map(
               (item, index) =>
