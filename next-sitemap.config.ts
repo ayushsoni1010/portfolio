@@ -8,4 +8,4 @@ const config: IConfig = {
   },
 };
 
-export default config;
+module.exports = config;
