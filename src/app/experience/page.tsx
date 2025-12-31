@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Box,
@@ -13,12 +15,10 @@ import {
   Icon,
   VStack,
 } from "@chakra-ui/react";
-import Header from "../components/Header";
-import BaseLayout from "../components/Wrapper/BaseLayout";
-import BaseText from "../components/Wrapper/BaseText";
-import Seo from "../components/Seo";
-import Footer from "../components/Footer";
-import experiencesDetails from "../data/experience/data.json";
+import BaseLayout from "@/components/Wrapper/BaseLayout";
+import BaseText from "@/components/Wrapper/BaseText";
+import PageLayout from "@/components/layouts/PageLayout";
+import experiencesDetails from "@/data/experience/data.json";
 import { MdVerified } from "react-icons/md";
 
 interface ExperienceItem {
@@ -198,29 +198,19 @@ const Experience = () => {
   );
 
   return (
-    <React.Fragment>
-      <Seo title="Experience" />
-      <Box>
-        <header>
-          <Header />
-        </header>
-        <main>
-          <BaseLayout>
-            <BaseText
-              firstTitle="Experience"
-              secondTitle="Products"
-              textIcon="https://ik.imagekit.io/ayushsoni1010/Website/projects?ik-sdk-version=javascript-1.4.3&updatedAt=1669666353424"
-            />
-            {renderDesktopView()}
-            {renderMobileView()}
-          </BaseLayout>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </Box>
-    </React.Fragment>
+    <PageLayout>
+      <BaseLayout>
+        <BaseText
+          firstTitle="Experience"
+          secondTitle="Products"
+          textIcon="https://ik.imagekit.io/ayushsoni1010/Website/projects?ik-sdk-version=javascript-1.4.3&updatedAt=1669666353424"
+        />
+        {renderDesktopView()}
+        {renderMobileView()}
+      </BaseLayout>
+    </PageLayout>
   );
 };
 
 export default Experience;
+
