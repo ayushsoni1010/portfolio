@@ -26,7 +26,12 @@
 \usepackage{ragged2e}
 
 \usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
+}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -74,10 +79,11 @@
     {#1 \vspace{-2pt}}
   }
 }
-\hypersetup{%
-  colorlinks=true,% hyperlinks will be colored
-  linkcolor=blue,% hyperlink text will be green
-  linkbordercolor=blue,% hyperlink border will be red
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -144,7 +150,7 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
-      \textbf{Languages}{: \hfill Javascript, Typescript, Python, SQL } \\
+      \textbf{Languages}{: \hfill JavaScript, TypeScript, Python, SQL } \\
       \vspace{3pt}\textbf{Libraries/Frameworks}{: \hfill React, Next.js, Vue, Nuxt.js, Redux, Zustand, Node.js, Express, Socket.io, FastAPI, tRPC} \\
       \vspace{3pt}\textbf{UI Component Libraries/CSS}{: \hfill Chakra UI, Shadcn UI, Ant Design, Material UI, styled-components, TailwindCSS, Framer} \\
       \vspace{3pt}\textbf{Databases/Servers}{: \hfill MongoDB, MySQL, PostgreSQL, pgvector, Redis, Prisma, Drizzle, Nginx} \\
@@ -163,11 +169,11 @@
 % ------------------------
 \resumeSubheading
 {\textbf{\href{https://attentions.ai}{Attentions AI}\hspace{5pt}}{}}{(Onsite) Pune, India}
-{\textbf{Software Development Engineer – Full-time}}{October 2024 -- Present}
+{\textbf{Software Development Engineer – Full-time}}{October 2024 -- February 2026}
 \resumeItemListStart
 \resumeItem{Built 4 production micro-frontends(Artigen, Connect, Docu, Lumina) for Q\&A on documents, call centers, e-commerce solution.}
-\resumeItem{Improved app performance by 60\%, implemented WebSocket streaming, built markdown wrapper, \& real-time pub-sub systems.}
-\resumeItem{Developed enterprise Chat SDK with voice, numerous AI agents, MCP connectors and integrations for the B2B client workflows.}
+\resumeItem{Engineered chat module with streaming UI, markdown/LaTeX parser, AI agents \& MCP connectors, improving app perf by 60\%.}
+\resumeItem{Built a multi-tenant RBAC system with org, department, team, user roles, enabling secure data isolation and role-based sharing.}
 \resumeItemListEnd
 % ------------------------
 
@@ -230,7 +236,7 @@
 
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{\href{https://github.com/useframe/frame}{Frame AI}\hspace{5pt}}{{[Next.js, tRPC, Prisma, Supabase, Inngest, E2B, AI Agents]}}}{}
+{\textbf{\href{https://github.com/useframe/frontend}{Frame AI}\hspace{5pt}}{{[Next.js, tRPC, Prisma, Supabase, Inngest, E2B, AI Agents]}}}{}
 \resumeItemListStart
 \resumeItem{Built AI code generation platform using AI Agents that converts natural language prompts into production-ready Next.js apps.}
 \resumeItem{Architected agent system with Inngest for async processing and E2B sandboxes, enabling secure code execution and live preview.}
